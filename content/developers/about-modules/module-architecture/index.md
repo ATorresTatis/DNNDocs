@@ -1,57 +1,54 @@
 ﻿---
 uid: module-architecture
-locale: en
+locale: es
 title: Module Architecture
 dnnversion: 09.02.00
 related-topics: dnn-manifest-schema,module-features,developers-creating-modules-overview,about-evs
 links: ["[DNN Module APIs](https://www.dnnsoftware.com/dnn-api/)"]
 ---
 
-# Module Architecture
+# Arquitectura de módulos
 
-Although every module provides a different set of features and functionality, some architectural elements are common among modules. Most DNN modules are developed using an n-tier architecture. Whether you build a Web Forms module, an MVC module, or a SPA module, you implement most of these layers in your module.
-
-
-
-![Module architecture](/images/gra-module-architecture.png)
+Aunque cada módulo proporciona un conjunto diferente de características y funcionalidades, algunos elementos arquitectónicos son comunes entre los módulos. La mayoría de los módulos para DNN se desarrollan utilizando una arquitectura de n niveles. Ya sea que construya un módulo de formularios web, un módulo MVC o un módulo SPA, implementará la mayoría de estas capas en su módulo.
 
 
+![Arquitectura de módulos](/images/gra-module-architecture.png)
 
-## Data Access Layer
 
-DNN supports three Data Access Layer (DAL) frameworks: DAL, DAL+, and DAL2. All three are based on the same underlying provider model, which enables DNN to be used with different database management systems.
+## Capa de acceso a datos
 
-Note: DNN ships with a SQL Server database provider. Other third-party database providers are available for Oracle, MySQL, and MS Access; however, MySQL and MS Access providers are no longer maintained or supported.
+DNN es compatible con tres marcos de datos de capa de acceso (DAL): DAL, DAL+ y DAL2. Los tres se basan en el mismo modelo de proveedor subyacente, que permite el uso de DNN con diferentes sistemas de administración de bases de datos.
 
-DAL is a fully abstracted implementation that requires the following:
+Nota: DNN viene con un proveedor de base de datos de SQL Server. Otros proveedores de bases de datos de terceros están disponibles para Oracle, MySQL y MS Access; sin embargo, los proveedores de MySQL y MS Access ya no se mantienen ni son compatibles.
 
-*   An abstract data provider class that defines your data layer API.
-*   A concrete implementation of this abstract class for every database type you wish to support (typically just SQL Server).
-*   Database scripts to create the stored procedures, tables, and views required by your module.
+DAL es una implementación completamente abstracta que requiere lo siguiente:
 
-DAL+ adds generic data access methods to the core platform to eliminate the need for the abstract and concrete data provider classes. You can still use alternate databases, and you must still provide the necessary database scripts.
+*   Una clase de proveedor de datos abstractos que define su API de capa de datos.
+*   Una implementación concreta de esta clase abstracta para cada tipo de base de datos que desee admitir (normalmente SQL Server).
+*   Scripts de base de datos para crear los procedimientos almacenados, tablas y vistas requeridas por su módulo.
 
-DAL2 uses the PetaPOCO Micro-ORM, which eliminates the need for writing stored procedures. DAL2 provides additional features, including integrated cache management, which further simplifies your code.
+DAL+ agrega métodos de acceso a datos genéricos a la plataforma central para eliminar la necesidad de las clases de proveedores de datos abstractos y concretos. Puede seguir utilizando bases de datos alternativaspero debe proporcionar los scripts de base de datos necesarios.
 
-You can use any data access method, even those not directly supported by DNN. You can also use more than one DAL technology within a single module.
+DAL2 utiliza el Micro-ORM de nombre PetaPOCO, que elimina la necesidad de escribir procedimientos almacenados. DAL2 proporciona funciones adicionales, incluida la gestión de caché integrada, que simplifica aún más su código.
 
-Tip: Use DAL2 for most of your standard CRUD queries, and use DAL+ for more complex queries that may require performance tuning. This approach simplifies development and lets you focus your performance-tuning efforts.
+Puede usar cualquier método de acceso a datos, incluso aquellos que no están directamente soportados por DNN. También puede utilizar más de una tecnología DAL dentro de un solo módulo.
 
-## Caching Layer
+Consejo: Utilice DAL2 para la mayoría de sus consultas CRUD estándar, y use DAL+ para consultas más complejas que pueden requerir ajustes de rendimiento. Este enfoque simplifica el desarrollo y le permite enfocar sus esfuerzos.
 
-Database access is one of the slowest actions performed by a web application. In many systems, the data is stored in a format that is different from the format in which it will be used. Applications often perform complex queries to filter the dataset and then alter the format of the results prior to use. If the database is not local, the query takes longer, depending on network speed. Database queries are orders of magnitude slower than using an in-memory cache.
+## Capa de almacenamiento en caché
 
-Caching is ideal for:
+El acceso a la base de datos es una de las acciones más lentas que realiza una aplicación web. En muchos sistemas, los datos se almacenan en un formato que es diferente del formato en el que se utilizarán. Las aplicaciones a menudo realizan consultas complejas para filtrar el conjunto de datos y luego alterar el formato de los resultados antes de su uso. Si la base de datos no es local, la consulta llevará más tiempo, dependiendo de la velocidad de la red. Las consultas de la base de datos son más lentas que usar una caché en memoria.
 
-*   Any data that is expensive to compute and yields the same results for a period of time.
-*   Any data segment that is invariant for a subset of users or for a specific URL.
+El almacenamiento en caché es ideal para:
 
-DNN provides built-in caching with the Cache API. If you use DNN's DAL or DAL+ APIs, implement the [Cache-Aside Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside) for optimum performance. You can configure DAL2's built-in caching by using attributes in your code.
+*   Cualquier dato que sea costoso de computar y produzca los mismos resultados durante un período de tiempo.
+*   Cualquier segmento de datos que sea invariable para un subconjunto de usuarios o para una URL específica.
 
-The Cache API can be extended to use different cache stores. The abstraction provided by the Cache API ensures that modules perform seamlessly, regardless of the caching provider installed by the site administrator.
+DNN proporciona almacenamiento en caché integrado con la API de caché.  Si utiliza las API DAL o DAL+ de DNN, implemente el patrón de almacenamiento en caché para obtener un mejor rendimiento [Cache-Aside Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside). Puede configurar el almacenamiento en caché incorporado de DAL2 utilizando atributos en su código.
 
-> [!Tip]
-> If a class would be stored in the cache, mark it `[Serializable]` to ensure that it is stored correctly by out-of-process caching providers.
+La API de caché se puede ampliar para utilizar diferentes almacenes de caché. La abstracción proporcionada por la API de caché garantiza que los módulos funcionen sin problemas, independientemente del proveedor de almacenamiento en caché instalado por el administrador del sitio.
+
+> [! Sugerencia] Marque las clases con el atributo [Serializable] para asegurarse de que esté almacenada correctamente por los proveedores de almacenamiento en caché fuera de proceso.
 
 ```
 
@@ -63,22 +60,22 @@ The Cache API can be extended to use different cache stores. The abstraction pro
 
 ```
 
-## Business Logic Layer
+## Capa de logica de negocios
 
-Most business rules are implemented in the business logic layer. These rules can be as simple as validating data or as complex as orchestrating workflows across multiple back-end systems. This layer is also responsible for coordinating calls to the caching and data access layers.
+La mayoría de las reglas de negocios se implementan en la capa de lógica de negocios. Estas reglas pueden ser tan simples como validar datos o tan complejas como organizar flujos de trabajo a través de múltiples sistemas de back-end. Esta capa también es responsable de coordinar las llamadas a las capas de almacenamiento en caché y acceso a datos.
 
-DNN provides APIs for handling common tasks, such as application security, file storage, list management, event logging, and full-text search. These APIs are fully abstracted and extensible so you can focus on just the business rules that are specific to your module.
+DNN proporciona APIs para manejar tareas comunes, como la seguridad de la aplicación, el almacenamiento de archivos, la administración de listas, el registro de eventos y la búsqueda de texto. Estas APIs son totalmente abstractas y extensibles, por lo que puede centrarse solo en las reglas de negocios que son específicas de su módulo.
 
-## Service Layer
+## Capa de servicios
 
-DNN provides the Service Framework, which you can use for quickly defining web services. The Service Framework provides integrated access to common DNN entities within your service methods, so that your service can determine which site is being called, the user making the request, and the module facilitating the request. You can also secure your web services by specifying which applications and which users can access your service endpoints.
+DNN proporciona un marco de servicios, que puede utilizar para definir rápidamente servicios web. El Marco de servicios proporciona acceso integrado a las entidades comunes de DNN dentro de sus métodos de servicio, de modo que el servicio pueda determinar a qué sitio se está llamando, el usuario que realiza la solicitud y el módulo encargado de procesas la solicitud. También puede proteger sus servicios web especificando qué aplicaciones y qué usuarios pueden acceder a sus puntos finales (endpoints) en el servicio.
 
-## Presentation Layer
+## Capa de presentación
 
-The core component in the presentation layer is the module control. Every unique view of a module is registered as a module control in the [DNN Manifest](xref:dnn-manifest-schema).
+El componente central en la capa de presentación son los controles del módulo. Cada vista única de un módulo se registra como un control de módulo en el archivo manifiesto  de DNN. [DNN Manifest](xref:dnn-manifest-schema).
 
-DNN APIs make it easy to access any module control, thus simplifying view management within your module.
+Las API de DNN facilitan el acceso a cualquier control del módulo, simplificando así la administración de la vista dentro de su módulo.
 
-Alternatively, modules can implement their own view dispatch methods to control when specific views are shown or how the module appears on the page.
+Alternativamente, los módulos pueden implementar sus propios métodos de envío de vistas para controlar cuándo se muestran vistas específicas o cómo aparece el módulo en la página.
 
-For Web Forms modules, the primary view component is an ASP.NET user control, called a module control in DNN. For MVC and SPA modules, DNN expanded the definition of module controls to accommodate their alternative view-rendering pipelines.
+Para los módulos de formularios web (webForms), el componente de vista principal es un control de usuario ASP.NET, denominado control de módulo en DNN. Para los módulos MVC y SPA, DNN expandió la definición de los controles del módulo para acomodar su representación de vista alternativa.
