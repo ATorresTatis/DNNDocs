@@ -1,16 +1,16 @@
 ﻿---
 uid: module-development
-locale: en
-title: About Module Development
+locale: es
+title: Acerca del desarrollo de módulos
 dnnversion: 09.02.00
 related-topics: providers
 ---
 
-# About Module Development
+# Acerca del desarrollo de módulos
 
-## What is a module?
+## ¿Qué es un módulo??
 
-A typical web page includes page elements and content blocks. Page elements, such as the site menu, the login control, and the search bar, are included with the theme. Content blocks are managed by modules.
+Una página web típica incluye elementos de página y bloques de contenido. Los elementos de la página, como el menú del sitio, el control de inicio de sesión y la barra de búsqueda, se incluyen con el tema. Los bloques de contenido son gestionados por módulos.
 
   
 
@@ -18,20 +18,18 @@ A typical web page includes page elements and content blocks. Page elements, suc
 
   
 
-The module is one of the basic building blocks that extend DNN to enable users to view, create, and edit content. All DNN administrative features are implemented as modules.
+El módulo es uno de los bloques de construcción básicos que extienden a DNN para permitir a los usuarios ver, crear y editar contenido. Todas las características administrativas de DNN se implementan como módulos.
 
-> [!Tip]
-> The DNN platform source code includes numerous example modules to help you build your own modules.
+> [!Sugerencia] El código fuente de  DNN incluye numerosos módulos de ejemplo para ayudarlo a construir sus propios módulos.
 
-Due to the modular nature of page composition in DNN, modules are usually built to manage and display a single content type.
+Debido a la naturaleza modular de la composición de las páginas en DNN, los módulos generalmente se construyen para administrar y mostrar un único tipo de contenido.
 
-> [!Tip]
-> Consider creating multiple modules when managing complex content types, or include rich templating support so that administrators can control the layout of the content on the page.
+> [!Sugerencia] Considere la posibilidad de crear múltiples módulos cuando administre tipos de contenido complejos, o incluya un amplio soporte de plantillas para que los administradores puedan controlar el diseño del contenido en la página.
 
-Module development involves selecting the development framework and then the development approach.
+El desarrollo de un módulo implica seleccionar el marco de desarrollo y luego el enfoque de desarrollo.
 
-*   These frameworks can be used with DNN:
-    *   Web Forms. This traditional framework creates DNN modules that use controls based on ASP.NET Web Forms.
-    *   MVC. This framework (introduced in DNN 8) uses the ASP.NET MVC framework.
-    *   SPA. This family of frameworks builds modules using plain HTML, JavaScript, and CSS. You can use any SPA framework.
-*   You can choose a manual development approach, where the entire module is built by hand, or a more automated approach, where the basic module foundation is created using a template or other automation tool.
+*   Estos marcos se pueden utilizar con DNN:
+    *   Web Forms. Este marco tradicional crea módulos de DNN que utilizan controles basados en formularios web de ASP.NET.
+    *   MVC. Este marco (introducido en DNN 8) utiliza el marco MVC de ASP.NET.
+    *   SPA. Esta familia de marcos construye módulos utilizando HTML, JavaScript y CSS. Puedes usar cualquier framework SPA.
+*   Puede elegir un enfoque de desarrollo manual, donde todo el módulo se construye a mano, o un enfoque más automatizado, donde la base del módulo básico se crea utilizando una plantilla u otra herramienta de automatización.
