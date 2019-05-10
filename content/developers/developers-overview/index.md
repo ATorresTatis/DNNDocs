@@ -1,10 +1,10 @@
 ﻿---
 uid: developers-overview
-locale: en
+locale: es
 title: Hello, Developer!
 dnnversion: 09.02.00
 ---
 
-# Hello, Developer!
+# Hola, desarrollador!
 
-Hello, Developer!
+Hola, desarrollador!
