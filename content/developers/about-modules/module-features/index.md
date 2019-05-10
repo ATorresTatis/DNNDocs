@@ -15,7 +15,7 @@ Aunque tradicionalmente no se considera parte del desarrollo de un módulo, los 
 
 Los temas definen la apariencia de las páginas dentro de DNN, y los módulos deben diseñarse para funcionar con una amplia variedad de estilos. A través de la colocación de los paneles, el tema define dónde se pueden colocar los módulos en una página web.
 
-> [!Sugerencia] Si elige definir estilos específicos para su módulo, especifique el alcance de sus estilos en un elemento raíz (generalmente un `<div>` que envuelve su marcado completamente) dentro de su módulo. Esto asegura que sus estilos serán más específicos que los estilos definidos en el tema.
+> [!Sugerencia] Si elige definir estilos específicos para su módulo, especifique el alcance de sus estilos en un elemento raíz (generalmente un `<div>` que envuelve su HTML de marcado) dentro de su módulo. Esto asegura que sus estilos serán más específicos que los estilos definidos en el tema.
 
 DNN envuelve un contenedor alrededor de cada módulo en la página. Además de definir la apariencia de los bloques de contenido en la página, el contenedor también proporciona elementos de IU que administran el módulo, como el título, el menú de acción y los enlaces de acción  del módulo.
 
