@@ -46,7 +46,7 @@ Puede personalizar el menú de acción del módulo implementando las siguientes 
 
 ## Ajustes/Configuraciones del módulo
 
-DNN incluye los objetos de configuración para las entidades Host, Portal, Tab, TabModule y Module. Para simplificar el desarrollo de módulos, DNN administra el almacenamiento y la recuperación de estos valores de configuraciones. Es posible que deba acceder a estos valores para determinar cuáles de las funciones de su módulo habilitar.
+DNN incluye los objetos de configuración para las entidades Host, Portal, Tab, TabModule y Module. Para simplificar el desarrollo de módulos, DNN administra el almacenamiento y la recuperación de estos valores de configuraciones. Es posible que deba acceder a estos valores para determinar cuáles de las funciones de su módulo  debe habilitar.
 
 También puede crear configuraciones personalizadas y la IU asociada para administrar dichas configuraciones personalizadas.
 
