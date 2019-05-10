@@ -29,7 +29,7 @@ El menú de acción del módulo proporciona una funcionalidad estándar, como el
 
 Puede personalizar el menú de acción del módulo implementando las siguientes funciones en su módulo:
 
-*   Proporcionar un enlace a un manifiesto de la página de ayuda para cambiar el enlace de Ayuda en el menú.
+*   Proporcionar un enlace a un manifiesto de la página de ayuda para establecer el enlace a la ayuda en el menú.
 
 *   Implemente la interfaz `IPortable` para mostrar las opciones de Importar y Exportar en el menú.
 
