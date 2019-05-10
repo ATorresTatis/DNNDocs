@@ -35,9 +35,9 @@ Puede personalizar el menú de acción del módulo implementando las siguientes 
 
     Nota: DNN también utiliza la interfaz `IPortable` cuando se crea o utiliza una página/plantilla de portal.
 
-*   Implemente la interfaz `ISearchable` para mostrar el enlace de Sindicar en el menú.
+*   Implemente la interfaz `ISearchable` para mostrar el enlace de Sindicación en el menú.
 
-   Nota: Un administrador debe habilitar la función de Sindicxacuión de contenido en la configuración del módulo.
+    Nota: Un administrador debe habilitar la función de Sindicación de contenido en la configuración del módulo.
    
 *  Implemente la interfaz `IActionable` para mostrar elementos de menú personalizados.
 
