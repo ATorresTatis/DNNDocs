@@ -48,15 +48,15 @@ Los módulos creados con el tipo de proyecto WAP pueden aprovechar los scripts d
 Independientemente del tipo de proyecto, los paquetes de módulos de Web Forms incluyen los siguientes archivos:
 
 *   Requeridos
-    * Los controles de usuario (.ascx) que contienen el marcado necesario para representar la interfaz de usuario UI del módulo.
-    * Los archivos de código (.cs o .vb) que contienen la lógica empresarial, lógica de almacenamiento en caché y/o el código de acceso a datos (solo se incluyen para los tipos de proyectos WSP).
-    * El archivo de manifiesto (.dnn) que contiene la información de definición de módulo requerida para su instalación.
-    * Los archivos (.dll) que son el código del módulo compilado y las bibliotecas de referencia de terceros. Los proyectos WSP no tendrán un ensamblado compilado para el módulo, pero podrían incluir referencias a bibliotecas de terceros.
-    * Los scripts SQL (.sqldataprovider) que son el código requerido para crear o actualizar los objetos de la base de datos de su módulo.
+    * Los controles de usuario `(.ascx)` que contienen el marcado necesario para representar la interfaz de usuario UI del módulo.
+    * Los archivos de código `(.cs o .vb)` que contienen la lógica empresarial, lógica de almacenamiento en caché y/o el código de acceso a datos (solo se incluyen para los tipos de proyectos WSP).
+    * El archivo de manifiesto `(.dnn)` que contiene la información de definición de módulo requerida para su instalación.
+    * Los archivos `(.dll)` que son el código del módulo compilado y las bibliotecas de referencia de terceros. Los proyectos WSP no tendrán un ensamblado compilado para el módulo, pero podrían incluir referencias a bibliotecas de terceros.
+    * Los scripts SQL `(.sqldataprovider)` que son el código requerido para crear o actualizar los objetos de la base de datos de su módulo.
 *   Opcionales
-    * Los archivos de recursos (.resx) que contienen cadenas de localización.
-    * Los archivos JavaScript (.js) que contienen el código utilizado para la lógica del lado del cliente.
-    * Las hojas de estilo (.css) que contienen los estilos personalizados de presentación que necesita su módulo.
-    * Los archivos de texto (.txt) que incluyen los archivos release.txt y license.txt que se muestran durante la instalación del módulo.
+    * Los archivos de recursos `(.resx)` que contienen cadenas de localización.
+    * Los archivos JavaScript `(.js)` que contienen el código utilizado para la lógica del lado del cliente.
+    * Las hojas de estilo `(.css)` que contienen los estilos personalizados de presentación que necesita su módulo.
+    * Los archivos de texto `(.txt)` que incluyen los archivos release.txt y license.txt que se muestran durante la instalación del módulo.
 
 La funcionalidad de DNN Module Creator coloca automáticamente los archivos en las carpetas apropiadas (`App_Code` y `DesktopModules`) y puede usarse para empaquetar el módulo una vez está completado.
