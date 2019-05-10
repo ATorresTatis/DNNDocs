@@ -21,9 +21,7 @@ DNN envuelve un contenedor alrededor de cada módulo en la página. Además de d
 
 ## Menú de acciones
 
-El menú de acción del módulo proporciona una funcionalidad estándar, como eliminación de módulos, impresión, importación/exportación de contenido y la ubicación de contenido. Los elementos del menú se crean dinámicamente según las características del módulo y la configuración del sitio.
-
-
+El menú de acción del módulo proporciona una funcionalidad estándar, como eliminación de módulos, impresión, importación/exportación y  ubicación del contenido. Los elementos del menú se crean dinámicamente según las características del módulo y la configuración del sitio.
 
 ![Menú de acciones](/images/scr-actionmenu-edit-icons.png)
 
