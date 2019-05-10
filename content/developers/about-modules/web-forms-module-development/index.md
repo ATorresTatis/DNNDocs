@@ -1,69 +1,62 @@
 ﻿---
 uid: web-forms-module-development
-locale: en
-title: Web Forms Module Development
+locale: es
+title: Desarrollo de módulos de formularios web
 dnnversion: 09.02.00
 related-topics: use-module-creator,providers
 links: ["[Module Development: DNN Video Library](https://www.dnnsoftware.com/videos/)"]
 ---
 
-# Web Forms Module Development
+# Desarrollo de módulos de formularios web
 
-## Web Forms Module Architecture
+## Arquitectura de módulos de formularios web
 
-Web Forms modules follow the standard DNN module architectural pattern and use a traditional server-side rendering model. When a page is requested, DNN will create an instance of the relevant module control as defined in the module definition. The module control inherits from a code-behind class that contains the presentation logic and that makes additional calls to the appropriate business methods in the Business Logic Layer.
+Los módulos de Web Forms siguen el patrón arquitectónico del módulo DNN estándar y utilizan un modelo de renderizado tradicional del lado del servidor. Cuando se solicita una página, DNN creará una instancia del control del módulo relevante como se encuentre definida en la configuración del módulo. El control de módulo se hereda de una clase de código subyacente que contiene la lógica de presentación y que realiza llamadas adicionales a los métodos de negocios apropiados en la capa de lógica de negocios.
 
+![Arquitectura lógica de un módulo de formularios web.](/images/gra-module-architecture-wf.png)
 
+Puede incluir puntos finales (endpoints) de servicios web para permitir el acceso de las aplicaciones móviles, si es necesario. Cuando se accede al módulo desde una aplicación móvil, la capa de presentación se mueve al dispositivo móvil y la capa de servicios se convierte en el punto final (endpoint) del lado del servidor que llama a los métodos comerciales apropiados.
 
-![Logical architecture of a Web Forms module](/images/gra-module-architecture-wf.png)
-
-
-
-You can include web service endpoints to enable access by mobile applications, if necessary. When accessing the module from a mobile application, the presentation layer moves to the mobile device and the service layer becomes the server-side endpoint that calls the appropriate business methods.
+![Acceso al módulo de formularios web a través de un servicio web](/images/gra-module-architecture-mobile.png)
 
 
+## Construyendo Módulos de Formularios Web
 
-![Accessing Web Forms Module via a Web Service](/images/gra-module-architecture-mobile.png)
-
-
-
-## Building Web Forms Modules
-
-In Visual Studio, modules can be created as one of these project types:
+En Visual Studio, los módulos se pueden crear como uno de estos tipos de proyectos:
 
 *   Web Site Project (WSP)
 *   Web Application Project (WAP)
 
-Modules built using the WSP project type include the source code as part of the module package. The source code is compiled at runtime, thereby, allowing you to easily alter code directly on the server. While this approach provides flexibility in making updates, it also decreases startup performance and can complicate module upgrades.
+Los módulos creados utilizando el tipo de proyecto WSP incluyen el código fuente como parte del paquete del módulo. El código fuente se compila en tiempo de ejecución, lo que le permite modificar fácilmente el código directamente en el servidor. Si bien este enfoque proporciona flexibilidad para realizar actualizaciones, también reduce el rendimiento de inicio y puede complicar las actualizaciones de los módulos.
 
-Important: The WSP project type is not recommended for commercial module development, because it requires the distribution of source code with your module.
+> Importante: El tipo de proyecto WSP no se recomienda para el desarrollo de módulos comerciales, ya que requiere la distribución del código fuente con su módulo.
 
-WSP projects do not have a project file (.csproj or .vbproj). Instead, they rely on files being part of a complete website. When creating a WSP module, all user controls, the associated code-behind files, and other related files are placed in a project folder under the DesktopModules folder. All code files not associated with a user control must be placed in the App_Code folder in the website's root. This disjointed code model complicates module development and packaging.
+Los proyectos WSP no tienen un archivo de proyecto (.csproj o .vbproj). En su lugar, se basan en archivos que forman parte de un sitio web completo. Al crear un módulo WSP, todos los controles de usuario, los archivos de código subyacente asociados y otros archivos relacionados se colocan en una carpeta de proyecto en la carpeta `DesktopModules`. Todos los archivos de código no asociados con un control de usuario deben colocarse en la carpeta `App_Code` en la raíz del sitio web. Este modelo de código inconexo complica el desarrollo y el empaquetado del módulo.
 
-Modules built using the WAP project type are compiled at development time and do not require you to include the source code with your module. WAP projects have a project file and are created as standalone projects.
+Los módulos creados utilizando el tipo de proyecto WAP se compilan en el momento del desarrollo y no requieren que incluya el código fuente en su módulo. Los proyectos WAP tienen un archivo de proyecto y se crean como proyectos independientes.
 
-Note: Microsoft recommends the WAP project type for ASP.NET development. (See [Web Application Projects Versus Web Site Projects in Visual Studio](https://docs.microsoft.com/en-us/previous-versions/aspnet/dd547590(v=vs.110)).)
+> Nota: Microsoft recomienda el tipo de proyecto WAP para el desarrollo de ASP.NET. (Consulte [Proyectos de aplicaciones web versus proyectos de sitios web en Visual Studio](https://docs.microsoft.com/en-us/previous-versions/aspnet/dd547590(v=vs.110))).
 
-Although Visual Studio is recommended for module development, you can create modules using standard text editors or the included DNN Module Creator. However, these tools do not provide .NET compiler support; therefore, they are more suited for developing WSP-based modules.
+Aunque se recomienda Visual Studio para el desarrollo de módulos, puede crear módulos utilizando editores de texto estándar o la funcionalidad de DNN Module Creator que viene incluida. Sin embargo, estas herramientas no proporcionan soporte para el compilador .NET; por lo tanto, son más adecuados para desarrollar módulos basados en WSP.
 
-You can organize your Web Forms project files any way you wish. Many module developers organize project files based on the logical architecture.
+Puede organizar sus archivos de proyecto de Web Forms de la forma que desee. Muchos desarrolladores de módulos organizan archivos de proyectos basados en la arquitectura lógica.
 
-## Packaging Web Forms Modules
+## Empaquetar módulos de formularios web
 
-Modules created using the WAP project type can leverage MS Build scripts to automatically bundle the module files and module manifest. WSP-based modules can be packaged using the package wizard that is available in DNN.
+Los módulos creados con el tipo de proyecto WAP pueden aprovechar los scripts de MS Build para agrupar automáticamente los archivos del módulo y el manifiesto del módulo. Los módulos basados en WSP se pueden empaquetar utilizando el asistente de paquetes que está disponible en DNN.
 
-Regardless of project type, Web Forms module packages include the following files:
+Independientemente del tipo de proyecto, los paquetes de módulos de Web Forms incluyen los siguientes archivos:
 
-*   Required
-    *   User controls (.ascx) contain the markup needed to render your module UI.
-    *   Code files (.cs or .vb) contain business logic, caching logic and data access code (only included for WSP project types).
-    *   Manifest file (.dnn) contains the module definition information required for installing the module.
-    *   Assemblies (.dll) are the compiled module code and 3rd party reference libraries. WSP projects will not have an assembly for the compiled module, but may still include 3rd party reference libraries.
-    *   SQL scripts (.sqldataprovider) are the code required to create or update your module's database objects.
-*   Optional
-    *   Resource files (.resx) contain localization strings.
-    *   JavaScript files (.js) contain code used for client-side logic.
-    *   Stylesheets (.css) contain the custom styles needed by your module.
-    *   Text files (.txt) include the release.txt and license.txt files that are displayed during module installation.
+*   Requeridos
+    * Los controles de usuario (.ascx) que contienen el marcado necesario para representar la interfaz de usuario UI del módulo.
+    * Los archivos de código (.cs o .vb) que contienen la lógica empresarial, lógica de almacenamiento en caché y/o el código de acceso a datos (solo se incluyen para los tipos de proyectos WSP).
+    * El archivo de manifiesto (.dnn) que contiene la información de definición de módulo requerida para su instalación.
+    * Los archivos (.dll) que son el código del módulo compilado y las bibliotecas de referencia de terceros. Los proyectos WSP no tendrán un ensamblado compilado para el módulo, pero podrían incluir referencias a bibliotecas de terceros.
+    * Los scripts SQL (.sqldataprovider) que son el código requerido para crear o actualizar los objetos de la base de datos de su módulo.
+*   Opcionales
+    * Los archivos de recursos (.resx) que contienen cadenas de localización.
+    * Los archivos JavaScript (.js) que contienen el código utilizado para la lógica del lado del cliente.
+    * Las hojas de estilo (.css) que contienen los estilos personalizados de presentación que necesita su módulo.
+    * Los archivos de texto (.txt) que incluyen los archivos release.txt y license.txt que se muestran durante la instalación del módulo.
 
-The DNN Module Creator automatically places files in the appropriate folders (App_Code and DesktopModules) and can be used to package the completed module.
+La funcionalidad de DNN Module Creator coloca automáticamente los archivos en las carpetas apropiadas (`App_Code` y `DesktopModules`) y puede usarse para empaquetar el módulo una vez está completado.
