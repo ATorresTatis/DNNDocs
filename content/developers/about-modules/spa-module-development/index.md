@@ -1,59 +1,55 @@
 ﻿---
 uid: spa-module-development
-locale: en
-title: SPA Module Development
+locale: es
+title: Desarrollo de módulos SPA
 dnnversion: 09.02.00
 related-topics: create-module-using-templates,use-module-creator,providers
 links: ["[Wikipedia: Single-Page Application](https://en.wikipedia.org/wiki/Single-page_application)","[DNN Wiki: Token Replacement API](https://www.dnnsoftware.com/wiki/ipropertyaccess)","[DNN Wiki: Standard DNN Tokens](https://www.dnnsoftware.com/wiki/tokens)"]
 ---
 
-# SPA Module Development
+# Desarrollo de módulos SPA
 
-## Overview
+## Visión general
 
-Single-Page Application (SPA) frameworks are a newer alternative to server-side web development frameworks such as ASP.NET. SPA replaces the full-page updates of server-side frameworks, with small targeted updates of select page elements. This lightweight approach results in a faster and more responsive UI.
+Los marcos de aplicaciones de una sola página (SPA) son una alternativa más nueva a los marcos de desarrollo web del lado del servidor, como ASP.NET. SPA reemplaza las actualizaciones de página completa de los marcos del lado del servidor, con pequeñas actualizaciones dirigidas de elementos seleccionados de la página. Este enfoque ligero da como resultado una interfaz de usuario más rápida y con mayor capacidad de respuesta.
 
-DNN's SPA module type simplifies the creation of modules that simulate traditional SPA applications and that use AJAX for all server interactions.
+El tipo de módulo SPA de DNN, simplifica la creación de módulos que simulan las aplicaciones SPA tradicionales y que usan AJAX para todas las interacciones del servidor.
 
-The SPA module framework supplements other SPA frameworks, such as AngularJS, Knockout, and React, by providing DNN-specific functionality.
+El marco del módulo SPA complementa otros marcos para SPA, como AngularJS, Knockout y React, al proporcionar una funcionalidad específica de DNN.
 
-## SPA Module Architecture
+## Arquitectura de un módulo SPA
 
-In a SPA module, each HTML file loads the necessary JavaScript and CSS to properly render the UI. SPA modules also make AJAX calls to the business layer through the service layer. This architecture is similar to [the mobile application architecture for Web Forms modules](xref:web-forms-module-development).
+En un módulo SPA, cada archivo HTML carga el JavaScript y CSS necesarios para representar correctamente la interfaz de usuario UI. Los módulos SPA también realizan llamadas AJAX a la capa empresarial a través de la capa de servicios. Esta arquitectura es similar a la [arquitectura de aplicaciones móviles para los módulos de formularios web](xref:web-forms-module-development).
 
+![Arquitectura lógica de un módulo SPA.](/images/gra-module-architecture-spa.png)
 
+Cuando se solicita una página DNN, el marco busca el control del módulo solicitado en la definición del módulo. En un módulo SPA, el control del módulo identifica un archivo HTML específico. Los tokens de DNN en el archivo HTML se reemplazan con datos específicos del sitio antes de que el HTML se inyecte en la página.
 
-![Logical architecture of a SPA module](/images/gra-module-architecture-spa.png)
+## Construyendo módulos SPA
 
+Tiene más opciones de desarrollo disponibles al construir módulos SPA en comparación con los módulos MVC. El código del lado del servidor se puede crear en Visual Studio como tipos de Proyecto de aplicación web (WAP) o Proyecto de sitio web (WAP). [Consulte Proyectos de aplicaciones web versus proyectos de sitios web en Visual Studio](https://msdn.microsoft.com/en-us/library/dd547590%28v=vs.110%29.aspx). Debido a que la capa de presentación se crea con HTML plano, JavaScript y CSS, sus componentes pueden construirse utilizando cualquier editor de código.
 
+Puede elegir construir el módulo SPA con todo el código de capa de presentación en un proyecto y todo el código del lado del servidor en otro proyecto por separado. Este enfoque facilita el uso de diferentes herramientas de implementación que están optimizadas para el desarrollo del lado del servidor o del lado del cliente.
 
-When a DNN page is requested, the framework looks up the requested module control in the module definition. In an SPA module, the module control identifies a specific HTML file. DNN tokens in the HTML file are replaced with site-specific data before the HTML is injected into the page.
+También, puede usar Visual Studio para crear un proyecto único que incluya componentes tanto del lado del servidor como del lado del cliente. Este enfoque aprovecha el sistema MS Build para empaquetar fácilmente su módulo como parte de su proceso de desarrollo. La plantilla de módulo DNN SPA está configurada con este enfoque.
 
-## Building SPA Modules
+## Acceso a las características de DNN
 
-You have more development options available when building SPA modules compared to MVC modules. The server-side code can be created in Visual Studio as Web Application Project (WAP) or Web Site Project (WAP) types. (See [Web Application Projects Versus Web Site Projects in Visual Studio](https://msdn.microsoft.com/en-us/library/dd547590%28v=vs.110%29.aspx).) Because the presentation layer is created with plain HTML, JavaScript, and CSS, its components can be built using any code editor.
+Los formularios Web Forms y los módulos MVC pueden acceder fácilmente a las funciones de DNN relacionadas con la representación porque ambas son tecnologías del lado del servidor. Los módulos SPA utilizan tecnología del lado del cliente y, por lo tanto, requieren un enfoque diferente para acceder a las funciones de DNN. Debido a que un módulo SPA utiliza HTML estándar, DNN proporciona tokens personalizados que pueden incluirse en el HTML para acceder a los datos y API.
 
-You can choose to build the SPA module with all presentation layer code in one project and all server-side code in a separate project. This approach makes it easy to use different development tools that are optimized for server-side or client-side development.
+Los siguientes tokens se pueden utilizar en su HTML:
 
-Alternatively, you can use Visual Studio to create a single project that includes both server-side and client-side components. This approach leverages the MS Build system to easily package your module as part of your development process. The DNN SPA module template is set up for this approach.
-
-## Accessing DNN Features
-
-Web Forms and MVC modules can easily access rendering-related DNN features because they are both server-side technologies. SPA modules use client-side technology and, therefore, require a different approach to access DNN features. Because a SPA module uses standard HTML, DNN provides custom tokens that can be included in the HTML to access data and APIs.
-
-The following SPA module tokens can be used in your HTML:
-
-*   JavaScript or JS registers a JavaScript file with the Client Resource Manager.
-*   CSS registers a stylesheet with the Client Resource Manager.
-*   AntiForgeryToken includes an anti-forgery token in the page to prevent Cross-Site Request Forgery (CSRF) attacks.
-*   ModuleAction identifies custom module actions.
-*   Resx includes a localized resource string in the page.
-*   Request includes the page-request query string in the page.
-*   ModuleContext includes a DNN module context property in the page. Supported module context properties include:
-    *   ModuleId
-    *   TabModuleId
-    *   TabId
-    *   PortalId
-    *   IsSuperUser
-    *   EditMode
-    *   SettingName. You can access a specific module setting by using the setting name, instead of a predefined property name.
+*   `JavaScript` o `JS` registra un archivo JavaScript con el Administrador de recursos del cliente.
+*   `CSS` registra una hoja de estilo con el Administrador de recursos del cliente..
+*   `AntiForgeryToken` incluye un token anti-falsificación en la página para evitar ataques de falsificación de solicitudes entre sitios (CSRF).
+*   `ModuleAction` identifica las acciones personalizadas del módulo.
+*   `Resx` incluye una cadena de recursos localizada en la página.
+*   `Request` incluye la cadena de consulta de solicitud de página en la página.
+*   `ModuleContext` incluye una propiedad de contexto de módulo DNN en la página. Las propiedades de contexto del módulo compatibles incluyen:
+    *   `ModuleId`
+    *   `TabModuleId`
+    *   `TabId`
+    *   `PortalId`
+    *   `IsSuperUser`
+    *   `EditMode`
+    *   `SettingName`. Puede acceder a una configuración de módulo específica utilizando el nombre de configuración, en lugar de un nombre de propiedad predefinido.
