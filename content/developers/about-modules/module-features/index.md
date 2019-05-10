@@ -1,86 +1,79 @@
 ﻿---
 uid: module-features
-locale: en
-title: Common Module Features
+locale: es
+title: Características comunes de módulos
 dnnversion: 09.02.00
 related-topics: dnn-manifest-schema,module-architecture,developers-creating-modules-overview,about-evs
 links: ["[DNN Module APIs](https://www.dnnsoftware.com/dnn-api/)"]
 ---
 
-# Common Module Features
+# Características comunes de módulos
 
-## Themes and Containers
+## Temas y Contenedores
 
-While not traditionally considered part of module development, themes and containers define how a module is displayed on a page. Understanding the relationship between these elements will help you build modules that play well with other content on the page.
+Aunque tradicionalmente no se considera parte del desarrollo de un módulo, los temas y los contenedores definen cómo se muestra un módulo en una página. Comprender la relación entre estos elementos le ayudará a construir módulos que funcionen bien con otro contenido de la página.
 
-Themes define the look and feel of pages within DNN, and modules should be designed to work with a wide variety of styles. Through the placement of panes, the theme defines where modules can be positioned on a webpage.
+Los temas definen la apariencia de las páginas dentro de DNN, y los módulos deben diseñarse para funcionar con una amplia variedad de estilos. A través de la colocación de los paneles, el tema define dónde se pueden colocar los módulos en una página web.
 
-> [!Tip]
-> If you choose to define styles specific to your module, specify the scope of your styles in a root element (usually a `<div>` that wraps your entire markup) within your module. This ensures that your styles will be more specific than the styles defined in the theme.
+> [!Sugerencia] Si elige definir estilos específicos para su módulo, especifique el alcance de sus estilos en un elemento raíz (generalmente un `<div>` que envuelve su marcado completamente) dentro de su módulo. Esto asegura que sus estilos serán más específicos que los estilos definidos en el tema.
 
-DNN wraps a container around each module in the page. In addition to defining the look and feel of content blocks on the page, the container also provides UI elements that manage the module, such as the module title, the module action menu, and the action links.
+DNN envuelve un contenedor alrededor de cada módulo en la página. Además de definir la apariencia de los bloques de contenido en la página, el contenedor también proporciona elementos de IU que administran el módulo, como el título, el menú de acción y los enlaces de acción  del módulo.
 
-## Module Action Menu
+## Menú de acciones
 
-The module action menu provides standard functionality, such as module deletion, printing, content import/export, and content placement. Menu items are dynamically created based on module features and site settings.
-
-
-
-![Module action menu](/images/scr-actionmenu-edit-icons.png)
+El menú de acción del módulo proporciona una funcionalidad estándar, como eliminación de módulos, impresión, importación/exportación de contenido y la ubicación de contenido. Los elementos del menú se crean dinámicamente según las características del módulo y la configuración del sitio.
 
 
 
-You can customize the module action menu by implementing the following features in your module:
-
-*   Provide a link to a help page manifest to change the Help link in the menu.
-*   Implement the IPortable interface to display the Import and Export links in the menu.
-
-    Note: The IPortable interface is also used by DNN when a page/portal template is created or used.
-
-*   Implement the ISearchable interface to display the Syndicate link in the menu.
-
-    Note: An Administrator must enable the Syndicate feature in the module settings.
-
-*   Implement the IActionable interface to display custom menu items.
-
-    Note: Custom menu items are included in the pencil icon menu. If IActionable is not implemented, then the pencil icon is not shown.
-
-
-## Module Settings
-
-DNN includes the settings objects for the Host, Portal, Tab, TabModule, and Module entities. To simplify module development, DNN manages the storage and retrieval of these settings. You might need to access these common settings to determine which of your module's features to enable.
-
-You can also create custom settings and the associated UI to manage those custom settings.
+![Menú de acciones](/images/scr-actionmenu-edit-icons.png)
 
 
 
-![Custom module settings](/images/scr-module-settings.png)
+Puede personalizar el menú de acción del módulo implementando las siguientes funciones en su módulo:
+
+*   Proporcionar un enlace a un manifiesto de la página de ayuda para cambiar el enlace de Ayuda en el menú.
+
+*   Implemente la interfaz `IPortable` para mostrar las opciones de Importar y Exportar en el menú.
+
+    Nota: DNN también utiliza la interfaz `IPortable` cuando se crea o utiliza una página/plantilla de portal.
+
+*   Implemente la interfaz `ISearchable` para mostrar el enlace de Sindicar en el menú.
+
+   Nota: Un administrador debe habilitar la función de Sindicxacuión de contenido en la configuración del módulo.
+   
+*  Implemente la interfaz `IActionable` para mostrar elementos de menú personalizados.
+
+    Nota: los elementos del menú personalizado se incluyen en el menú del icono del lápiz. Si `IActionable` no está implementado, entonces el icono del lápiz no se mostrará.
+
+
+## Ajustes/Configuraciones del módulo
+
+DNN incluye los objetos de configuración para las entidades Host, Portal, Tab, TabModule y Module. Para simplificar el desarrollo de módulos, DNN administra el almacenamiento y la recuperación de estos valores de configuraciones. Es posible que deba acceder a estos valores para determinar cuáles de las funciones de su módulo habilitar.
+
+También puede crear configuraciones personalizadas y la IU asociada para administrar dichas configuraciones personalizadas.
+
+![Ajustes del módulo](/images/scr-module-settings.png)
 
 
 
-## Packaging
+## Empaquedato
 
-Modules must be packaged in a standard format to be shared with other DNN websites. DNN packages are essentially .zip files that include a custom DNN manifest. The manifest is an XML file with a .dnn extension; it defines how the components of your module are installed.
+Los módulos deben estar empaquetados en un formato estándar para compartirlos con otros sitios de DNN. Los paquetes DNN son esencialmente archivos .zip que incluyen un manifiesto DNN personalizado. El manifiesto es un archivo XML con una extensión .dnn; que define cómo se instalan los componentes de su módulo.
 
-You can bundle modules into packages:
+Se pueden crear estos paquetes:
 
-*   manually,
-*   by using the module packaging wizard, which is available through the Module Creator or the Extensions page, or
+*   Manualmente,
+*   Utilizando el asistente de empaquetado de módulos, que está disponible a través del Creador de módulos en la página de Extensiones
 
-    ![Click Create Package to start the wizard.](/images/scr-module-package.png)
-
-
-
-*   by using the build scripts that come with standard module templates.
-
-## Security
-
-DNN provides a role-based access control system that provides granular control at the site level, page level, and module level. You can extend this system to increase granularity of permission settings at the module level.
+    ![Haga clic en Crear paquete para iniciar el asistente](/images/scr-module-package.png)
 
 
+*   Mediante el uso de scripts de construcción que vienen con las plantillas de módulo estándar.
 
-![Include custom module permissions](/images/scr-module-permissions.png)
+## Seguridad
 
+DNN viene con un sistema de control de acceso basado en roles que proporciona control granular a nivel de sitio, nivel de página y nivel de módulo. Puede ampliar este sistema para aumentar la granularidad de la configuración de permisos en el nivel de módulo.
 
+![Incluir permisos de módulos personalizados](/images/scr-module-permissions.png)
 
-Modules can also call DNN security APIs to check a user's current permissions before enabling secured features.
+Los módulos también pueden llamar a las API de seguridad de DNN para verificar los permisos actuales de un usuario antes de habilitar funciones seguras.
