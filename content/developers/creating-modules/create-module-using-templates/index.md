@@ -1,7 +1,7 @@
 ﻿---
 uid: create-module-using-templates
-locale: en
-title: Create a Module Using Templates
+locale: es
+title: Crear un módulo usando plantillas
 dnnversion: 09.02.00
 previous-topic: use-module-creator
 next-topic: start-vs-project-with-templates
@@ -9,18 +9,18 @@ related-topics: mvc-module-development,spa-module-development,providers
 links: ["[DNN API Reference](https://www.dnnsoftware.com/dnn-api/)","[DNN Wiki: Module Development](https://www.dnnsoftware.com/wiki/module-development)","[DNN Community Blog: Module Development series by Clinton Patterson](https://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro)","[Using the new Module Development Templates for DotNetNuke 7 by Chris Hammond](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot)"]
 ---
 
-# Create a Module Using Templates
+# Crear un módulo usando plantillas
 
-## Prerequisites
+## Pre-requisitos
 
-*   [A local DNN installation](xref:set-up-dnn) with Host permissions.
-*   Visual Studio 2015 is the recommended IDE for developing DNN modules.
+*   [Una instalación de DNN local](xref:set-up-dnn) con permisos de host.
+*   Visual Studio 2015 es el IDE recomendado para desarrollar módulos DNN.
 
-## Steps
+## Pasos
 
-1.  [Start a Visual Studio project using DNN templates.](xref:start-vs-project-with-templates)
-2.  Modify the Visual Studio project to add functionality to your new module.
-3.  Build, debug, and package.
+1.  [Inicie un proyecto de Visual Studio usando plantillas DNN](xref:start-vs-project-with-templates).
+2.  Modifique el proyecto de Visual Studio para agregar funcionalidad a su nuevo módulo.
+3.  Construir, depurar y empaquetar.
 
 
 
@@ -28,14 +28,13 @@ links: ["[DNN API Reference](https://www.dnnsoftware.com/dnn-api/)","[DNN Wiki: 
 
 
 
-    1.  Build in debug mode.
+    1.  Genere en modo de depuración.
 
-        This build produces .pdb files that are needed when stepping through your code.
+        Esta compilación genera archivos .pdb que son necesarios cuando se depura su código.
+    2.  Depure, si es necesario.
+    3.  Cree el archivo de [Manifiesto DNN](xref:dnn-manifest-schema).
+    4.  Genere en modo de lanzamiento..
 
-    2.  Debug, if needed.
-    3.  Create the [DNN Manifest](xref:dnn-manifest-schema).
-    4.  Build in release mode.
+        La compilación crea un archivo zip de instalación (para que empaquete su módulo) en la carpeta `DesktopModules` de su organización/módulo/instalación.
 
-        This build creates an installation zip file (your module's package) in the folder Desktop Modules/yourorganization/yourmodule/install.
-
-    5.  Alternatively, you can manually [pack your module](xref:developers-pack-extension).
+    5.  Alternativamente, puede [empaquetar manualmente su módulo](xref:developers-pack-extension).
