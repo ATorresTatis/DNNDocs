@@ -19,14 +19,10 @@ links: ["[DNN API Reference](https://www.dnnsoftware.com/dnn-api/)","[DNN Wiki: 
 ## Pasos
 
 1.  [Inicie un proyecto de Visual Studio usando plantillas DNN](xref:start-vs-project-with-templates).
-2.  Modifique el proyecto de Visual Studio para agregar funcionalidad a su nuevo módulo.
+2.  Modifique el proyecto de Visual Studio para agregar la funcionalidad a su nuevo módulo.
 3.  Construir, depurar y empaquetar.
 
-
-
-    ![Visual Studio build type dropdown](/images/scr-VS2015DebugReleaseBuildOptions.png)
-
-
+    ![Tipo de construcción de Visual Studio desplegable](/images/scr-VS2015DebugReleaseBuildOptions.png)
 
     1.  Genere en modo de depuración.
 
