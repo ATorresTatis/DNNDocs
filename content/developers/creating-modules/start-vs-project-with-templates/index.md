@@ -60,14 +60,15 @@ links: ["[Blog de la comunidad de DNN: Desarrollo de módulos para no desarrolla
 
         ![Visual Studio \> Nuevo \> Proyecto con plantillas DNN8](/images/scr-VS2015NewProjectWithTemplates-01.png)
 
-    4.  Configure los ajustes.
+    4.  Ingrese los ajustes
 
-        *   Nombre: el nombre de su nuevo módulo.
-        *   Ubicación: una subcarpeta dentro de la carpeta `DesktopModules` de su carpeta de instalación de DNN
+        *   Nombre: El nombre de su nuevo módulo.
+        *   Ubicación: Una subcarpeta dentro de la carpeta `DesktopModules` en su carpeta de instalación de DNN.
+
 
         >[!Sugerencia] Utilice el nombre de su empresa o un nombre único como nombre de la subcarpeta para evitar conflictos con otros creadores de módulos en un entorno de producción.
 
-    5.  Desmarque la opción crear directorio para solución.
+    5.  Desmarque la opción crear directorio para solución
 
         Las plantillas esperan que el archivo de solución de Visual Studio (.sln) esté en la misma carpeta que el archivo de proyecto. Al marcar esta opción, el archivo de la solución se coloca en una carpeta diferente, lo que puede causar errores de compilación.
 
