@@ -31,7 +31,7 @@ links: ["[Blog de la comunidad de DNN: Desarrollo de módulos para no desarrolla
         ![En línea> Galería de Visual Studio, busque DotNetNuke y descargue](/images/scr-VS2015Search4DNN.png)
 
 
-    4.  Haga clic en el botón Descargar para btener las plantillas del proyecto de DotNetNuke.
+    4.  Haga clic en el botón Descargar para obtener las plantillas del proyecto de DotNetNuke.
 
     > [!Nota] Vea las instrcciones de [Chris Hammond's](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot) para conocer otras formas de instalación.
 
