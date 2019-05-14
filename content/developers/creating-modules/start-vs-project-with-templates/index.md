@@ -1,91 +1,74 @@
 ﻿---
 uid: start-vs-project-with-templates
-locale: en
-title: Start a Visual Studio Project with Templates
+locale: es
+title: Iniciar un proyecto de Visual Studio con plantillas
 dnnversion: 09.02.00
 previous-topic: create-module-using-templates
 next-topic: test-module
-links: ["[DNN Community Blog: Module Development for Non-Developers, Skinners, & DNN Beginners — Blog Series by Clinton Patterson](https://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro)","[Using the new Module Development Templates for DotNetNuke 7 by Chris Hammond](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot)"]
+links: ["[Blog de la comunidad de DNN: Desarrollo de módulos para no desarrolladores, expertos en temas o principiantes de DNN - Serie de blogs por Clinton Patterson](https://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro)","[Uso de las nuevas plantillas de desarrollo de módulos para DotNetNuke 7 por Chris Hammond](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot)"]
 ---
 
-# Start a Visual Studio Project with Templates
+# Iniciar un proyecto de Visual Studio con plantillas
 
-## Prerequisites
+## Pre-requisitos
 
-*   [A local DNN installation](xref:set-up-dnn) with Host permissions.
-*   Visual Studio 2015 is the recommended IDE for developing DNN modules.
+*   [Una instalación de DNN local con permisos de host](xref:set-up-dnn)
+*   Visual Studio 2015 es el IDE recomendado para desarrollar módulos DNN.
 
-## Steps
+## Pasos
 
-1.  Download and install the templates.
+1.  Descargue e instale las plantillas (Chris Hammond).    
 
-    For Chris Hammond's templates,
+    1.  Ejecute Visual Studio como un usario administrador.
+    2.  Vaya a Herramientas> Extensiones y actualizaciones.
 
-    1.  Run Visual Studio as an administrator.
-    2.  Go to Tools \> Extensions and Updates.
-
-
-
-        ![Tools > Extensions and Updates](/images/scr-VS2015ExtAndUpdates.png)
+        ![Herramientas> Extensiones y actualizaciones](/images/scr-VS2015ExtAndUpdates.png)
 
 
 
-    3.  Highlight the Online \> Visual Studio Gallery tree and search for DotNetNuke.
+    3.  Vaya en el árbol a la ocpión En línea > Galería de Visual Studio y busque DotNetNuke.
+
+        ![En línea> Galería de Visual Studio, busque DotNetNuke y descargue](/images/scr-VS2015Search4DNN.png)
 
 
+    4.  Haga clic en el botón Descargar para btener las plantillas del proyecto de DotNetNuke.
 
-        ![In the Online > Visual Studio Gallery tree, search for DotNetNuke then Download.](/images/scr-VS2015Search4DNN.png)
+    > [!Nota] Vea las instrcciones de [Chris Hammond's](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot) para conocer otras formas de instalación.
 
+    Para plantillas de DNN 8,
 
+    1.  [Descargue el archivo .vsix apropiado](https://github.com/dnnsoftware/DNN.Templates/releases)
 
-    4.  Click the Download button for the DotNetNuke Project Templates.
-
-    > [!Note]
-    > See [Chris Hammond's instructions](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot) for other installation methods.
-
-    For the DNN 8 templates,
-
-    1.  [Download the appropriate .vsix file.](https://github.com/dnnsoftware/DNN.Templates/releases)
-
-        Two are included:
+        Se incluyen dos:
 
         *   Dnn.Mvc.Module.vsix
         *   Dnn.Spa.Module.vsix
 
+        ![Descargar las plantillas de DNN8 desde Github](/images/scr-VS2015DNN8Templates-11.png)
 
+    2.  En su carpeta de descarga, haga doble clic en el archivo .vsix para instalar la plantilla en Visual Studio.
+2.  Cree un nuevo proyecto de Visual Studio.
+    1.  Ejecute Visual Studio como un usuario administrador.
+    2.  Archivo \> Nuevo \> Proyecto
+    3.  Seleccione la plantilla para el nuevo proyecto.
 
-        ![Download DNN8 templates from Github.](/images/scr-VS2015DNN8Templates-11.png)
+        Para las plantillas de Chris Hammond, vaya a Plantillas \> Visual C # o Visual Basic \> DotNetNuke.
 
+        ![Visual Studio \> Nuevo \> Proyecto con plantillas de Chris Hammond](/images/scr-VS2015NewProjectWithTemplates-02.png)
 
+        Para las plantillas de DNN 8, vaya a Plantillas \> Visual C # \> DNN.
 
-    2.  In your download folder, double-click the .vsix file to install the template in Visual Studio.
-2.  Create a new Visual Studio project.
-    1.  Run Visual Studio as an administrator.
-    2.  File \> New \> Project
-    3.  Select the template for the new project.
+        ![Visual Studio \> Nuevo \> Proyecto con plantillas DNN8](/images/scr-VS2015NewProjectWithTemplates-01.png)
 
-        For Chris Hammond's templates, go to Installed \> Templates \> Visual C# or Visual Basic \> DotNetNuke.
+    4.  Configure los ajustes.
 
-        ![Visual Studio > New > Project with Chris Hammond's templates](/images/scr-VS2015NewProjectWithTemplates-02.png)
+        *   Nombre: el nombre de su nuevo módulo.
+        *   Ubicación: una subcarpeta dentro de la carpeta `DesktopModules` de su carpeta de instalación de DNN
 
+        >[!Sugerencia] Utilice el nombre de su empresa o un nombre único como nombre de la subcarpeta para evitar conflictos con otros creadores de módulos en un entorno de producción.
 
+    5.  Desmarque la opción crear directorio para solución.
 
-        For the DNN 8 templates, go to Installed \> Templates \> Visual C# \> Dnn.
+        Las plantillas esperan que el archivo de solución de Visual Studio (.sln) esté en la misma carpeta que el archivo de proyecto. Al marcar esta opción, el archivo de la solución se coloca en una carpeta diferente, lo que puede causar errores de compilación.
 
-        ![Visual Studio > New > Project with DNN8 templates](/images/scr-VS2015NewProjectWithTemplates-01.png)
-
-
-
-    4.  Fill in the settings.
-
-        *   Name: the name of your new module
-        *   Location: a subfolder inside the DesktopModules folder of your DNN installation folder
-
-        >[!Tip]
-        >Use your company name or a unique name as the subfolder name to avoid conflicts with other module creators in a production environment.
-
-    5.  Uncheck Create directory for solution.
-
-        The templates expect Visual Studio's solution file (.sln) to be in the same folder as the project file. Checking this option puts the solution file in a different folder, which can cause build errors.
-
-3.  Modify the Visual Studio project to add functionality to your new module.
+3.  Modifique el proyecto de Visual Studio para agregar la funcionalidad a su nuevo módulo.
