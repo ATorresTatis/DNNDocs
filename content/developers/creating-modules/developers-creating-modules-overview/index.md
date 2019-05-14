@@ -1,27 +1,27 @@
 ﻿---
 uid: developers-creating-modules-overview
-locale: en
-title: Creating a Module
+locale: es
+title: Creación de un módulo
 dnnversion: 09.02.00
 related-topics: dnn-manifest-schema,module-features,module-architecture,about-evs
 links: ["[DNN Module APIs](https://www.dnnsoftware.com/dnn-api/)","[DNN 8 API Reference](https://www.dnnsoftware.com/dnn-api/)","[DNN Wiki: Module Development](https://www.dnnsoftware.com/wiki/module-development/)","[DNN Community Blog: Module Development series by Clinton Patterson](https://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro/)","[Using the new Module Development Templates for DotNetNuke 7 by Chris Hammond](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/)"]
 ---
 
-# Creating a Module
+# Creación de un módulo
 
-You can produce a module in different ways:
+Puede crear un módulo de diferentes formas:
 
-*   Create an entire module from scratch. For very simple modules, you can use the DNN Module Creator.
-*   Start with module development templates, such as:
-    *   [DNN 8 Templates](https://github.com/dnnsoftware/DNN.Templates/releases/)
-    *   [Chris Hammond's DotNetNuke Module and Theme Development Templates](https://github.com/ChrisHammond/DNNTemplates/) ([Installation instructions](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/))
-*   Customize a pre-existing module.
+*   Crear un módulo desde cero. Para módulos muy simples, puede utilizar DNN Module Creator.
+*   Comienzar con las plantillas de desarrollo de módulos, como:
+    *   [Plantillas para DNN 8](https://github.com/dnnsoftware/DNN.Templates/releases/)
+    *   [Plantillas de desarrollo de temas y módulos de Chris Hammond](https://github.com/ChrisHammond/DNNTemplates/) ([Instrucciones de instalación](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/))
+*   Personalizar un módulo preexistente..
 
-    Thousands of third-party modules and themes are available from these sources:
+    Miles de módulos y temas de terceros están disponibles en estas fuentes::
 
-    *   [DNN Store](https://store.dnnsoftware.com): Extensions for sale. Some developers provide versions that include the source code.
-    *   [DNN Community Github](https://www.github.com/DnnCommunity): Community maintained extensions including most of the formerly included core modules.
-    *   [DNN Connect Community extensions page](https://www.dnn-connect.org/community/community-extensions): A collection of community maintained modules maitained by Dnn Connect.
+    *   [DNN Store](https://store.dnnsoftware.com): Extensiones para la venta. Algunos desarrolladores proporcionan versiones que incluyen el código fuente.
+    *   [Comunidad de DNN en Github](https://www.github.com/DnnCommunity): Extensiones mantenidas por la comunidad que incluyen la mayoría de los módulos básicos que vienen con el producto.
+    
+    *   [Página de extensiones de la comunidad DNN Connect](https://www.dnn-connect.org/community/community-extensions): Una colección de módulos mantenidos por la comunidad y por Dnn Connect.
 
-
-You can also use different programming frameworks (Web Forms, MVC, SPA) and languages (C#, VB) to create your module.
+También puede usar diferentes marcos de programación como (Web Forms, MVC, SPA) o lenguajes de programación com (C# o VB) para crear su módulo.
