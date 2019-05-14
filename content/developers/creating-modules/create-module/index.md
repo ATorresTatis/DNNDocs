@@ -1,23 +1,22 @@
 ﻿---
 uid: create-module
-locale: en
-title: Creating a Module
+locale: es
+title: Creando un módulo
 dnnversion: 09.02.00
 related-topics: providers
 links: ["[DNN 8 API Reference](https://www.dnnsoftware.com/dnn-api/)","[DNN Wiki: Module Development](https://www.dnnsoftware.com/wiki/module-development/)","[DNN Community Blog: Module Development series by Clinton Patterson](https://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro/)","[Using the new Module Development Templates for DotNetNuke 7 by Chris Hammond](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/)"]
 ---
 
-# Creating a Module
+# Creando un módulo
 
-You can produce a module in different ways:
+Puede generar un módulo de diferentes maneras:
 
-*   Create an entire module from scratch. For very simple modules, you can use the DNN Module Creator.
-*   Start with module development templates, such as:
-    *   [DNN 8 Templates](https://github.com/dnnsoftware/DNN.Templates/releases/)
-    *   [Chris Hammond's DotNetNuke Module and Theme Development Templates](https://github.com/ChrisHammond/DNNTemplates/) ([Installation instructions](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/))
-*   Customize a pre-existing module.
+*   Cree un módulo desde cero. Para módulos muy simples, puede usar DNN Module Creator.
+*   Comience con las plantillas de desarrollo de módulos, tales como:
+    *   [Plantillas para DNN 8](https://github.com/dnnsoftware/DNN.Templates/releases/)
+    *   [Plantillas de desarrollo de temas y módulos DotNetNuke de Chris Hammond](https://github.com/ChrisHammond/DNNTemplates/) [(Instrucciones de instalación)](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/))
+*   Personalizar un módulo preexistente.
 
-    Thousands of third-party modules and themes are available from the [DNN Store](https://store.dnnsoftware.com). There are extensions for sale, including versions that include the source code, as well as some free extension.
+Miles de módulos y temas de terceros están disponibles en la [Tienda de DNN](https://store.dnnsoftware.com). Hay extensiones para la venta, incluidas versiones que incluyen el código fuente, así como algunas extensiones gratuitas.
 
-
-You can also use different programming frameworks (Web Forms, MVC, SPA) and languages (C#, VB) to create your module.
+También puede usar diferentes marcos de programación (Web Forms, MVC, SPA) y lenguajes de programación (C #, VB) para crear su módulo.
