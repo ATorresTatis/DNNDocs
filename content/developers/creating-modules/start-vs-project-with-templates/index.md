@@ -35,7 +35,7 @@ links: ["[Blog de la comunidad de DNN: Desarrollo de módulos para no desarrolla
 
     > [!Nota] Vea las instrcciones de [Chris Hammond's](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot) para conocer otras formas de instalación.
 
-    Para plantillas de DNN 8,
+    Para plantillas de DNN 8
 
     1.  [Descargue el archivo .vsix apropiado](https://github.com/dnnsoftware/DNN.Templates/releases)
 
