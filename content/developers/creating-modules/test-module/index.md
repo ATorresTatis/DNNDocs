@@ -1,33 +1,30 @@
 ﻿---
 uid: test-module
-locale: en
-title: Test Your Module
+locale: es
+title: Pruebe su módulo
 dnnversion: 09.02.00
 previous-topic: start-vs-project-with-templates
 related-topics: about-evs
 ---
 
-# Test Your Module
+# Pruebe su módulo
 
-## Steps
+## Pasos
 
-1.  Run your module through the DNN [Extension Verification Service](https://evs.dnnsoftware.com/) (EVS) to perform [compatibility tests in three areas](xref:about-evs).
-2.  [Install the package.](xref:install-extension)
-3.  In your DNN installation, apply the module to a pane in a new webpage.
-    1.  Modules \> Add New Module
-
-
-
-        ![Module > Add New Module](/images/scr-menuModulesAddNew.png)
+1.  Ejecute su módulo a través del [Servicio de Verificación de Extensión (EVS)](https://evs.dnnsoftware.com/) de DNN para realizar pruebas de [compatibilidad en tres áreas](xref:about-evs).
+2.  [Instale el paquete](xref:install-extension)
+3.  En su instalación de DNN, agregue el módulo a un panel en una nueva página web.
+    1.  Módulos \> Añadir nuevo módulo
 
 
 
-    2.  Find your module in the Available Modules bar and drag it to the page.
+        ![Módulo> Añadir nuevo módulo](/images/scr-menuModulesAddNew.png)
 
 
 
-        ![Drag your module to a pane in the page.](/images/scr-cp-ModulesList-Drag.png)
+    2.  Encuentre su módulo en la barra de Módulos disponibles y arrástrelo a la página.
+
+        ![Arrastre su módulo a un panel en la página](/images/scr-cp-ModulesList-Drag.png)
 
 
-
-4.  Check how the webpage looks in different browsers.
+4.  Compruebe cómo se ve la página web en diferentes navegadores
