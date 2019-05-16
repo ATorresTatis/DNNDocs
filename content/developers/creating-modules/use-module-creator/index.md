@@ -1,103 +1,73 @@
 ﻿---
 uid: use-module-creator
-locale: en
-title: Use the Module Creator
+locale: es
+title: Utilizar el creador de módulos
 dnnversion: 09.02.00
 next-topic: create-module-using-templates
 related-topics: module-module-creator,web-forms-module-development,spa-module-development,mvc-module-development
 ---
 
-# Use the Module Creator
+# Utilizar el creador de módulos
 
-## Overview
+## Visión general
 
-The DNN Module Creator enables developers to quickly build modules without a full-blown IDE, like Visual Studio. It automates many of the initial module creation tasks so that module developers can focus on writing code. In addition, the Module Creator can be extended with custom templates to further streamline development.
+La funcionalidad DNN Module Creator permite a los desarrolladores crear módulos rápidamente sin utilizar un IDE, como Visual Studio. Automatiza muchas de las tareas iniciales de creación de módulos, para que los desarrolladores puedan centrarse en escribir su código. Además, DNN Module Creator se puede ampliar con plantillas personalizadas para optimizar aún más el desarrollo.
 
-The DNN Module Creator is generally recommended only for simple modules. For more complex modules, you can create a Web Forms module using templates.
+El uso de DNN Module Creator se recomienda generalmente solo para módulos simples. Para módulos más complejos, puede crear un módulo de formularios web utilizando plantillas.
 
-## Prerequisites
+## Pre-requisitos
 
-*   [A local DNN installation](xref:set-up-dnn) with Host permissions.
+*   [Una instalación de DNN local con permisos de host](xref:set-up-dnn).
 
-## Steps
+## Pasos
 
-1.  Create, copy, or edit a page.
-    *   [Create a page.](xref:obsolete)
-    *   [Copy a page.](xref:obsolete)
-    *   [Edit a page.](xref:obsolete)
-2.  Within a pane, click/tap on the module icon.
+1.  Crear, copiar o editar una página.
+    *   [Crear una pagina](xref:obsolete)
+    *   [Copiae una página](xref:obsolete)
+    *   [Editar una página](xref:obsolete)
+
+2.  Dentro de un panel, haga clic en el icono del módulo.
+          
+    ![Panel con iconos de contenido](/images/scr-pane-with-content-icons-module.png)
+             
+3.  Busque el Creador de Módulos entre los módulos instalados.         
     
-      
+    ![Búsqueda del creador de módulos](/images/scr-menuModulesList04ModuleCreator.png)         
     
-    ![Pane with content icons](/images/scr-pane-with-content-icons-module.png)
+4.  Arrastre el creador de módulos a cualquier panel de la página web.          
     
-      
+    ![Arrastrar a un panel](/images/scr-menuModulesModuleCreatorDrag.png)
+             
+5.  Rellene el formulario de creación de módulos.         
     
-3.  Search for the Module Creator among the installed modules.
-    
-      
-    
-    ![Search for Module Creator.](/images/scr-menuModulesList04ModuleCreator.png)
-    
-      
-    
-4.  Drag the Module Creator module to any pane in the webpage.
-    
-      
-    
-    ![Drag to a pane.](/images/scr-menuModulesModuleCreatorDrag.png)
-    
-      
-    
-5.  Fill in the Module Creation form.
-    
-      
-    
-    ![Module Creation form](/images/scr-ModuleCreatorForm.png)
-    
-      
-    |**Field**|**Description**|
+    ![Formulario de creación de módulos](/images/scr-ModuleCreatorForm.png)
+          
+    |**Campo**|**Descripción**|
     |---|---|
-    |**Owner Name**|Name of your organization. Must contain only alphanumeric characters. Used to create a folder to distinguish your modules from those created by other module creators. Also used as the namespace for your code.|
-    |**Module Name**|Must contain only alphanumeric characters. Used to create the module's friendly name and full name. The full name is \[OwnerName\].\[ModuleName\] with space characters removed.|
-    |**Language**|The selected language (C#, VB, or Web) determines which templates become available.|  
-    |**Template**|For **C#** and **VB**, choose among:<ul><li>**Inline Script**. Code is embedded. Also uses user controls.</li><li>**Razor**. Uses Razor scripts to render views.</li><li>**User Control**. Code is stored in separate files. Most commonly used.</li></ul>For **Web**, the **HTML** template allows you to use HTML, CSS, and JavaScript.|
-    |**Control Name**|Name of the primary module control that is registered with DNN.|
+    |**Nombre del propietario**|Nombre de su organización. Debe contener únicamente caracteres alfanuméricos. Se utiliza para crear una carpeta para distinguir sus módulos de aquellos creados por otros creadores de módulos. También se utiliza como el espacio de nombres para su código.|
+    |**Nombre del módulo**|Debe contener únicamente caracteres alfanuméricos. Se utiliza para crear el nombre descriptivo y el nombre completo del módulo. El nombre completo es \[OwnerName\].\[ModuleName\]|
+    |**Idioma**|El idioma seleccionado (C#, VB o Web) determina qué plantillas estarán disponibles.|  
+    |**Plantilla**|Para **C#** y **VB**, elija:<ul><li>**Script en línea**. El código está embebido. También utiliza controles de usuario.</li><li>**Razor**. Utiliza scripts de Razor para renderizar las vistas.</li><li>**Control de usuario**. El código se almacena en archivos separados. Es el formto más utilizado.</li></ul>Para **Web**, la plantilla **HTML** permite utilizar HTML, CSS y JavaScript.|
+    |**Nombre del Control**|Nombre del control de módulo primario que está registrado con DNN.|
     
-    The new module replaces the Module Creator form in the pane.
-    
-      
-    
-    ![Module created.](/images/scr-ModuleCreatorModuleCreated.png)
-    
-      
-    
-6.  Customize the module.
-    1.  From the gear icon, choose **Develop**.
+    El nuevo módulo reemplazará el formulario del creador del módulo en el panel.
+     
+    ![Módulo creado](/images/scr-ModuleCreatorModuleCreated.png)
+              
+6.  Personalizar el módulo.
+    1.  Desde el icono con forma de engranaje, seleccione **Desarrollar**.                 
         
-          
+        ![Ajustes (icono de engranaje) \> Desarrollar](/images/scr-ModuleGearMenuDevelop.png)                  
         
-        ![Settings (gear icon) > Develop](/images/scr-ModuleGearMenuDevelop.png)
+    2.  En el archivo `View.ascx`, elimine todas las líneas de código, excepto la primera.                
         
-          
-        
-    2.  In the View.ascx file, delete all the lines of code, except the first one.
-        
-          
-        
-        ![In View.ascx, delete all except first line.](/images/scr-ModuleViewAscx.png)
-        
-          
-        
-    3.  Add markup to customize the module. Then click **Update**    to save your changes.
-        
-          
-        
-        ![Customize the module.](/images/scr-ModuleCustomize.png)
-        
-          
-        
-        Example:
+        ![En View.ascx, borre todo excepto la primera línea](/images/scr-ModuleViewAscx.png)
+                          
+    3.  Añada el código de marcado necesario para personalizar el módulo. Luego haga clic en **Actualizar** para guardar los cambios.
+                         
+        ![Personalizar el módulo](/images/scr-ModuleCustomize.png)
+                          
+        Ejemplo:
         
         ```
          
@@ -105,16 +75,10 @@ The DNN Module Creator is generally recommended only for simple modules. For mor
                                     
         ```
         
-    4.  From the **Select File** dropdown, choose the View.ascx.cs file.
+    4. Desde el menú desplegable **Seleccionar archivo** , elija el archivo `View.ascx.cs`.
+                          
+        ![Seleccione View.ascx.cs.](/images/scr-ModuleViewAscxCs.png)                  
         
-          
-        
-        ![Select View.ascx.cs.](/images/scr-ModuleViewAscxCs.png)
-        
-          
-        
-    5.  Remove all the code in the **Event Handlers** region and click **Update** to save your changes.
-        
-          
-        
-        ![Remove Event Handlers.](/images/scr-ModuleDeleteEventHandlers.png)
+    5.  Elimine todo el código en la región **Controladores de eventos** y haga clic en **Actualizar** para guardar los cambios.
+                          
+        ![Quitar los controladores de eventos](/images/scr-ModuleDeleteEventHandlers.png)
