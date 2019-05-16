@@ -23,7 +23,7 @@ El uso de DNN Module Creator se recomienda generalmente solo para módulos simpl
 
 1.  Crear, copiar o editar una página.
     *   [Crear una pagina](xref:obsolete)
-    *   [Copiae una página](xref:obsolete)
+    *   [Copiar una página](xref:obsolete)
     *   [Editar una página](xref:obsolete)
 
 2.  Dentro de un panel, haga clic en el icono del módulo.
