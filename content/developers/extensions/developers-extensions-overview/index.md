@@ -18,9 +18,9 @@ Antes de crear una extensión, vale la pena verificar primero si ya existe la ex
 
 # Tipos de Extensiones
 
-Often, developers will create a _module_ extension to solve a problem when another type of extension is more suitable.  Of course, you can also use your module to enhance or provide a configuration interface for other extensions. 
+A menudo, los desarrolladores crearán una extensión de _módulo_ para resolver un problema. Por supuesto, también puede usar su módulo para mejorar o proporcionar una interfaz de configuración para otras extensiones.
 
-For example, if you have code to run a custom report on regular basis, you would typically create a _scheduling_ extension. However, since the scheduler is only available to SuperUser account, if you want to allow other users to run it ad-hoc or to change the schedule, you could create a  _module_ that has a front-end to expose some of those settings. You could then provide access to that module for users and/or security roles using DNN’s module permissions mechanism.
+Por ejemplo, si tiene un código para ejecutar un informe personalizado de forma regular, normalmente programará una tarea para generar la información. Sin embargo, dado que el programador de tareas solo está disponible para la cuenta de _Superusuario_ (conocida como la cuenta Host), si desea permitir que otros usuarios ejecuten de forma ad hoc el reporte o que modifiquen la programación, puede crear un módulo que tenga una interfaz para exponer algunas de esas configuraciones. Luego, puede proporcionar acceso a ese módulo para usuarios y/o roles de seguridad mediante el mecanismo de permisos del módulo de DNN.
 
 *   *JavaScript Library* - Allows you to install a JavaScript framework (e.g., Angular or React) in a way that allows multiple extensions to safely ask for and include the framework without loading it multiple times. It also allows superusers to globally define from where and how the library loads.  
 *   *Library* - A file known as a DLL is packaged and installed so that it's available for any number of purposes. Some extensions may use it as a shared API and/or it can be one of the other types of extensions listed below.  For example, a URL Provider is distributed as a library extension.  
