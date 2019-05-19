@@ -1,22 +1,22 @@
 ﻿---
 uid: developers-extensions-overview
-locale: en
-title: Creating a Module
+locale: es
+title: Creación de un módulo 
 dnnversion: 09.02.00
 related-topics: dnn-manifest-schema,module-features,module-architecture,about-evs
 links: ["[DNN Module APIs](https://www.dnnsoftware.com/dnn-api/)","[DNN 8 API Reference](https://www.dnnsoftware.com/dnn-api/)","[DNN Wiki: Module Development](https://www.dnnsoftware.com/wiki/module-development/)","[DNN Community Blog: Module Development series by Clinton Patterson](https://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro/)","[Using the new Module Development Templates for DotNetNuke 7 by Chris Hammond](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/)"]
 ---
 
-# Should You Create an Extension?
+#¿Debería crear una extensión?
 
-Before you create an extension, it's worth your time to first check to see if the extension you want already exists.  Try searching the resources below first to see if the extension you want to create already exists.
+Antes de crear una extensión, vale la pena verificar primero si ya existe la extensión que necesita. Intente buscar en alguno de estos recursos para ver si la extensión que desea crear ya existe.
 
-* [DNN Store](https://store.dnnsoftware.com/)
-* [Search GitHub](https://github.com/search?q=dnn)
-* [Use nvQuickPulse to find an Extensionn](https://github.com/nvisionative/nvQuickPulse/blob/master/README.md)
-* [Look through the DNN-Connect directory](https://www.dnn-connect.org/community/community-extensions)
+* [Tienda DNN](https://store.dnnsoftware.com/)
+* [Buscar en GitHub](https://github.com/search?q=dnn)
+* [Usar nvQuickPulse para encontrar una extensión](https://github.com/nvisionative/nvQuickPulse/blob/master/README.md)
+* [Buscar a través del directorio DNN-Connect](https://www.dnn-connect.org/community/community-extensions)
 
-# Types of Extensions
+# Tipos de Extensiones
 
 Often, developers will create a _module_ extension to solve a problem when another type of extension is more suitable.  Of course, you can also use your module to enhance or provide a configuration interface for other extensions. 
 
