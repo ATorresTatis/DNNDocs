@@ -4,10 +4,10 @@ locale: es
 title: Creación de un módulo 
 dnnversion: 09.02.00
 related-topics: dnn-manifest-schema,module-features,module-architecture,about-evs
-links: ["[DNN Module APIs](https://www.dnnsoftware.com/dnn-api/)","[DNN 8 API Reference](https://www.dnnsoftware.com/dnn-api/)","[DNN Wiki: Module Development](https://www.dnnsoftware.com/wiki/module-development/)","[DNN Community Blog: Module Development series by Clinton Patterson](https://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro/)","[Using the new Module Development Templates for DotNetNuke 7 by Chris Hammond](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/)"]
+links: ["[API del módulo DNN](https://www.dnnsoftware.com/dnn-api/)","[Referencia DNN 8 API](https://www.dnnsoftware.com/dnn-api/)","[DNN Wiki: Desarrollo De Módulos](https://www.dnnsoftware.com/wiki/module-development/)","[DNN Community Blog: Serie de desarrollo de módulos por Clinton Patterson](https://www.dnnsoftware.com/community-blog/cid/155064/module-development-for-non-developers-skinners-dnn-beginners--blog-series-intro/)","[Uso de las nuevas plantillas de desarrollo de módulos para DotNetNuke 7 por Chris Hammond](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/)"]
 ---
 
-#¿Debería crear una extensión?
+# ¿Debería crear una extensión?
 
 Antes de crear una extensión, vale la pena verificar primero si ya existe la extensión que necesita. Intente buscar en alguno de estos recursos para ver si la extensión que desea crear ya existe.
 
