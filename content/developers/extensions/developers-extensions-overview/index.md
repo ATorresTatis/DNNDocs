@@ -50,18 +50,18 @@ Por ejemplo, si tiene un código para ejecutar un informe personalizado de forma
 
 # Creando un módulo  
 
-You can produce a module in different ways:
+Puedes generar un módulo de diferentes maneras::
 
-*   Create an entire module from scratch. For very simple modules, you can use the DNN Module Creator.
-*   Start with module development templates, such as:
-    *   [DNN 8 Templates](https://github.com/dnnsoftware/DNN.Templates/releases/)
-    *   [Chris Hammond's DotNetNuke Module and Theme Development Templates](https://github.com/ChrisHammond/DNNTemplates/) ([Installation instructions](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/))
-    *   [Matt Rutledge's generator-dnn](https://github.com/mtrutledge/generator-dnn)
+*   Crear un módulo completo desde cero. Para módulos muy simples, puede usar DNN Module Creator.
+*   Comenzar con las plantillas de desarrollo de módulos, tales como:
+    *   [Plantillas para DNN 8](https://github.com/dnnsoftware/DNN.Templates/releases/)
+    *   [Plantillas de desarrollo de temas y módulos DotNetNuke de Chris Hammond](https://github.com/ChrisHammond/DNNTemplates/) ([Instrucciones de instalación](https://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot/))
+    *   [Generador de DNN por Matt Rutledge](https://github.com/mtrutledge/generator-dnn)
     *   [Upendo Ventures' generator-upendodnn](https://github.com/UpendoVentures/generator-upendodnn)
-*   Customize a pre-existing module.
+*   Personalizar un módulo preexistente.
 
-    Thousands of third-party modules and themes are available from the [DNN Store](https://store.dnnsoftware.com). There are extensions for sale, including versions that include the source code, as well as some free extension.
+    Miles de módulos y temas de terceros están disponibles en la [Tiena de DNN](https://store.dnnsoftware.com). Hay extensiones para la venta, incluidas versiones que incluyen el código fuente, así como algunas extensiones gratuitas.
 
 
 
-You can also use different programming frameworks (Web Forms, MVC, SPA) and languages (C#, VB) to create your module.
+También puede usar diferentes marcos de programación como (Web Forms, MVC, SPA) y lenguajes de programación como (C # o VB) para crear su módulo.
