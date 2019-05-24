@@ -1,23 +1,23 @@
 ﻿---
 uid: dnn-manifest-schema
-locale: en
-title: The DNN Manifest Schema
+locale: es
+title: El archivo manifiesto de DNN
 dnnversion: 09.02.00
 related-topics: module-features,module-architecture,developers-creating-modules-overview,about-evs
 links: ["[DNN Module APIs](https://www.dnnsoftware.com/dnn-api/)","[Top 5 DotNetNuke Manifest file Module Packaging Tips by Bruce Chapman](https://web.archive.org/web/20160610221847/http://www.ifinity.com.au/Blog/EntryId/89/Top-5-DotNetNuke-Manifest-file-Module-Packaging-Tips)","[DNN Community blog: DAL 2 — A New DotNetNuke Data Layer for a New Decade by Charles Nurse](https://www.dnnsoftware.com/community-blog/cid/142201/dal-2-a-new-dotnetnuke-data-layer-for-a-new-decade)","[DNN Wiki: Manifests](https://www.dnnsoftware.com/wiki/manifests)","[DNN Community blog: The New Extension Installer Manifest — Part 1, Introduction by Charles Nurse](https://www.dnnsoftware.com/community-blog/cid/135060/the-new-extension-installer-manifest-part-1-introduction)"]
 ---
 
-# The DNN Manifest Schema
+# Esquema del archivo de manifiesto de DNN
 
-The DNN manifest is an XML file (e.g., MyDNNExtension.dnn) that indicates how specific files in the extension package must be processed during installation.
+El archivo de manifiesto de DNN es un archivo XML (por ejemplo, MyDNNExtension.dnn) que indica cómo deben procesarse los archivos específicos en el paquete de extensión durante la instalación.
 
-Only the files specifically declared in the manifest would be installed. Files inside any zip file specified in `component type="ResourceFile"` do not have to be listed individually. Nonexistent files mentioned in the manifest will cause an error message.
+Solo se instalarán los archivos específicamente declarados en el manifiesto. Los archivos dentro de cualquier archivo zip especificado como `component type="ResourceFile"` no tienen que ser listados individualmente. Los archivos inexistentes mencionados en el manifiesto causarán un mensaje de error.
 
-The manifest file extension must be `.dnn`. You can add the DNN version at the end; e.g., `MyDNNExtension.dnn7`.
+La extensión del archivo manifiesto debe ser `.dnn`. Puedes agregar la versión DNN al final; por ejemplo, `MyDNNExtension.dnn7`.
 
-Save the manifest file in the base folder of your package and include it when zipping your package files.
+Guarde el archivo de manifiesto en la carpeta base de su paquete e inclúyalo al comprimir los archivos de su paquete.
 
-## Schema
+## Esquema
 
 ```
 
@@ -62,8 +62,8 @@ Save the manifest file in the base folder of your package and include it when zi
 
 ```
 
-*   name must be unique. To ensure your package's uniqueness, add your company as the prefix.
-*   type can be one of the following:
+*   El nombre debe ser único. Para garantizar la singularidad de su paquete, agregue su compañía como prefijo.
+*   El vaoor de tipo `type` puede ser alguno de los siguientes:
     *   Auth_System
     *   Container
     *   CoreLanguagePack
@@ -75,16 +75,16 @@ Save the manifest file in the base folder of your package and include it when zi
     *   [Provider](https://www.dnnsoftware.com/wiki/providers)
     *   [Skin](https://www.dnnsoftware.com/wiki/dotnetnuke-skins)
     *   SkinObject
-    *   other custom extension types
-*   version holds the version of your extension.
+    *   otros tipos de extensiones personalizadas
+*   `version` versión contiene el número de versión de su extensión.
 
-Each package represents a DNN extension. You can install multiple extensions using a single DNN manifest by creating a `package` section for each extension inside the `packages` tag.
+Cada paquete representa una extensión de DNN. Puede instalar múltiples extensiones utilizando un solo manifiesto DNN creando una sección `package` para cada extensión dentro de la etiqueta `packages`.
 
-Packages are installed in the order they appear in the manifest.
+Los paquetes se instalan en el orden en que aparecen en el manifiesto.
 
-Only the information about the _first_ package is displayed during installation. This includes the package name, description, owner, license, and release notes.
+Solo se muestra la información sobre el _primer paquete_ durante la instalación. Esto incluye el nombre del paquete, la descripción, el propietario, la licencia y las notas de la versión.
 
-## friendlyName and description
+## friendlyName y description
 
 ```
 
@@ -93,7 +93,7 @@ Only the information about the _first_ package is displayed during installation.
 
 ```
 
-The friendlyName and description are displayed during installation and are used in the Host \> Extensions page, which lists the extensions that are installed or are available for installation. The friendlyName can contain spaces and up to 250 characters; the description can hold up to 2000 characters.
+El nombre y la descripción amigable se muestran durante la instalación y se usan en la página Host \> Extensions, que enumera las extensiones que están instaladas o que están disponibles en su instalación. El valor de `friendlyName` puede contener espacios y hasta 250 caracteres; El valor de `description` puede contener hasta 2000 caracteres.
 
 ## iconFile
 
@@ -103,7 +103,7 @@ The friendlyName and description are displayed during installation and are used 
 
 ```
 
-Optional. The icon is displayed in the DNN Control Panel's dropdown list and in the Extensions page. The .png format is preferred. If not specified, the DNN default icon is used.
+Opcional. El icono se muestra en la lista desplegable del Panel de control de DNN y en la página de Extensiones. Se recomienda el formato .png. Si no se especifica, se utiliza el icono predeterminado de DNN.
 
 ## owner
 
@@ -118,7 +118,7 @@ Optional. The icon is displayed in the DNN Control Panel's dropdown list and in 
 
 ```
 
-Optional, but encouraged. Information about the owner or creator of the extension.
+Opcional, pero se recomienda. Es la información sobre el propietario o creador de la extensión.
 
 ## license and releaseNotes
 
@@ -129,7 +129,7 @@ Optional, but encouraged. Information about the owner or creator of the extensio
 
 ```
 
-Optional, but encouraged. These text files are displayed during the installation. The user is prompted to accept or decline the license. The release notes is displayed during the installation. The actual text can also be embedded within the tag without the src attribute.
+Opcional, pero se recomienda. Estos archivos de texto se muestran durante la instalación. Se solicita al usuario que acepte o rechace la licencia. Las notas de la versión se muestran durante la instalación. El texto real también se puede incrustar dentro de la etiqueta sin el atributo `src`.
 
 ## azureCompatible
 
@@ -139,7 +139,7 @@ Optional, but encouraged. These text files are displayed during the installation
 
 ```
 
-Optional. Default is `false`. Set to `true` if the extension is compatible with Microsoft Azure.
+Opcional. El valor predeterminado es `false`. Se establece en `true` si la extensión es compatible con Microsoft Azure.
 
 ## dependencies
 
@@ -152,9 +152,9 @@ Optional. Default is `false`. Set to `true` if the extension is compatible with 
 
 ```
 
-Dependencies can be any of these types (case-insensitive):
+Las dependencias pueden ser cualquiera de estos tipos (sin distinción de mayúsculas y minúsculas):
 
-*   **coreVersion**. Minimum DNN version required by the extension being installed. Example:
+*   **coreVersion**. Versión mínima de DNN requerida por la extensión que se está instalando. Ejemplo:
 
     ```
 
@@ -162,7 +162,7 @@ Dependencies can be any of these types (case-insensitive):
 
     ```
 
-*   **managedPackage**. The name and minimum version of a package required by the extension being installed. The required package must already be listed in the core Packages table.
+*   **managedPackage**. El nombre y la versión mínima de un paquete requerido por la extensión que se está instalando. El paquete requerido ya debe estar listado en la tabla de Paquetes principales.
 
     ```
 
@@ -170,7 +170,7 @@ Dependencies can be any of these types (case-insensitive):
 
     ```
 
-*   **package**. The name of a package required by the extension being installed. The required package must already be listed in the core Packages table. Example:
+*   **package**. El nombre de un paquete requerido por la extensión que se está instalando. El paquete requerido ya debe estar listado en la tabla de Paquetes principales. Ejemplo:
 
     ```
 
@@ -178,7 +178,7 @@ Dependencies can be any of these types (case-insensitive):
 
     ```
 
-*   **type**. A type in .NET, in a DNN library, or a third-party library. Ensures that the installation can create an object of the specified type. Example:
+*   **type**. Un tipo en la biblioteca de librerias de .NET,  de DNN o en una biblioteca de terceros. Asegura que la instalación pueda crear un objeto del tipo especificado. Ejemplo
 
     ```
 
@@ -186,9 +186,9 @@ Dependencies can be any of these types (case-insensitive):
 
     ```
 
-    Tip: [Fully qualify](https://docs.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names) a type if it is not in the App_Code folder to avoid conflicts with similarly named types from multiple sources.
+    Consejo: [Califique completamente](https://docs.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names) un tipo si no está en la carpeta `App_Code` para evitar conflictos con tipos con nombres similares de otras fuentes.
 
-*   Any custom dependency type included in the Dependency list. DNN can be extended by creating custom dependency types, which inherit from DotNetNuke.Services.Installer.Dependencies.DependencyBase and must be included in the Dependency list (Host \> Lists). Example:
+*   Cualquier tipo de dependencia personalizado incluido en la lista de dependencias. DNN se puede ampliar creando tipos de dependencia personalizados, que se heredan de `DotNetNuke.Services.Installer.Dependencies.DependencyBase` y se deben incluir en la lista de dependencias (Host > Listas). Ejemplo:
 
     ```
 
@@ -196,7 +196,7 @@ Dependencies can be any of these types (case-insensitive):
 
     ```
 
-    Note: The custom dependency type must already be installed before it is used in another installation.
+    Nota: el tipo de dependencia personalizado ya debe estar instalado antes de que se use en otra instalación.
 
 
 ## components
@@ -211,12 +211,12 @@ Dependencies can be any of these types (case-insensitive):
 
 ```
 
-Some component types are applicable only to the package type of the same name; generic component types can be used with any package type.
+Algunos tipos de componentes son aplicables solo al tipo de paquete del mismo nombre; Los tipos de componentes genéricos se pueden utilizar con cualquier tipo de paquete.
 
 <table>
-    <th><strong>Package type</strong></th>
-    <th><strong>Specific component type</strong></th>
-    <th><strong>Generic component types</strong></th>
+    <th><strong>Tipo de paquete</strong></th>
+    <th><strong>Tipo de componente específico</strong></th>
+    <th><strong>Tipo de componente genérico</strong></th>
     <tr>
         <td>Auth_System</td>
         <td>AuthenticationSystem</td>
@@ -264,7 +264,7 @@ Some component types are applicable only to the package type of the same name; g
     </tr>
 </table>
 
-*   [`Assembly`](https://www.dnnsoftware.com/wiki/manifest-assembly-component). Assemblies to be installed in the main \\bin folder of the installation. Assemblies are the compiled code portion of your extension. They can be your own assemblies or third-party assemblies that you ship with your extension.
+*   [`Assembly`](https://www.dnnsoftware.com/wiki/manifest-assembly-component). Los ensamblados se instalarán en la carpeta principal `.\bin` de la instalación. Los ensamblados son la parte del código compilado de su extensión. Pueden ser sus propios ensamblados o ensamblados de terceros que distribuyen con su extensión.
 
     ```
 
@@ -286,7 +286,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`AuthenticationSystem`](https://www.dnnsoftware.com/wiki/manifest-authenticationsystem-component). Authentication providers used by the extension, such as **Facebook**, **Google**, **Twitter**, and **Microsoft Accounts**. By default, DNN authenticates using its own database.
+*   [`AuthenticationSystem`](https://www.dnnsoftware.com/wiki/manifest-authenticationsystem-component). Proveedores de autenticación utilizados por la extensión, como **Facebook** , **Google** , **Twitter** o **cuentas de Microsoft** . De forma predeterminada, DNN se autentica utilizando su propia base de datos.
 
     ```
 
@@ -303,9 +303,9 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`Cleanup`](https://www.dnnsoftware.com/wiki/cleanup-component). List of files that must be deleted during installation or upgrade of the package.
+*   [`Cleanup`](https://www.dnnsoftware.com/wiki/cleanup-component). Lista de archivos que deben eliminarse durante la instalación o actualización del paquete.
 
-    You can list the files individually in the manifest.
+    Se pueden listar los archivos individualmente en el manifiesto.
 
     ```
 
@@ -322,7 +322,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-    You can also list the files with their paths in a text file instead.
+    También pueden enumerar los archivos con sus rutas en un archivo de texto.
 
     ```
 
@@ -330,12 +330,12 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-    See also:
+    Vea también:
 
-    *   Component type `Config` to update configuration files during uninstall.
-    *   Component type `Script` for data provider scripts that must be uninstalled.
+    *   Tipo de componente `Config` para actualizar los archivos de configuración durante la desinstalación.
+    *   Tipo de componente `Script` para los scripts del proveedor de datos que se deben desinstalar.
 
-*   [`Config`](https://www.dnnsoftware.com/wiki/manifest-config-component). Changes to do on the specified config file.
+*   [`Config`](https://www.dnnsoftware.com/wiki/manifest-config-component). Cambios para hacer en el archivo de configuración especificado.
 
     ```
 
@@ -365,9 +365,9 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-    For information on `node` attributes, see [Manifest: XML Merge](https://www.dnnsoftware.com/wiki/manifest-xml-merge).
+    Para obtener información sobre los atributos node, consulte [Manifiesto: XML Merge](https://www.dnnsoftware.com/wiki/manifest-xml-merge).
 
-*   [`Container`](https://www.dnnsoftware.com/wiki/manifest-container-component). Containers to be installed.
+*   [`Container`](https://www.dnnsoftware.com/wiki/manifest-container-component). Contenedores a instalar.
 
     ```
 
@@ -386,7 +386,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`DashboardControl`](https://www.dnnsoftware.com/wiki/manifest-dashboardcontrol-component). Controls that will appear as separate tabs in the DNN Dashboard (Host \> Dashboard).
+*   [`DashboardControl`](https://www.dnnsoftware.com/wiki/manifest-dashboardcontrol-component). Controles que aparecerán como pestañas separadas en el panel de control de DNN (Host \> Panel de control).
 
     ```
 
@@ -405,7 +405,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`File`](https://www.dnnsoftware.com/wiki/manifest-file-component). Files to be installed. By default, only files with allowed file extensions are installed; however, the host user can bypass this security check during installation. To view or modify the list of file extensions, go to your DNN installation and choose Host \> Host Settings \> Other Settings \> Allowable File Extensions.
+*   [`File`](https://www.dnnsoftware.com/wiki/manifest-file-component).  Archivos a instalar. De forma predeterminada, solo se instalan los archivos con extensiones de archivo permitidas; sin embargo, el usuario host puede omitir esta comprobación de seguridad durante la instalación. Para ver o modificar la lista de extensiones de archivo permitidas, vaya a la instalación de su DNN y elija Host \> Configuración del host \> Otras configuraciones \> Extensiones de archivo permitidas.
 
     ```
 
@@ -424,7 +424,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-    Example: To copy img/MyAwesomeImageFile.jpg from the zip file to desktopmodules/mymodule/images/MyFile.jpg,
+    Ejemplo: para copiar img/MyAwesomeImageFile.jpg del archivo zip a desktopmodules/mymodule/images/MyFile.jpg,,
 
     ```
 
@@ -437,7 +437,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`CoreLanguage`](https://www.dnnsoftware.com/wiki/manifest-corelanguage-component). Language pack files required to localize the core DNN Platform for a specific culture. A core language pack can be installed during the DNN Platform installation or anytime after.
+*   [`CoreLanguage`](https://www.dnnsoftware.com/wiki/manifest-corelanguage-component). Archivos de paquetes de idioma necesarios para localizar la plataforma de DNN para una cultura específica. Se puede instalar un paquete de idioma central durante la instalación de la plataforma DNN o en cualquier momento posterior.
 
     ```
 
@@ -457,9 +457,9 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-    For the list of supported language codes, see the .NET [CultureInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo) class.
+    Para obtener la lista de códigos de idioma compatibles, consulte la clase .NET [CultureInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo) class.
 
-*   [`ExtensionLanguage`](https://www.dnnsoftware.com/wiki/manifest-extensionlanguage-component). Language pack files required to localize a DNN extension for a specific culture.
+*   [`ExtensionLanguage`](https://www.dnnsoftware.com/wiki/manifest-extensionlanguage-component). Archivos de paquete de idioma necesarios para localizar una extensión DNN para una cultura específica.
 
     ```
 
@@ -479,9 +479,9 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-    For the list of supported language codes, see the .NET [CultureInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo) class.
+    Para obtener la lista de códigos de idioma compatibles, consulte la clase .NET [CultureInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo) class.
 
-*   [`Module`](https://www.dnnsoftware.com/wiki/module-component). Only one component with `type="Module"` is allowed within a `package` section. To install a set of modules as a unit, create one `package` section per module in the same manifest.
+*   [`Module`](https://www.dnnsoftware.com/wiki/module-component). Solo se permite `type="Module"` en un componente dentro de una sección `package`. Para instalar un conjunto de módulos como una unidad, cree una sección `package` por módulo en el mismo manifiesto.
 
     ```
 
@@ -538,7 +538,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`Provider`](https://www.dnnsoftware.com/wiki/manifest-provider-component). Extends the list of allowed file extensions. These additional file extensions apply only to the current installation and are not added to the global list of file extensions found in Host \> Host Settings \> Other Settings \> Allowable File Extensions. The following file extensions can be allowed: .ashx, .aspx, .ascx, .vb, .cs, .resx, .css, .js, .resources, .config, .xml, .htc, .html, .htm, .text, .vbproj, .csproj, and .sln.
+*   [`Provider`](https://www.dnnsoftware.com/wiki/manifest-provider-component). Amplía la lista de extensiones de archivo permitidas. Estas extensiones de archivo adicionales se aplican solo a la instalación actual y no se agregan a la lista global de extensiones de archivo que se encuentran en Host \> Configuración del host \> Otras configuraciones \> Extensiones de archivo permitidas. Se permiten las siguientes extensiones de archivo: .ashx, .aspx, .ascx, .vb, .cs, .resx, .css, .js, .resources, .config, .xml, .htc, .html, .htm, .text, .vbproj, .csproj y .sln.
 
     ```
 
@@ -546,7 +546,9 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`ResourceFile`](https://www.dnnsoftware.com/wiki/manifest-resourcefile-component). Zip files to be expanded during installation. Can be used instead of `component type="File"` to simplify the manifest for packages that contain many files.
+*   [`ResourceFile`](https://www.dnnsoftware.com/wiki/manifest-resourcefile-component). Archivos zip para descomprimir durante la instalación. Puede utilizarse en lugar de `component type="File"` para simplificar el manifiesto de paquetes que contienen muchos archivos.
+
+.
 
     ```
 
@@ -563,10 +565,10 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`Script`](https://www.dnnsoftware.com/wiki/script-component). Database scripts that the extension needs. The following scripts are handled differently:
+*   [`Script`](https://www.dnnsoftware.com/wiki/script-component). Scripts de base de datos que la extensión necesita. Los siguientes scripts se manejan de manera diferente::
 
-    *   `install.<dataprovidertype>` (e.g., `install.SqlDataProvider`) is executed _before_ all other scripts, if the package is being installed for the first time.
-    *   `upgrade.<dataprovidertype>` (e.g., `upgrade.SqlDataProvider`) is executed _after_ all regular scripts.
+    *   `install.<dataprovidertype>` (e.g., `install.SqlDataProvider`) se ejecuta _antes_ de todos los demás scripts, si el paquete se está instalando por primera vez.
+    *   `upgrade.<dataprovidertype>` (e.g., `upgrade.SqlDataProvider`) e ejecuta _después_ de todos los otros scripts.
 
     ```
 
@@ -589,7 +591,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`Skin`](https://www.dnnsoftware.com/wiki/manifest-skin-component). All files related to the theme. The installer needs to parse the main theme files at installation time to replace relative folder names; therefore, every ASCX, HTML, or CSS file must be declared as a `skinFile`. Other files (i.e., images and scripts) can be packaged using component type `ResourceFile` to simplify the complexity of the theme manifest.
+*   [`Skin`](https://www.dnnsoftware.com/wiki/manifest-skin-component). Todos los archivos relacionados con el tema (Theme). El instalador debe analizar los archivos de temas principales en el momento de la instalación para reemplazar los nombres de carpetas relativos; por lo tanto, cada archivo ASCX, HTML o CSS debe ser declarado como un archivo `skinFile`. Otros archivos (es decir, imágenes y scripts) se pueden empaquetar utilizando el tipo de componente ``TEXT`` para simplificar la complejidad del manifiesto del tema.
 
     ```
 
@@ -608,7 +610,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`SkinObject`](https://www.dnnsoftware.com/wiki/manifest-skinobject-component). Custom theme objects.
+*   [`SkinObject`](https://www.dnnsoftware.com/wiki/manifest-skinobject-component). Objetos temáticos personalizados.
 
     ```
 
@@ -622,7 +624,7 @@ Some component types are applicable only to the package type of the same name; g
 
     ```
 
-*   [`URLProvider`](https://www.dnnsoftware.com/wiki/manifest-url-provider). Custom URL provider to be used with the Advanced URL Management System (AUM).
+*   [`URLProvider`](https://www.dnnsoftware.com/wiki/manifest-url-provider). Proveedor de URL personalizado que se utilizará con el Sistema de gestión avanzada de URL (AUM).
 
     ```
 
