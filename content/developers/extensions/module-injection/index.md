@@ -1,29 +1,29 @@
 ﻿---
 uid: module-injection-filter
-locale: en
-title: Module Injection Filter
+locale: es
+title: Filtros de inyección de módulos
 dnnversion: 09.02.00
 related-topics: module-features,developers-creating-modules-overview
 links: ["[DNN Community Blog: Discover DNN Module Injection Filters](https://www.dnnsoftware.com/community-blog/cid/155402/discover-dnn-module-injection-filters)","[GitHub Injection Filter Samples](https://github.com/dnnsoftware/Dnn.InjectionFilter.Sample)"]
 ---
 
-# Module Injection Filters
+# Filtros de inyección de módulos
 
-Module Injection Filters are a mechanism in DNN that allows you to specify if a module should be displayed or hidden. When DNN is displaying a page, for every module on the page, it asks all of the Module Injection Filters whether it should add the module or not. If there is _any_ module injection filter that excludes the module, then it won't be included on the page.  This is a fairly low-level extension point that can be used to enable some scenarios that are otherwise difficult to achieve.
+Los filtros de inyección de módulos son un mecanismo en DNN que le permite especificar si un módulo debe mostrarse u ocultarse. Cuando DNN muestra una página, para cada módulo de la página, pregunta a todos los Filtros de inyección si debería agregar el módulo o no. Si hay algún filtro de inyección de módulo que excluya el módulo, entonces dicho módulo no se incluirá en la página. Este es un punto de extensión de nivel bastante bajo que se puede usar para habilitar algunos escenarios que de otra manera serían difíciles de lograr.
 
-## When Not to Use
+## Cuando no usar
 
-DNN's [`StandardModuleInjectionFilter`](xref:DotNetNuke.UI.Modules.StandardModuleInjectionFilter) takes care of hiding modules that are deleted, expired, or excluded via permissions. Much of the time, you'll want to use one of these mechanisms, rather than implementing a custom Module Injection Filter. For instance, if you are trying to dynamically show or hide content on a page based on a user's role, you should use the module's permissions setting instead.  If you just want to show/hide content _within_ a custom module, it is usually more appropriate to place that logic inside the module.
+DNN [`StandardModuleInjectionFilter`](xref:DotNetNuke.UI.Modules.StandardModuleInjectionFilter) tse ocupa de ocultar los módulos que se eliminan, caducan o excluyen mediante permisos. La mayoría de las veces querrá usar uno de estos mecanismos, en lugar de implementar un Filtro de inyección de módulos personalizado. Por ejemplo, si está intentando mostrar u ocultar dinámicamente el contenido en una página en función de los permisos asignado a un usuario, debería usar la configuración de permisos del módulo en su lugar. Si solo desea _mostrar/ocultar_ contenido dentro de un módulo personalizado, generalmente es más apropiado colocar esa lógica dentro del módulo.
 
-## When to Use
+## Cuando usar
 
-There are a number of scenarios that are not easily handled by any existing mechanism that DNN provides. If the criteria for hiding/showing a module cannot be tied to permissions (e.g. geolocation, cookie values, complex date/time rules, last visit date, etc.) then a custom Module Injection Filter may be a good avenue to consider. One good use case is A/B testing, the initial reason for development of the feature. Another reason to choose a custom Module Injection Filter is to apply one uniform hide/show rule to a variety of types of modules, or to modules that your team did not develop (whether built-in or third party).
+Hay una serie de escenarios que no son fáciles de manejar por ningún mecanismo existente de los que proporciona DNN. Si los criterios para ocultar/mostrar un módulo no pueden vincularse a los permisos (por ejemplo, geolocalización, valores de cookies, reglas de fecha/horas complejas, fecha de la última visita, etc.), un filtro de inyección de módulos personalizado puede ser una buena forma de implementar. Imaginemos un caso de uso como una prueba A/B <testing>, como la razón inicial para el desarrollo de dicha función. Otra razón para elegir un Filtro de inyección de módulo personalizado podría ser la necesidad de aplicar una regla uniforme para ocultar/mostrar una variedad de tipos de módulos, o módulos que su equipo no haya desarrollado (ya sea que los está integrado o sean propiedad de terceros).
 
-One method you can use when hiding arbitrary modules is to leverage the Tags module setting to indicate modules which should be hidden in a certain scenario. For example, you could [create two terms](xref:add-term-to-vocabulary), _Hide A_ and _Hide B_ to exclude content based on an A/B testing cookie value. Then when those terms are applied as a tag to a module, you can use a custom Module Injection Filter to show or hide the content appropriately. See the linked [GitHub Injection Filter Samples](https://github.com/dnnsoftware/Dnn.InjectionFilter.Sample) for a starting point for a tag-based filter.
+Un método que puede utilizar cuando oculta módulos de forma arbitraria es aprovechar la configuración de etiquetas del módulo para indicar a los módulos que deberían estar ocultos en un determinado escenario. Por ejemplo, puede [crear dos términos](xref:add-term-to-vocabulary), _Ocultar A_ y _Ocultar B_ para excluir contenido basado en un valor de cookie en una prueba A/B. Luego, cuando esos términos se aplican como una etiqueta a un módulo, puede utilizar un Filtro de inyección de módulo personalizado para mostrar u ocultar el contenido de forma adecuada. Consulte [GitHub Injection Filter Samples](https://github.com/dnnsoftware/Dnn.InjectionFilter.Sample) para ver un punto de partida para un filtro basado en etiquetas.
 
-## How to Add a Module Injection Filter?
+## ¿Cómo agregar un filtro de inyección de módulo?
 
-DNN simply includes any class that implements [`StandardModuleInjectionFilter`](xref:DotNetNuke.UI.Modules.IModuleInjectionFilter) in the collection of filters to ask. To implement the interface, a class only needs to implement one method, `CanInjectModule`, which takes the relevant `ModuleInfo` and `PortalSettings` objects, and returns either True or False.
+DNN simplemente incluye cualquier clase que implemente [`StandardModuleInjectionFilter`](xref:DotNetNuke.UI.Modules.IModuleInjectionFilter) en la colección de filtros para consultar si se deben mostrar. Para implementar la interfaz, una clase solo necesita implementar el método, `CanInjectModule`, que toma como entradas una instancia de `ModuleInfo` y `PortalSettings`, y devuelve Verdadero o Falso para determinar si el módulo se debe agregar o no.
 
 ```csharp
     using DotNetNuke.Collections;
@@ -41,9 +41,9 @@ DNN simply includes any class that implements [`StandardModuleInjectionFilter`](
     }
 ```
 
-## How to Deploy a Module Injection Filter?
+## ¿Cómo implementar un filtro de inyección de módulo?
 
-If you are already deploying custom code (e.g. a custom module), you may want to include the class implementing your Module Injection Filter in the assembly containing your other code.  If you do not have other custom code or you do not want to combine the Module Injection Filter with existing code, you can compile the class into its own assembly and package it separately.  In the [manifest file](xref:dnn-manifest-schema), choose `Library` for the package type, and use the `Assembly` component to install the assembly file into the `bin` folder.
+Si está implementando un código personalizado (por ejemplo, un módulo personalizado), puede incluir la clase que implementa su Módulo de filtro de inyección en el ensamblado que contiene su código. Si no tiene otro código personalizado o no desea combinar el Filtro de inyección de módulos con el código existente, puede compilar la clase en su propio ensamblado y empaquetarlo por separado.  En el [archivo de manifiesto](xref:dnn-manifest-schema), escoga `Library` para el tipo de paquete, y use el componente `Assembly` para instalar el ensamblado en la carpeta `bin`.
 
 ```xml
 <dotnetnuke type="Package" version="5.0">
