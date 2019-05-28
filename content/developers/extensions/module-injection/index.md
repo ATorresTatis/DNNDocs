@@ -4,7 +4,7 @@ locale: es
 title: Filtros de inyección de módulos
 dnnversion: 09.02.00
 related-topics: module-features,developers-creating-modules-overview
-links: ["[DNN Community Blog: Discover DNN Module Injection Filters](https://www.dnnsoftware.com/community-blog/cid/155402/discover-dnn-module-injection-filters)","[GitHub Injection Filter Samples](https://github.com/dnnsoftware/Dnn.InjectionFilter.Sample)"]
+links: ["[Blog de la comunidad de DNN: descubra los filtros de inyección del módulo DNN](https://www.dnnsoftware.com/community-blog/cid/155402/discover-dnn-module-injection-filters)","[Ejemplos de filtro de inyección en GitHub](https://github.com/dnnsoftware/Dnn.InjectionFilter.Sample)"]
 ---
 
 # Filtros de inyección de módulos
