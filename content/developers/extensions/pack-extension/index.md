@@ -6,7 +6,7 @@ dnnversion: 09.02.00
 previous-topic: test-module
 next-topic: install-extension
 related-topics: dnn-manifest-schema,module-development,web-forms-module-development,spa-module-development,create-module,mvc-module-development,providers
-links: ["[DNN Professional Training video: Skinning 5: Packaging](https://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-5-packaging)"]
+links: ["[Vídeo de formación profesional de DNN: Skinning 5: Empaquetado](https://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-5-packaging)"]
 ---
 
 # Empaquetar su extensión
