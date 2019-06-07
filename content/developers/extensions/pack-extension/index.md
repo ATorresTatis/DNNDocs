@@ -1,7 +1,7 @@
 ﻿---
 uid: developers-pack-extension
-locale: en
-title: Pack Your Extension
+locale: es
+title: Empaquetar su extensión
 dnnversion: 09.02.00
 previous-topic: test-module
 next-topic: install-extension
@@ -9,36 +9,37 @@ related-topics: dnn-manifest-schema,module-development,web-forms-module-developm
 links: ["[DNN Professional Training video: Skinning 5: Packaging](https://www.dnnsoftware.com/services/professional-training/training-videos-subscription/skinning-5-packaging)"]
 ---
 
-# Pack Your Extension
+# Empaquetar su extensión
 
-For easier distribution and installation, the components of an extension (theme or module) can be bundled into a package. An extension package is simply a zip file that contains all the files required by your extension. The most important part of the process is creating the DNN Manifest, which provides information required by the installer, such as the target locations for the files.
+Para facilitar la distribución e instalación, los componentes de una extensión (tema o módulo) se pueden agrupar en un paquete. Un paquete de extensión es simplemente un archivo zip que contiene todos los archivos requeridos por su extensión. La parte más importante del proceso es crear el Manifiesto de DNN, que proporciona la información requerida por el instalador, como las ubicaciones de destino de los archivos.
 
-If you use the DNN templates and compile in Visual Studio, the Release build creates the zip file for you.
+Si usa las plantillas de DNN y compila con Visual Studio, la compilación de la versión crea el archivo zip por usted.
 
-Note: The package wizard, accessible through the DNN Module Creator or the Extensions page, currently cannot create packages for MVC or SPA modules.
+Nota: el asistente de paquetes, al que se puede acceder a través del DNN Module Creator o la página de extensiones, actualmente no puede crear paquetes para los módulos de tipo MVC o SPA.
 
-## Steps
 
-1.  Prepare your files in folders.
+## Pasos
 
-    *   Files that are common among all packages:
-        *   (Optional) `MyLicense.txt` is displayed to the user during package installation.
-        *   (Optional) `MyReleaseNotes.txt` lists the changes for the current version of the package and is also provided during installation.
-    *   Files included in MVC and SPA module packages:
-        *   Required
-            *   Views (.cshtml or .vbhtml) contain the markup needed to render your module UI.
-            *   Manifest file (.dnn) contains the module definition information required for installing the module.
-            *   Assemblies (.dll) are the compiled module code and third party reference libraries. WSP projects will not have an assembly for the compiled module, but may still include third party reference libraries.
-            *   SQL scripts (.sqldataprovider) are the code required to create or update your module's database objects.
-        *   Optional
-            *   Resource files (.resx) contain localization strings.
-            *   JavaScript files (.js) contain code used for client-side logic.
-            *   Stylesheets (.css) contain the custom styles needed by your module.
-            *   Text files (.txt) include the release.txt and license.txt files that are displayed during module installation.
+1.  Prepare sus archivos en carpetas.
 
-    Tip: The license and release notes are HTML files, so you can include special offers, including a call to action and other details.
+    *   Archivos que comúnmente se incluyen en todos los paquetes:
+        *   (Opcional) `MyLicense.txt` se muestra al usuario durante la instalación del paquete.
+        *   (Opcional) `MyReleaseNotes.txt` enumera los cambios para la versión actual del paquete y también se muestra durante la instalación.
+    *   Archivos incluidos en los paquetes de módulos de tipo MVC y SPA:
+        *   Requeridos
+            *   Vistas (.cshtml o .vbhtml) que contienen el marcado necesario para representar la interfaz de usuario del módulo.
+            *   El archivo de manifiesto (.dnn) que contiene la información de definición de módulo requerida para instalar el módulo.
+            *   Ensamblados (.dll) queson el código del módulo compilado y las bibliotecas de referencia de terceros. Los proyectos de WSP no tendrán un ensamblado compilado, pero aún pueden incluir bibliotecas de referencia de terceros.
+            *   Scripts de SQL (.sqldataprovider) son el código requerido para crear o actualizar los objetos de la base de datos de su módulo.
+        *   Opcional
+            *   Los archivos de recursos (.resx) contienen cadenas de localización.
+            *   Los archivos JavaScript (.js) contienen el código utilizado para la lógica del lado del cliente.
+            *   Las hojas de estilo (.css) contienen los estilos personalizados que necesita su módulo.
+            *   Los archivos de texto (.txt) que incluyen los archivos release.txt y license.txt que se muestran durante la instalación del módulo.
 
-    Remember: Include the version number of your extension in the release notes.
+   Sugerencia: la licencia y las notas de la versión son archivos HTML, por lo que puede incluir ofertas especiales, incluida una llamada a la acción y otros detalles.
 
-2.  Create the [DNN Manifest](xref:dnn-manifest-schema).
-3.  Zip up your files, including the DNN Manifest in the root folder.
+    Recuerde: incluya el número de versión de su extensión en las notas de la versión.
+
+2.  Cree el [archivo de manifiesto de DNN](xref:dnn-manifest-schema).
+3.  Comprima sus archivos, incluido el Manifiesto DNN en la carpeta raíz.
