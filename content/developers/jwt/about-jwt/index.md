@@ -1,29 +1,28 @@
 ﻿---
 uid: developers-about-jwt
-locale: en
-title: About JWT Authentication
+locale: es
+title: Acerca de la autenticación JWT
 dnnversion: 09.02.00
 links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[DNN Presentation: How Evoq Helps You Build Modern Web Applications by Will Morgenweck](https://www.slideshare.net/dnnsoftware/how-evoq-helps-you-build-modern-web-applications)","[jwt.io](https://jwt.io/introduction/)","[Unix time](https://en.wikipedia.org/wiki/Unix_time)"]
 ---
 
-# About JWT Authentication
+# Acerca de la autenticación JWT
 
-## Overview
+## Visión general
 
-The JSON Web Token (JWT) is an open standard (IETF RFC 7519) data format that is compact, self-contained, and secure. It is intended for passing information where space is limited, such as HTTP headers and URI queries.
+JSON Web Token (JWT) es un formato de datos estándar abierto (IETF RFC 7519) que es compacto, autónomo y seguro. Está destinado a pasar información donde el espacio es limitado, como encabezados HTTP y consultas de URI.
 
-*   Compact. Because the JWT is comprised of encoded JavaScript Object Notation (JSON) objects, it is compact enough to be sent through a URL query, a POST parameter, or an HTTP header. JSON objects are simpler and more compact than Security Assertion Markup Language (SAML) assertions, which use XML. Due to its smaller size, it can also be transmitted faster.
-*   Self-contained. The JWT can contain all the required information about the user and therefore avoids querying the database more than once.
-*   Secure. The JWT can be digitally signed with one of the following methods:
-    *   HMAC algorithm, using a secret
-    *   RSA algorithm, using a public/private key pair
+*   Compacto. Debido a que el JWT está compuesto por objetos codificados de JavaScript Object Notation (JSON), es lo suficientemente compacto como para ser enviado a través de una consulta de URL, un parámetro POST o un encabezado HTTP. Los objetos JSON son más simples y más compactos que las aserciones del lenguaje de marcado de aserción de seguridad (SAML), que utilizan XML. Debido a su tamaño más pequeño, también se puede transmitir más rápido.
+*   Autocontenido. El JWT puede contener toda la información requerida sobre el usuario y, por lo tanto, evita consultar la base de datos más de una vez.
+*   Seguro. El JWT se puede firmar digitalmente con uno de los siguientes métodos:
+    *   Algoritmo HMAC, utilizando un secreto.
+    *   Algoritmo RSA, utilizando un par de claves pública/privada
 
-JWT is ideal for applications that can not or do not want to use cookies, such as mobile native apps and desktop apps. In a standard web-forms application, the user logs into a web site and receives a session/token cookie that the browser sends back with each subsequent request to the site, in order to avoid checking the user's credentials with each request. JWT simply replaces the cookie with a token that is smaller and faster to transmit.
+JWT es ideal para aplicaciones que no pueden o no desean usar cookies, como aplicaciones móviles nativas y aplicaciones de escritorio. En una aplicación de formularios web estándar, el usuario inicia sesión en un sitio web y recibe una cookie de sesión/token que el navegador envía con cada solicitud posterior al sitio, para evitar verificar las credenciales del usuario con cada solicitud. JWT simplemente reemplaza la cookie con un token que es más pequeño y más rápido de transmitir.
 
-## JWT Authentication
+## Autenticación JWT
 
-> [!Note]
-> The JWT Authentication Provider is available in DNN products; however, it must be installed and enabled separately. DNN uses JWT for authentication only.
+> [!Nota] El proveedor de autenticación JWT está disponible en productos DNN; sin embargo, se debe instalar y habilitar por separado. DNN utiliza JWT solo para autenticación.
 
 
 
@@ -31,8 +30,8 @@ JWT is ideal for applications that can not or do not want to use cookies, such a
 
 
 
-1.  The user logs in with their username and password or other security credentials. The browser or the client app sends a POST request with the user credentials, which are sent over an HTTPS connection.
-2.  The user's credentials are checked against the login database. If valid, the server creates and encrypts an access JWT, which is stored in the body of the response.
-3.  When the user requests a page, the browser or client app stores the access JWT inside the `Authorization` section of the request.
-4.  The server verifies the JWT signature and extracts the user information from the JWT payload.
-5.  The requested page or resource is sent to the client.
+1.  El usuario inicia sesión con su nombre de usuario y contraseña u otras credenciales de seguridad. El navegador o la aplicación cliente envía una solicitud POST con las credenciales de usuario, que se envían a través de una conexión HTTPS.
+2.  Las credenciales del usuario se comparan con la base de datos de inicio de sesión. Si son validas, el servidor crea y cifra un JWT de acceso, que se almacena en el cuerpo de la respuesta.
+3.  Cuando el usuario solicita una página, el navegador o la aplicación cliente almacenan el token acceso JWT dentro de la sección `Authorization` de la solicitud.
+4.  El servidor verifica la firma JWT y extrae la información del usuario de la carga útil de JWT.
+5.  La página o recurso solicitado se envía al cliente.
