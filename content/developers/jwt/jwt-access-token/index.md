@@ -1,6 +1,6 @@
 ﻿---
 uid: developers-jwt-access-token
-locale: en
+locale: es
 title: JWT Access Token
 dnnversion: 09.02.00
 related-topics: 
@@ -8,7 +8,7 @@ related-topics:
 
 # JWT Access Token
 
-The decoded access token is comprised of three parts separated by dots.
+El token de acceso decodificado consta de tres partes separadas por puntos.
 
 ```
 
@@ -16,13 +16,13 @@ The decoded access token is comprised of three parts separated by dots.
             
 ```
 
-Component
+Componente
 
-Description
+Descripción
 
-JWT header
+Cabecera JWT
 
-A JSON object containing the JWT protocol identifier and the signature scheme. The header is converted to a JavaScript Object Signing and Encryption (JOSE) header as UTF-8 octets and then encoded as a Base64 string. Example:
+Un objeto JSON que contiene el identificador de protocolo JWT y el esquema de firma. El encabezado se convierte en un encabezado de firma y cifrado de objetos de JavaScript (JOSE) como octetos UTF-8 y luego se codifica como una cadena Base64. Por ejemplo:
 
 ```
 
@@ -33,17 +33,17 @@ A JSON object containing the JWT protocol identifier and the signature scheme. T
                         
 ```
 
-JWT payload
+Payload JWT (carga útil)
 
-A JSON object that contains the JWT claims set (asserted information about the user) or other information. Encoded as a Base64 string. The DNN JWT claims set includes the following:
+Un objeto JSON que contiene el conjunto de notificaciones JWT (información sobre el usuario) u otra información. Codificado como una cadena de base 64. El conjunto de notificaciones JWT en DNN incluye lo siguiente:
 
-*   sid is the session id, which is fixed for the lifetime of the renewal token.
-*   role is the list of roles assigned to the user. Used in authorization to determine which areas of the site the user can access.
-*   iss is the portal alias of the site that issued the token.
-*   exp is the expiration time of the access token. The token is rejected after this time (plus a small grace period). Expressed as Unix time.
-*   nbf is the "not-before" time. The token is rejected before this time. Expressed as Unix time.
+*   sid es el ID de sesión, que se ha establecido durante la vida útil del token de renovación.
+*   rol es la lista de roles asignados al usuario. Se utiliza en la autorización para determinar a qué áreas del sitio puede acceder el usuario.
+*   iss es el alias de portal del sitio que emitió el token.
+*   exp es el tiempo de expiración del token de acceso. El token se rechazará después de este tiempo (más un pequeño período de gracia). Expresado como tiempo Unix.
+*   nbf es el tiempo de "no antes (en ingles not before)". El token es rechazado antes de este tiempo. Expresado como tiempo de Unix.
 
-Example:
+Ejemplo:
 
 ```
 
@@ -57,8 +57,8 @@ Example:
                         
 ```
 
-JWT signature
+Firma JWT 
 
-The hash/encryption of the header and payload. The encryption method is stated in the header. Encoded as a Base64 string.
+El hash/cifrado del encabezado y la carga útil. El método de cifrado se indica en el encabezado. Codificado como una cadena de base 64.
 
-The new access token is valid for one hour.
+El nuevo token de acceso es válido por una hora.
