@@ -1,14 +1,14 @@
 ﻿---
 uid: developers-jwt-page-request
-locale: en
-title: Page Request with JWT
+locale: es
+title: Solicitud de página con JWT
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# Page Request with JWT
+# Solicitud de página con JWT
 
-The header of a subsequent request must include the token in this format:
+El encabezado de una solicitud posterior debe incluir el token en este formato::
 
 ```
 
@@ -16,7 +16,7 @@ The header of a subsequent request must include the token in this format:
 
 ```
 
-A sample GET request with JWT:
+Una solicitud GET de muestra con JWT:
 
 ```
 
