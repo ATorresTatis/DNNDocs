@@ -1,15 +1,15 @@
 ﻿---
 uid: developers-jwt-auth-handler
-locale: en
-title: JWT Authentication Handler
+locale: es
+title: Controlador de autenticación JWT
 dnnversion: 09.02.00
 related-topics: 
 links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[DNN Presentation: How Evoq Helps You Build Modern Web Applications by Will Morgenweck](https://www.slideshare.net/dnnsoftware/how-evoq-helps-you-build-modern-web-applications)","[jwt.io](https://jwt.io/introduction/)"]
 ---
 
-# JWT Authentication Handler
+# Controlador de autenticación JWT
 
-After the JWT Authentication Handler is installed in DNN, the web.config file is updated with a line similar to the following:
+Después de instalar el controlador de autenticación JWT en DNN, el archivo web.config se actualiza con una línea similar a la siguiente:
 
 ```
 
@@ -22,12 +22,11 @@ After the JWT Authentication Handler is installed in DNN, the web.config file is
 
 ```
 
-|**Parameter**|**Allowed Values**|**Description**|
+|**Parámetro**|**Valores permitidos**|**Descripción**|
 |---|---|---|
-|name|string|Name of the authentication provider. Must be unique within the `messageHandlers` section.|
-|enabled|`true` or `false`|If `true`, an instance of the provider is created and added to the chain of providers when the application starts. Otherwise, the provider is not instantiated.|
-|defaultInclude|`true` or `false`|If `true`, the API controller uses the authentication type included in each Web API request by default; if `false`, the API controller uses the authentication type specified in its own `DnnAuthorize` attribute. Example: If the API controller’s attribute is set to `[DnnAuthorize(AuthTypes = "JWT")]`, then the API controller will respond only to requests that use JWT authentication.|
-|forceSSL|`true` or `false`|If `true`, SSL mode (HTTPS) is required for API requests; otherwise, all requests are accepted.|
+|name|string|Nombre del proveedor de autenticación. Debe ser único dentro de la sección `messageHandlers`.|
+|enabled|`true` or `false`|Cuando se establece a `true` se crea una instancia del proveedor y se agrega a la cadena de proveedores cuando se inicia la aplicación. De lo contrario, el proveedor no creará una instancia.|
+|defaultInclude|`true` or `false`|Cuando se establece a `true`, el controlador de API utiliza el tipo de autenticación incluido en cada solicitud de Web.API de forma predeterminada; si es false, el controlador de API utiliza el tipo de autenticación especificado en su propio atributo `DnnAuthorize`. Por ejemplo: si el atributo del controlador de API está establecido en `[DnnAuthorize(AuthTypes = "JWT")]`, entonces el controlador de API responderá solo a las solicitudes que utilicen la autenticación JWT.|
+|forceSSL|`true` or `false`|Cuando se establece a `true`, se requiere el modo SSL (HTTPS) para las todas las solicitudes; de lo contrario, las solicitudes HTTP también serán aceptadas.|
 
-> [!Important]
-> To prevent unauthorized access to the site, enforce SSL so that tokens are treated the same way as cookies in a web request.
+> [!Importante] Para evitar el acceso no autorizado al sitio, aplique SSL para que los tokens se traten de la misma manera que las cookies en una solicitud web.
