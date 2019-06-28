@@ -1,16 +1,16 @@
 ﻿---
 uid: developers-jwt-user-credentials
-locale: en
-title: JWT User Credentials
+locale: es
+title: Credenciales de usuario de JWT
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# JWT User Credentials
+# Credenciales de usuario de JWT
 
-For DNN, the user credentials must be in a JSON object with the user name (key: `"u"`) and password (key: `"p"`).
+Para DNN, las credenciales de usuario deben estar en un objeto JSON con el nombre de usuario `(key "u":)` y la contraseña `(key:"p")` 
 
-A sample POST request with the user name `sitemanager` and password `dnnhost`:
+Una solicitud POST de muestra con el nombre de usuario `sitemanager` y la contraseña `dnnhost`:
 
 ```
 
