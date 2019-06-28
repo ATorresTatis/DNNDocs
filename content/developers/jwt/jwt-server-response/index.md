@@ -1,22 +1,22 @@
 ﻿---
 uid: developers-jwt-server-response
-locale: en
-title: Server Response with JWT
+locale: es
+title: Respuesta del servidor con JWT
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# Server Response with JWT
+# Respuesta del servidor con JWT
 
-When the server responds to the user's browser, the JSON object that is returned contains three properties.
+Cuando el servidor responde al navegador del usuario, el objeto JSON que se devuelve contiene tres propiedades.
 
-|**Property name**|**Description**|
+|**Nombre de la propiedad**|**Descripción**|
 |---|---|
-|*displayName*|The display name of the user.|
-|*accessToken*|A JWT that must be included with each subsequent request to the various Web API endpoints for servers. The server obtains the user information from the access token itself, which is faster than retrieving the information from the database again. The access token is valid for 60 minutes and must be renewed using the renewal token.|
-|*renewalToken*|A JWT that is required to renew the access token when expired. The renewal token becomes invalid after 14 days, after the user logs out, or when the user changes their credentials, such as the login password for the web site.|
+|*displayName*|El nombre para mostrar del usuario.|
+|*accessToken*|Un JWT que debe incluirse con cada solicitud posterior, a los distintos puntos finales de la API. El servidor obtiene la información del usuario del token de acceso, que es más rápido que recuperar la información de la base de datos nuevamente. El token de acceso es válido durante 60 minutos y debe renovarse utilizando el token de renovación.|
+|*renewalToken*|Un JWT que se requiere para renovar el token de acceso cuando este caduque. El token de renovación deja de ser válido después de 14 días, después de que el usuario cierre la sesión o cuando el usuario cambie sus credenciales, como la contraseña de inicio de sesión del sitio web.|
 
-A sample JSON object sent to the browser after validating a user named "Site Manager":
+Un objeto JSON de muestra enviado al navegador después de validar un usuario llamado "Administrador del sitio (Site Manager)":
 
 ```
 
