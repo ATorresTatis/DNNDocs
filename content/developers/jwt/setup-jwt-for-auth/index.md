@@ -4,7 +4,7 @@ locale: es
 title: Configurar la autenticación JWT para su sitio
 dnnversion: 09.02.00
 related-topics: 
-links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[DNN Presentation: How Evoq Helps You Build Modern Web Applications by Will Morgenweck](https://www.slideshare.net/dnnsoftware/how-evoq-helps-you-build-modern-web-applications)","[jwt.io](https://jwt.io/introduction/)"]
+links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[Presentación de DNN: Cómo Evoq le ayuda a crear aplicaciones web modernas por Will Morgenweck](https://www.slideshare.net/dnnsoftware/how-evoq-helps-you-build-modern-web-applications)","[jwt.io](https://jwt.io/introduction/)"]
 ---
 
 # Configurar la autenticación JWT para su sitio
