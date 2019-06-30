@@ -1,40 +1,32 @@
 ﻿---
 uid: developers-setup-jwt-for-auth
-locale: en
-title: Set Up JWT Authentication for Your Site
+locale: es
+title: Configurar la autenticación JWT para su sitio
 dnnversion: 09.02.00
 related-topics: 
 links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[DNN Presentation: How Evoq Helps You Build Modern Web Applications by Will Morgenweck](https://www.slideshare.net/dnnsoftware/how-evoq-helps-you-build-modern-web-applications)","[jwt.io](https://jwt.io/introduction/)"]
 ---
 
-# Set Up JWT Authentication for Your Site
+# Configurar la autenticación JWT para su sitio
 
-## Prerequisites
+## Prerrequisitos
 
-**A host / super user account.** Hosts have full permissions to all sites in the DNN instance.
+**Una cuenta host / super user account.** Las cuentas hosts tienen permisos completos para todos los sitios en una instancia de DNN.
 
-## Steps
+## Pasos
 
-1.  Install the DNN JWT Auth Handler.
+1.  Instalar el controlador de autenticación DNN JWT.
 
-    1.  Go to Host \> Extensions.
-
-
+    1.  Vaya a Host \> Extensiones
 
         ![Host > Extensions](/images/scr-menuHostCommonExtensions.png)
 
-
-
-    2.  In the Available Extensions tab, expand the Providers section, search for DNN JWT Auth Handler, then click/tap its Install button.
-
-
+    2.  En la pestaña Extensiones disponibles, expanda la sección Proveedores, busque DNN JWT Auth Handler y luego haga clic / Instalar.
 
         ![Available Extensions > Providers > DNN JWT Auth Handler > Install](/images/scr-AvailableExtensionsProvidersJWT.png)
 
 
-
-
-    In your web.config file, the JWTAuth line is added inside the `<messageHandlers/>` tag.
+    En el archivo web.config, se agrega la línea JWTAuth dentro de la sección `<messageHandlers/>`.
 
     ```
 
@@ -47,11 +39,11 @@ links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[DNN Presentatio
 
     ```
 
-2.  (Optional) Enable JWT authentication for all Web API requests.
+2.  (Opcional) Habilite la autenticación JWT para todas las solicitudes de la API web.
 
-    1.  Access the web.config file.
-    2.  Search for the newly-added JWTAuth line inside the `<messageHandlers/>` section.
-    3.  Change JWTAuth's `enabled` and `defaultInclude` attributes to "true".
+    1.  Acceder al archivo web.config..
+    2.  Busque la línea JWTAuth recién agregada dentro de la sección `<messageHandlers/>`.
+    3.  Cambia los atributos `enabled` y `defaultInclude` a "true".
 
         ```
 
@@ -60,8 +52,7 @@ links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[DNN Presentatio
         ```
 
 
-    > [!Tip]
-    > Developers: To enable JWT authentication for your specific Web API, add the following attribute to the controller class:
+    > [! Consejo para desarrolladores]: para habilitar la autenticación JWT para su API web específica, agregue el siguiente atributo a la clase de controlador:
 
     ```
 
@@ -69,14 +60,14 @@ links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[DNN Presentatio
 
     ```
 
-3.  (Optional) Enable cross-origin resource sharing (CORS) to allow requests from remote JavaScript clients.
+3.  (Opcional) Habilite el uso compartido de recursos de origen cruzado (CORS) para permitir solicitudes de clientes remotos de JavaScript.
 
-    CORS is required only if the Web API would be accessed through a web browser. CORS is not required by native mobile or desktop apps.
+    CORS solo es necesario si se accede a la API web a través de un navegador web. CORS no es requerido por aplicaciones móviles o de escritorio nativas.
 
-    Warning: Enabling CORS allows external sites to access your site, therefore, making it vulnerable to cross-site scripting (XSS) attacks.
+    Advertencia: habilitar CORS permite que los sitios externos accedan a su sitio, por lo tanto, lo hacen vulnerable a ataques de scripts entre sitios (XSS).
 
-    1.  Access the web.config file.
-    2.  In your web.config file, add these access control lines inside the `<customHeaders/>` section.
+    1.  Acceda al archivo web.config.
+    2.  En su archivo web.config, agregue estas líneas de control de acceso dentro de la sección `<customHeaders/>`.
 
         ```
 
@@ -86,9 +77,9 @@ links: ["[IETF RFC 7519](https://tools.ietf.org/html/rfc7519)","[DNN Presentatio
 
         ```
 
-4.  (Optional) Developers: Enable additional logging for advanced debugging, testing, or troubleshooting.
-    1.  Access the DotNetNuke.log4net.config file.
-    2.  In your DotNetNuke.log4net.config file, add the following logger lines after the `</root>` closing tag.
+4.  (Opcional) Desarrolladores: habilite el registro para la depuración avanzada, las pruebas o la solución de problemas.
+    1.  Acceda al archivo DotNetNuke.log4net.config.
+    2.  En el archivo DotNetNuke.log4net.config, agregue las siguientes líneas después de la etiqueta de cierre `</root>`.
 
         ```
 
