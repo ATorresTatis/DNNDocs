@@ -90,10 +90,10 @@ El marco ASP.NET MVC se basa en la convención sobre el [paradigma de configurac
     |Vista/View|La carpeta **Views** ebbe coincidir con el nombre del controlador. Por ejemplo: Una vista para el controlador  **Home** debería estar en la carpeta **Views/Home**.|
     |Diseño compartido/Shared layout|En la carpeta **Views/Shared**|
     |MVC module|En la carpeta **DesktopModules/MVC**|
-    |Controladores/Controller|La carpeta **Controllers** (opcional)|
-    |Modelos/Model|La carpeta **Models**|
-    |Archivos de contenido estático (ej., hojas de estilo e imagenes)|La carpeta **Content**|
-    |Archivos de JavaScript|La carpeta **Scripts**|
+    |Controladores/Controller|En la carpeta **Controllers** (opcional)|
+    |Modelos/Model|En la carpeta **Models**|
+    |Archivos de contenido estático (ej., hojas de estilo e imagenes)|En la carpeta **Content**|
+    |Archivos de JavaScript|En la carpeta **Scripts**|
 
 *   Otras convenciones
     *   Los campos de un formulario HTML enlazados deben tener el mismo nombre que la propiedad del modelo correspondiente
