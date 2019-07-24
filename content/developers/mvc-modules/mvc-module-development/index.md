@@ -1,29 +1,28 @@
 ﻿---
 uid: mvc-module-development
-locale: en
-title: MVC Module Development
+locale: es
+title: Desarrollo de un módulo MVC
 dnnversion: 09.02.00
 related-topics: create-module-using-templates,use-module-creator,providers
 links: ["[Wikipedia: Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)"]
 ---
 
-# MVC Module Development
+# Desarrollo de un módulo MVC
 
-## Overview
+## Visión general
 
-The MVC module type integrates ASP.NET MVC 5 with the DNN platform.
+El tipo de módulo MVC integra ASP.NET MVC 5 con la plataforma DNN.
 
-> [!Note]
-> Incompatibilities between ASP.NET MVC and ASP.NET Web Forms cause conflicts with pre-existing Web Forms features in the DNN platform. Therefore, DNN implementations of some ASP.NET features, such as MVC routing, are limited.
+> [!Nota] Las incompatibilidades entre ASP.NET MVC y ASP.NET Web Forms causan conflictos con algunas características de Formularios Web preexistentes en la plataforma DNN. Por lo tanto, las implementaciones de DNN de algunas características de ASP.NET, como el enrutamiento MVC, son limitadas.
 
-MVC modules can use any of the standard DNN module features. All DNN module types can co-exist on a single page, and the user should not be able to distinguish which framework was used to build the module.
+Los módulos MVC pueden usar cualquiera de las características de un módulo DNN estándar. Todos los tipos de módulos de DNN pueden coexistir en una sola página, y el usuario no debería poder distinguir qué marco se utilizó para construir cada módulo.
 
-## MVC Module Architecture
+## Arquitectura de un módulo MVC
 
-The MVC module type implements the model-view-controller pattern, which separates an application into three main components:
+Los módulos del tipo MVC implementan el patrón modelo-vista-controlador, que separa una aplicación en tres componentes principales:
 
-*   **Models** implement the domain logic and often store and retrieve data from the database.
-*   **Views** render the module's user interface (UI). Typically, views are created based on data provided by the model.
+*   **Modelos/Models** que implementan la lógica del dominio y a menudo, almacenan y recuperan datos de la base de datos.
+*   **Vistas/Views** que representan la interfaz de usuario (IU) del módulo. Normalmente, las vistas se crean en función de los datos proporcionados por el modelo.
 
     ```
 
@@ -59,55 +58,50 @@ The MVC module type implements the model-view-controller pattern, which separate
 
     ```
 
-*   **Controllers** handle user interaction, retrieve and update the model, and select the view to use.
+*   **Controladores/Controllers** que manejan la interacción del usuario, recuperan y actualizan el modelo, y seleccionan la vista a utilizar.
 
-    Although the composition of the presentation layer is different, the logical architecture of an MVC module is similar to that of a Web Forms module.
-
-
+Aunque la composición de la capa de presentación es diferente, la arquitectura lógica de un módulo MVC es similar a la de un módulo de formularios web
 
     ![Logical architecture of an MVC module](/images/gra-module-architecture-mvc.png)
 
+    Cuando se solicita una página DNN, el marco busca el control del módulo solicitado en la definición del módulo. En un módulo MVC, el control del módulo identifica un espacio de nombres, un controlador y una acción específicos. La salida de la acción del controlador se almacena en una cadena, que se inyecta en la página.
 
 
-    When a DNN page is requested, the framework looks up the requested module control in the module definition. In an MVC module, the module control identifies a specific namespace, controller, and action. The output from the controller action is stored in a string, which is injected into the page.
+## Construyendo módulos MVC
 
+Visual Studio solo admite un tipo de proyecto para proyectos MVC. Sin embargo, el tipo de proyecto de Visual Studio MVC incluye plantillas adicionales para crear nuevos controladores y vistas. Las plantillas adicionales, aceleran el desarrollo y garantizan que los controladores y las vistas sigan las convenciones estándar de MVC.
 
-## Building MVC modules
+> [!Nota> Visual Studio es actualmente la única herramienta disponible para crear módulos MVC.
 
-Visual Studio supports only one project type for MVC projects. However, the Visual Studio MVC project type includes additional scaffolding for creating new controllers and views. The additional scaffolding speeds up development and ensures that controllers and views follow the standard MVC conventions.
+El marco ASP.NET MVC se basa en la convención sobre el [paradigma de configuración](https://en.wikipedia.org/wiki/Convention_over_configuration) para simplificar el desarrollo. Los módulos de DNN siguen todas las convenciones de ASP.NET MVC, así como las convenciones específicas de DNN. Las convenciones del módulo MVC incluyen:
 
-> [!Note]
-> Visual Studio is currently the only tool available for creating MVC modules.
+*   Convenciones de nombres de archivos
 
-The ASP.NET MVC framework relies on the [convention over configuration](https://en.wikipedia.org/wiki/Convention_over_configuration) paradigm to simplify development. DNN modules follow all ASP.NET MVC conventions, as well as DNN-specific conventions. MVC module conventions include:
-
-*   File name conventions
-
-    |**File Type**|**Convention**|
+    |**Tipo de archivo**|**Convención**|
     |---|---|
-    |Controller|Name must include the "controller" suffix.|
-    |Default View|Name must be the same as the associated action. Example: The default view for an **index** action must be named **index.cshtml**.|
-    |Shared layout|Name must be prefixed with an underscore (_).|
+    |Controladores/Controller|El nombre debe incluir el sufijo "Controller".|
+    |Vista predeterminada/Default View|El nombre debe ser el mismo que la acción asociada. Por ejemplo: La vista predeterminada para una acción del **index/índice** debe denominarse **index.cshtml.**|
+    |Diseño compartido/Shared layout|El nombre debe ir prefijado con un guion bajo (_).|
 
-*   File location conventions
+*   Convenciones de ubicación de archivos
 
-    |**File Type**|**Convention**|
+    |**Tipo de archivo**|**Convención**|
     |---|---|
-    |View|The **Views** folder that matches the controller name. Example: A view for the **Home** controller should be in the **Views/Home** folder.|
-    |Shared layout|The **Views/Shared** folder|
-    |MVC module|The **DesktopModules/MVC** folder|
-    |Controller|The **Controllers** folder (optional)|
-    |Model|The **Models** folder (optional)|
-    |Static content file (e.g., stylesheets and images)|The **Content** folder|
-    |JavaScript file|The **Scripts** folder|
+    |Vista/View|La carpeta **Views** ebbe coincidir con el nombre del controlador. Por ejemplo: Una vista para el controlador  **Home** debería estar en la carpeta **Views/Home**.|
+    |Diseño compartido/Shared layout|En la carpeta **Views/Shared**|
+    |MVC module|En la carpeta **DesktopModules/MVC**|
+    |Controladores/Controller|La carpeta **Controllers** (opcional)|
+    |Modelos/Model|La carpeta **Models**|
+    |Archivos de contenido estático (ej., hojas de estilo e imagenes)|La carpeta **Content**|
+    |Archivos de JavaScript|La carpeta **Scripts**|
 
-*   Miscellaneous conventions
-    *   Bound HTML form fields must have the same name as the corresponding model property.
+*   Otras convenciones
+    *   Los campos de un formulario HTML enlazados deben tener el mismo nombre que la propiedad del modelo correspondiente
 
-## Accessing DNN features
+## Accediendo a las funciones de DNN
 
-Common DNN features are made available to MVC developers through DNN APIs, such as:
+Las funciones comunes de DNN se ponen a disposición de los desarrolladores de MVC a través de las API de DNN, como:
 
-*   **Localization**. The DNN helper object includes a **LocalizeString** method. This helper object can be used in your view when localizing your module.
-*   **Module actions**. DNN includes the **ModuleAction** and **ModuleActionItems** attributes to identify custom module actions. These attributes can only be used with controller action methods.
-*   **Base controller class**. MVC controllers must inherit from the **DnnController** class. Similar to the **PortalModuleBase** class for Web Forms module developers, this class provides access to the DNN module and portal context objects.
+*   **Localización**. El objeto auxiliar (helper) DNN incluye un método **LocalizeString** . Este objeto auxiliar o helper se puede usar en su vista cuando localice su módulo.
+*   **Acciones del módulo**. DNN incluye los atributos **ModuleAction** y **ModuleActionItems** para identificar acciones de módulos personalizados. Estos atributos solo se pueden utilizar con los métodos de acción del controlador.
+*   **Controlador de clase base**. Los controladores MVC deben heredar de la clase **DnnController**. Similar a la clase **PortalModuleBase** para los desarrolladores de módulos de Formularios Web, esta clase proporciona acceso al módulo DNN y a los objetos de contexto del portal.
