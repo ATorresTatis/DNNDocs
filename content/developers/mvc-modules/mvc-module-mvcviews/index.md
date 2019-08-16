@@ -8,7 +8,7 @@ related-topics: developers-mvc-modules-overview,mvc-module-mvccontroller,mvc-mod
 
 # Vistas MVC
 
-## The _ViewStart.cshtml
+## _ViewStart.cshtml
 
 En ASP.NET MVC3 y versiones posteriores, puede definir una vista Razor llamada `ViewStart.cshtml (o _ViewStart.vbhtml para VB)` en la raíz de la carpeta `Views`. Este archivo opcional define el código de vista común que se ejecuta cuando cada vista comienza a renderizarse. Por ejemplo: El código dentro del archivo `_ViewStart.cshtml` puede establecer mediante programación cada propiedad de diseño en `Views/Shared/_Layout.cshtml` de forma predeterminada.
 
