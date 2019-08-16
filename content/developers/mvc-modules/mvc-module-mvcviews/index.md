@@ -1,18 +1,18 @@
 ﻿---
 uid: mvc-module-mvcviews
-locale: en
-title: MVC Views
+locale: es
+title: Vistas MVC
 dnnversion: 09.02.00
 related-topics: developers-mvc-modules-overview,mvc-module-mvccontroller,mvc-module-unittest,unsupported-mvc-features
 ---
 
-# MVC Views
+# Vistas MVC
 
 ## The _ViewStart.cshtml
 
-In ASP.NET MVC3 and later versions, you can define a Razor view named _ViewStart.cshtml (or _ViewStart.vbhtml for VB) in the root of the Views folder. This optional file defines the common view code that executes when each view starts to render. Example: Code within _ViewStart.cshtml can programmatically set each View's Layout property to Views/Shared/_Layout.cshtml by default.
+En ASP.NET MVC3 y versiones posteriores, puede definir una vista Razor llamada `ViewStart.cshtml (o _ViewStart.vbhtml para VB)` en la raíz de la carpeta `Views`. Este archivo opcional define el código de vista común que se ejecuta cuando cada vista comienza a renderizarse. Por ejemplo: El código dentro del archivo `_ViewStart.cshtml` puede establecer mediante programación cada propiedad de diseño en `Views/Shared/_Layout.cshtml` de forma predeterminada.
 
-Example: In Views/_ViewStart.cshtml:
+Ejemplo: `Views/_ViewStart.cshtml`:
 
 ```
 
@@ -22,7 +22,7 @@ Example: In Views/_ViewStart.cshtml:
 			
 ```
 
-Example: In Views/Shared/_Layout.cshtml:
+Ejemplo: `Views/Shared/_Layout.cshtml`:
 
 ```
 
@@ -32,29 +32,29 @@ Example: In Views/Shared/_Layout.cshtml:
 			
 ```
 
-The above files, which are generated from the MVC project template, ensure that all views returned by a controller action will always have a wrapper <div> with an id that includes the current module's ID. If you choose to exclude the _ViewStart.cshtml in your project, your individual action views will simply render without a common wrapping.
+Los archivos anteriores, que se generan a partir de la plantilla de proyecto MVC, aseguran que todas las vistas devueltas por una acción del controlador siempre tendrán un contenedor con un identificador que incluye la identificación del módulo actual. Si elige excluir `_ViewStart.cshtml` de su proyecto, sus vistas de acción individuales simplemente se procesarán sin un ajuste común.
 
-## View Naming Conventions
+## Convenciones de nomenclatura para vistas
 
-According to MVC pattern conventions, views reside in folders within the Views folder. Each controller must have a View folder named after it. For example, the template-generated project created two MVC controllers: ItemController and SettingsController with their respective controllers: Views/Item and Views/Settings.
+Según las convenciones de patrones MVC, las vistas residen en carpetas dentro de la carpeta Vistas. Cada controlador debe tener una carpeta `Views` con su nombre, por ejemplo el proyecto generado por la plantilla creó dos controladores MVC: `ItemController` y `SettingsController` con sus respectivos controladores: _Views/Item y Views/Settings_.
 
-Note: View folders typically the name of their corresponding controllers, but without the word "Controller".
+Nota: Las carpetas `View` normalmente llevan el nombre de sus controladores correspondientes, pero sin la palabra "Controller".
 
-Likewise, your Razor view files must be named according to the action method names in their associated controller. Example: We have two C# Razor views in the Views/Item folder called Index.cshtml and Edit.cshtml, which correspond to the ItemController.Index() and ItemController.Edit() action methods.
+Del mismo modo, los archivos de vista Razor deben nombrarse de acuerdo con los nombres de los métodos de acción de su controlador asociado. Por ejmplo: Tenemos dos vistas de C# Razor en la carpeta `Views` llamados Index.cshtml y Edit.cshtml, que corresponden a los métodos de acción `ItemController.Index()` y `ItemController.Edit()`.
 
-## Binding Data in Your View
+## Enlace de datos en la vista
 
-Aside from HTML and javascript, the following server objects can be used to populate your view:
+Además de HTML y JavaScript, los siguientes objetos de servidor se pueden utilizar para complemenetar la vista:
 
-*   Model The model object that is returned in the action is bound to the view in the generic declaration inside the @inherits statement at the top of the view.
+*   Model El objeto modelo que se devuelve en la acción está vinculado a la vista en la declaración genérica dentro de la declaración @inherits en la parte superior de la vista.
     
     ```
     
-        @inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<Dnn.Modules.CompanyName.MyMvcModule.Models.Item<
+        @inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<Dnn.Modules.CompanyName.MyMvcModule.Models.Item>
     					
     ```
     
-    The above line will make the Item class available for access in the Razor view via the Model property. Then you can inject the model attributes into the html:
+    La línea anterior hará que la clase Item esté disponible para acceder en la vista Razor a través de la propiedad Model. Luego puede inyectar los atributos del modelo en el html:
     
     ```
     
@@ -62,7 +62,7 @@ Aside from HTML and javascript, the following server objects can be used to popu
     					
     ```
     
-*   ViewBag ViewBag attributes are available from the Razor view.
+*   ViewBag Los atributos de ViewBag están disponibles en la vista Razor.
     
     ```
     
@@ -70,7 +70,7 @@ Aside from HTML and javascript, the following server objects can be used to popu
     					
     ```
     
-*   HTML Helper Helpers are classes that generate HTML elements using the model class. ASP.NET MVC includes an @HTML helper class, which constructs form elements, such as dropdown lists, text boxes, and labels.
+*   HTML Helpers son clases que generan elementos HTML utilizando la clase de modelo. ASP.NET MVC incluye una clase auxiliar @HTML que construye elementos de formulario, como listas desplegables, cuadros de texto y etiquetas.
     
     ```
     
@@ -78,7 +78,7 @@ Aside from HTML and javascript, the following server objects can be used to popu
     					
     ```
     
-*   DNN Helper DNN's own helper class (@Dnn) provides DNN core objects that you can use in your Razor view. PortalSettings, ModuleContext, User and other objects provide access to the underlying CMS structure of your page.
+*   DNN Helper La propia clase de ayuda de DNN (@Dnn) proporciona objetos centrales de DNN que puede usar en su vista Razor. PortalSettings, ModuleContext, User y otros objetos proporcionan acceso a la estructura CMS subyacente de su página.
     
     ```
     
@@ -87,9 +87,9 @@ Aside from HTML and javascript, the following server objects can be used to popu
     ```
     
 
-## View Navigation
+## Navegación entre vistas
 
-To navigate to another view or another controller action, you can use the action method of the @Url helper to create a URL action method that you can place in an anchor tag or button. Example, in the template-generated Item Index view, a hyperlink in each item can lead the user to the single item's Edit view.
+Para navegar a otra vista u otra acción del controlador, puede usar el método de acción del ayudante @Url para crear un método de acción de URL que puede colocar en una etiqueta o botón de anclaje. Por ejemplo, en la vista de índice de elemento generado por la plantilla, un hipervínculo en cada elemento puede llevar al usuario a la vista de edición del elemento individual.
 
 ```
 
@@ -97,11 +97,11 @@ To navigate to another view or another controller action, you can use the action
 			
 ```
 
-## Client Scripting
+## Scripts del lado del cliente
 
-The mechanisms used in registering scripts, stylesheets, or Javascript libraries in a DNN module have been modified to work with MVC modules.
+Los mecanismos utilizados para registrar scripts, hojas de estilo o bibliotecas Javascript en un módulo DNN se han modificado para que funcionen con módulos MVC.
 
-Registering a stylesheet or script using the Client Resource Manager, or register a Javascript Library Extension:
+El registro de una hoja de estilo o secuencia de comandos se puede hacer con Client Resource Manager. También se permite el registro de una extensión de biblioteca de Javascript a través de Javascript Library Extension.
 
 ```
 
@@ -120,9 +120,9 @@ Registering a stylesheet or script using the Client Resource Manager, or registe
 			
 ```
 
-## Localization
+## Localización
 
-One of the base methods on the @Dnn MVC helper is LocalizeString(). The resource files for Views are organized at the controller level in the App_LocalResources folder in the root of the module project. By convention, the ItemController should have a resource file named App_LocalResources/Item.resx. If there was a resource key called "lblName.Text", you can pull that content into your view using the following code:
+Uno de los métodos base en @Dnn MVC es LocalizeString(). Los archivos de recursos para Vistas están organizados en el nivel del controlador en la carpeta `App_LocalResources` en la raíz del proyecto del módulo. Por convención, ItemController debe tener un archivo de recursos llamado `App_LocalResources\Item.resx`. Si había una clave de recurso llamada "lblName.Text", puede extraer ese contenido en su vista usando el siguiente código:
 
 ```
 
