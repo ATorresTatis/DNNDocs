@@ -1,81 +1,80 @@
 ﻿---
 uid: mvc-module-unittest
-locale: en
-title: Create a Unit Test for an MVC module
+locale: es
+title: Crear una prueba unitaria para un módulo MVC
 dnnversion: 09.02.00
 related-topics: developers-mvc-modules-overview,mvc-module-mvccontroller,mvc-module-mvcviews,unsupported-mvc-features
 links: ["[Microsoft MSDN: Unit Test Basics](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics)","[Microsoft Visual Studio: Run tests with your builds for continuous integration](https://www.visualstudio.com/en-gb/docs/test/continuous-testing/test-build)","[Moq](https://www.nuget.org/packages/Moq/)"]
 ---
 
-# Create a Unit Test for an MVC module
+# Crear una prueba unitaria para un módulo MVC
 
-## Overview
+## Visión
 
-Because MVC controllers are the central business logic of an MVC module, it is a best practice to create automated unit tests to ensure they behave as intended. This example illustrates how to create a unit test for your module's MVC controller.
+Debido a que los controladores MVC son la lógica comercial central de un módulo MVC, es una buena práctica crear pruebas unitarias automatizadas para garantizar que se comporten según lo previsto. Este ejemplo ilustra cómo crear una prueba unitaria para el controlador MVC de su módulo.
 
-> [!Note]
-> This unit test procedure is applicable only to modules created with the DNN MVC module template.
+> [!Nota] Este procedimiento de prueba de la unidad es aplicable solo a los módulos creados con la plantilla de módulo DNN MVC.
 
-## Prerequisites
+## Prerrequisitos
 
-*   A module created with the DNN MVC module template in Visual Studio as a Project with Templates.
-*   [Moq](https://www.nuget.org/packages/Moq/), a simulation framework for C#/.NET.
+Un módulo creado con la plantilla de módulo DNN MVC en Visual Studio como un proyecto con plantillas.
+*   [Moq](https://www.nuget.org/packages/Moq/), un marco de simulación para C#/.NET.
 
-## Steps
+## Pasos
 
-1.  Add a new unit test project to the MVC module solution.
-    1.  In Visual Studio's Solution Explorer, right-click on your MVC module solution and select Add \> New Project.
-
-
-
-        ![Add New Project](/images/scr-mvc-unittest-addproject.png)
+1.  Agregue un nuevo proyecto de prueba unitaria a la solución del módulo MVC..
+    1.  En el Explorador de soluciones de Visual Studio, haga clic con el botón derecho en la solución del módulo MVC y seleccione Agregar \> Nuevo proyecto.
 
 
 
-    2.  In the Add New Project dialog, select Unit Test Project, enter a name, and select the local folder to store it in.
+        ![Agregar nuevo proyecto](/images/scr-mvc-unittest-addproject.png)
 
 
 
-        ![Create Unit Test project](/images/scr-mvc-unittest-create.png)
+    2.  En el cuadro de diálogo Agregar nuevo proyecto, seleccione Proyecto de prueba unitaria, ingrese un nombre y seleccione la carpeta local para almacenarlo.
 
 
 
-2.  Add the necessary MVC and DNN assembly references.
-
-    For each assembly to be added to the new unit test project, right-click on the project's References node and add an assembly reference.
+        ![Crear proyecto de prueba unitaria](/images/scr-mvc-unittest-create.png)
 
 
 
-    ![Project Reference](/images/scr-mvc-unittest-projref.png)
+2.  Agregue las referencias de ensamblados de MVC y DNN necesarias.
+
+    Para cada conjunto que se agregará al nuevo proyecto de pruebas unitarias, haga clic con el botón derecho en el nodo Referencias del proyecto y agregue una referencia de conjunto.
 
 
 
-    Add references to the following assemblies, as well as others that your module specifically needs:
+    ![Referencia de proyecto](/images/scr-mvc-unittest-projref.png)
+
+
+
+    Agregue referencias a los siguientes ensamblados, así como a otros que su módulo necesite específicamente:
 
     *   DotNetNuke
     *   DotNetNuke.Web.Mvc
     *   System.Web.Mvc
 
-3.  (Optional) Use Moq to simulate a data store.
+3.  (Opcional) Use Moq para simular un almacén de datos.
 
-    Moq is a simulation framework for C#/.NET, typically used in unit testing to quickly create dependency objects that mimic the actual objects. This project uses Moq to simulate an ItemManager object in order to run tests without requiring a database.
+    Moq es un marco de simulación para C#/.NET, que generalmente se utiliza en pruebas unitarias para crear rápidamente objetos de dependencia que imitan objetos reales. Este proyecto utiliza Moq para simular un objeto ItemManager para ejecutar pruebas sin requerir una base de datos.
 
-    Note: This step is not required for the example test, but it is needed in most real-world test cases.
+    Nota: Este paso no es necesario para la prueba de ejemplo, pero es necesario en la mayoría de los casos de prueba del mundo real.
 
-    1.  In Visual Studio's Solution Explorer, right-click on your unit test project.
-    2.  Choose Manage Nuget Packages.
-    3.  Search for Moq and install.
-
-
-
-        ![Moq Nuget Installation](/images/scr-mvc-unittest-moqnuget.png)
+    1.  En el Explorador de soluciones de Visual Studio, haga clic derecho en su proyecto de prueba unitaria.
+    2.  Elija Administrar paquetes Nuget.
+    3.  Busque Moq e instálelo.
 
 
 
+        ![Instalación de Moq](/images/scr-mvc-unittest-moqnuget.png)
 
-    This example creates a MockStores class for use with Moq to simulate a database and its behavior.
 
-    Create a folder called Mocks and create a MockStores.cs file inside the folder. Enter the following code in MockStores.cs:
+
+
+    Este ejemplo crea una clase MockStores para usar con Moq y simular una base de datos y su comportamiento.
+
+    Cree una carpeta llamada Mocks y cree un archivo MockStores.cs dentro de la carpeta. Ingrese el siguiente código en MockStores.cs:
 
     ```
 
@@ -139,17 +138,17 @@ Because MVC controllers are the central business logic of an MVC module, it is a
 
     ```
 
-    The static MockItemManager() method in the MockStores class simulates all methods of an IItemManager implementation. Therefore, MockStores can be used in the controller as the IItemManager implementation.
+    El método estático MockItemManager() en la clase MockStores simula todos los métodos de una implementación IItemManager. Por lo tanto, MockStores se puede usar en el controlador como la implementación de IItemManager..
 
-    The allItems variable is a generic list of Item objects and serves as the data store.
+    La variable allItems es una lista genérica de objetos Item y sirve como almacén de datos.
 
-4.  Create the unit test.
+4.  Cree la prueba unitaria.
 
-    Tip: Unit test method names should be more descriptive than typical methods. Ideally, the test method name includes the name of the method being tested, the test being performed, and the expected result. Example: `Edit_CreateNewItem_ModuleIdAssignedinModel` could be the name of a test method that verifies if an Edit() method creates a new item (if the item does not yet exist) by checking if the moduleID is assigned in the view's model.
+    Consejo: Los nombres de los métodos de prueba de unidad deberían ser más descriptivos que los métodos típicos. Idealmente, el nombre del método de prueba incluye el nombre del método que se está probando, la prueba que se está realizando y el resultado esperado. Por ejemplo: `Edit_CreateNewItem_ModuleIdAssignedinModel` podría ser el nombre de un método de prueba que verifica si un método Edit() crea un nuevo elemento (si el elemento aún no existe) al verificar si el ID de módulo está asignado en el modelo de la vista.
 
-    This example creates a unit test for the ItemController class.
+    Este ejemplo crea una prueba unitaria para la clase ItemController.
 
-    You can rename the sample unit test file UnitTest1.cs (included as a default when the new unit test project was created) to ItemControllerTests.cs or create a new file. Then enter the following code in ItemControllerTests.cs:
+    Puede cambiar el nombre del archivo de prueba de unidad de muestra UnitTest1.cs (incluido de forma predeterminada cuando se creó el nuevo proyecto de prueba de unidad) a ItemControllerTests.cs o crear un nuevo archivo. Luego ingrese el siguiente código en ItemControllerTests.cs:
 
     ```
 
@@ -184,19 +183,19 @@ Because MVC controllers are the central business logic of an MVC module, it is a
 
     ```
 
-    This sample unit test uses the Arrange Act Assert pattern of unit testing:
+    Esta muestra de prueba unitaria utiliza el patrón Arrange Act Assert de una prueba unitaria:
 
-    *   Arrange: A new instance of ItemController is created with a new MockStores.MockItemManager instance and the moduleId. (The next step retrofits the ItemController constructor to work with this unit test.
-    *   Act: The Edit() method of the control is called without any parameters, and the result is saved.
-    *   Assert: The test verifies that the moduleId is set in the resulting View module before the add/edit-item view is rendered.
+    *   Arrange: crea una nueva instancia de ItemController con una nueva instancia de MockStores.MockItemManager y moduleId. (El siguiente paso actualiza el constructor ItemController para trabajar con esta prueba unitaria.
+    *   Act: se llama al método Edit() del control sin ningún parámetro y se guarda el resultado.
+    *   Assert: La prueba verifica que el valor de moduleId esté configurado en el módulo de Vista resultante antes de que se visualice la vista de agregar/editar elemento.
 
-    If your controller has more complex business logic, you can automate the validation of the unit test.
+    Si su controlador tiene una lógica empresarial más compleja, puede automatizar la validación de la prueba unitaria.
 
-5.  Retrofit the ItemController.Edit() method to work with unit tests.
+5.  Adapte el método ItemController.Edit() para trabajar con pruebas unitarias.
 
-    In code that was generated using the MVC module templates, the ItemController has no dependency-injection capability for the data layer. In addition, some basic DNN environment objects, such as PortalSettings and ModuleContext are not available when running unit tests. Retrofitting the ItemController.Edit() method fixes these limitations.
+    En el código que se generó usando las plantillas del módulo MVC, el ItemController no tiene capacidad de inyección de dependencia para la capa de datos. Además, algunos objetos de entorno básicos de DNN, como `PortalSettings` y `ModuleContext` no están disponibles al ejecutar pruebas unitarias. La actualización del método ItemController.Edit() corrige estas limitaciones.
 
-    This example adds a constructor and class variable to the ItemController to inject the IItemManager implementation/simulator and moduleId.
+    Este ejemplo agrega un constructor y una variable de clase al ItemController para inyectar la implementación / simulador IItemManager y moduleId.
 
     ```
 
@@ -229,25 +228,23 @@ Because MVC controllers are the central business logic of an MVC module, it is a
 
     ```
 
-    Some lines in the default ItemController are not applicable to this sample unit test, which uses an ItemController simulation.
+    Algunas líneas en el ItemController predeterminado no son aplicables a esta prueba de unidad de muestra, que utiliza una simulación de ItemController.
 
-    To ignore those lines when running the unit test, the retrofitted ItemController.Edit() method checks PortalSettings and ModuleContext, which get their values from the module's runtime engine. During the unit test, the runtime engine is bypassed by the ItemController simulation; therefore, these variables are set to `null` when the unit test is running.
+    Para ignorar esas líneas cuando se ejecuta la prueba de la unidad, el método ItemController.Edit() actualizado revisa PortalSettings y ModuleContext, que obtienen sus valores del motor de tiempo de ejecución del módulo. Durante la prueba unitaria, la simulación de ItemController omite el motor de tiempo de ejecución; por lo tanto, estas variables se configuran a `null` cuando se ejecuta la prueba unitaria.
 
-    The _moduleId variable is passed to the constructor as the itemId parameter by the sample unit test and the ItemManager.Instance will be our mock instance because our unit test overrode the implementation in the constructor.
+    La variable _\_moduleId_ se pasa al constructor como parámetro itemId mediante la prueba unitaria de muestra y la instancia de ItemManager.Instance será nuestra instancia simulada porque nuestra prueba de unidad anuló la implementación en el constructor.
 
-6.  Run the unit test.
+6.  Ejecute la prueba unitaria..
 
-    You can run a unit test in Visual Studio:
+    Puede ejecutar una prueba unitaria en Visual Studio:
 
-    *   Test \> Debug
-    *   Test \> Run
+    *   Pruebas \> Depuración
+    *   Pruebas \> Ejecutar
 
-    The Test Explorer window gives you a quick view of all tests, the test results, and the commands to run them.
+    La ventana Explorador de pruebas le ofrece una vista rápida de todas las pruebas, los resultados de estas y los comandos para ejecutarlas.
 
-
-
-    ![Test Explorer](/images/scr-mvc-unittest-testexplorer.png)
+    ![ Explorador de pruebas unitarias](/images/scr-mvc-unittest-testexplorer.png)
 
 
 
-    For more advanced users, unit tests can be scheduled to run automatically as part of your build process.
+    Para usuarios más avanzados, las pruebas unitarias pueden programarse para ejecutarse automáticamente como parte de su proceso de compilación.
