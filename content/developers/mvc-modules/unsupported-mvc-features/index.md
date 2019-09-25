@@ -11,9 +11,9 @@ related-topics: developers-mvc-modules-overview,mvc-module-mvccontroller,mvc-mod
 Algunas características de MVC no se implementaron completamente en DNN 8 debido a las diferencias entre los marcos de ASP.NET MVC y ASP.NET Web Forms.
 
 *   Ayudantes de HTML
-    *   FormExtensions (BeginForm, BeginRouteForm, EndForm)
+    *   Extensiones de formulario (BeginForm, BeginRouteForm, EndForm)
     *   Html.RouteLink
-    *   All ChildActionExtensions (e.g., Html.Action, Html.RenderAction)
+    *   Todas las Extensiones de ChildAction (por ejemplo, Html.Action, Html.RenderAction)
 *   Ayudantes de URL
     *   Url.Action(string actionName, string controllerName, RouteValueDictionary routeValues, string protocol)
     *   Url.Action(string actionName, string controllerName, object routeValues, string protocol)
