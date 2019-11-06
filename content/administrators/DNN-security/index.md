@@ -1,44 +1,42 @@
 ﻿---
 uid: dnn-security
-locale: en
-title: DNN Security
+locale: es
+title: Seguridad en DNN
 dnnversion: 09.02.00
 related-topics: administrators-included-modules-overview,requirements,product-versions,dnn-overview,control-bar-to-persona-bar,persona-bar-by-role,providers,more-resources
 links: ["[DNN Security Center](http://www.dnnsoftware.com/community/security/security-center)","[DNN blog](http://www.dnnsoftware.com/community-blog)"]
 ---
 
-# DNN Security
+# Seguridad en DNN
 
-DNN makes every effort to quickly analyze reported security issues and to provide workarounds and releases that address those issues as required.
+DNN hace todo lo posible para analizar rápidamente los problemas de seguridad reportados y proporcionar soluciones y lanzamientos que aborden esos problemas según sea necesario.
 
-## Reporting Security Issues
+## Informar problemas de seguridad
 
-> [!Important]
-> To report potential security issues and questionable security scan results, please contact DNN by email at [security@dnnsoftware.com](mailto:security@dnnsoftware.com).
+> [!Importante] Para informar de posibles problemas de seguridad y/o resultados cuestionables de análisis de seguridad, comuníquese con DNN a través del correo electrónico [security@dnnsoftware.com](mailto:security@dnnsoftware.com).
 
-All submissions are viewed by members of the DNN Security Task Force only. Submissions are discussed outside the Task Force, only if permitted by the individual or company that reported the issue.
+Todos los reportes son vistos solo por los miembros del Grupo de trabajo de seguridad de DNN. Las presentaciones se discuten fuera del Grupo de trabajo, solo si lo permite la persona o empresa que informó el problema.
 
-## Severity Levels
+## Niveles de gravedad
 
-Each confirmed issue is assigned a severity level (Critical, Moderate, or Low) based on its potential impact on the security of DNN installations.
+A cada problema confirmado se le asigna un nivel de gravedad (Crítico, Moderado o Bajo) en función de su impacto potencial en la seguridad de una instalación de DNN.
 
-|**Severity Level**|**Description**|
+|**Nivel de gravedad**|**Descripción**|
 |---|---|
-|**Critical**|The security issue could be exploited by a remote attacker to gain access to DNN data or functionality. Security bulletins for all critical issues include a recommended workaround or a fix that must be applied as soon as possible.|
-|**Moderate**|The security issue could compromise data or functionality, only if another condition is met; e.g., if a specific module is installed or if a user in a specific role logs in. Security bulletins for moderate issues typically include recommended actions to resolve the issue.|
-|**Low**|The security issue is very difficult to exploit, or its potential impact is limited.|
+|**Crítico**|Un atacante remoto podría explotar el problema de seguridad para obtener acceso a los datos o la funcionalidad de DNN. Los boletines de seguridad para todos los problemas críticos incluyen una solución recomendada o una solución que debe aplicarse lo antes posible.|
+|**Moderado**|El problema de seguridad podría comprometer los datos o la funcionalidad, solo si se cumple otra condición; por ejemplo, si se instala un módulo específico o si un usuario en un rol específico inicia sesión. Los boletines de seguridad para problemas moderados generalmente incluyen acciones recomendadas para resolver el problema.|
+|**Bajo**|El problema de seguridad es muy difícil de explotar, o su impacto potencial es limitado.|
 
-## Security Bulletins
+## Boletines de seguridad
 
-The Security Task Force publishes security bulletins in [the DNN blog](http://www.dnnsoftware.com/community-blog), in forum posts, and sometimes by email. Each bulletin includes details about the issue, the affected DNN versions, and suggested fixes or workarounds.
+Security Task Force publica boletines de seguridad [el blog de DNN](http://www.dnnsoftware.com/community-blog), en publicaciones de foros y, a veces, por correo electrónico. Cada boletín incluye detalles sobre el problema, las versiones de DNN afectadas y soluciones sugeridas o soluciones alternativas.
 
-[View the full list of known and resolved issues and their bulletins.](http://www.dnnsoftware.com/community/security/security-center)
+[Vea la lista completa de problemas conocidos y resueltos y sus boletines](http://www.dnnsoftware.com/community/security/security-center)
 
-## Security Support for Retired Versions
+## Soporte de seguridad para versiones retiradas
 
-Bug fixes and enhancements are applied only to the most recent major release. Previous releases are considered retired. Example: After version 9.0 was released, all 8.x versions were considered retired.
+Las correcciones de errores y las mejoras se aplican solo a la versión principal más reciente. Los lanzamientos anteriores se consideran retirados. Ejemplo: después de que se lanzó la versión 9.0, todas las versiones 8.x se consideraron retiradas.
 
-However, DNN continues to provide maintenance releases for retired versions that are affected by a newly discovered security issue, up to one year after the version is retired. Example: 8.x versions were retired when 9.0 was released on 2016 December 9; however, if DNN becomes aware of a security issue that affects 8.x, a security maintenance release will still be published for 8.x until 2017 December 9.
+Sin embargo, DNN continúa proporcionando versiones de mantenimiento para versiones retiradas que se ven afectadas por un problema de seguridad recientemente descubierto, hasta un año después de que se retira la versión. Por ejemplo: las versiones 8.x se retiraron cuando 9.0 se lanzó el 9 de diciembre de 2016; sin embargo, si DNN encuentra un problema de seguridad que afecta a versiones 8.x, todavía se publicará una versión de mantenimiento de seguridad para 8.x hasta el 9 de diciembre de 2017.
 
-[View release dates for DNN versions.](xref:product-versions)
-
+[Vea las fechas de lanzamiento para versiones de DNN](xref:product-versions)
