@@ -1,10 +1,10 @@
 ﻿---
 uid: administrators-overview
-locale: en
+locale: es
 title: Hello, Administrator!
 dnnversion: 09.02.00
 ---
 
-# Hello, Administrator!
+# Hola, Administrador!
 
-Hello, Administrator!
+Hola, Administrador!
