@@ -1,13 +1,13 @@
 ﻿---
 uid: administrators-pages-templates-overview
-locale: en
-title: Managing Pages and Templates
+locale: es
+title: Administrar páginas y plantillas
 dnnversion: 09.02.00
 related-topics: administrators-content-with-modules-overview
 ---
 
-# Managing Pages and Templates
+# Administrar páginas y plantillas
 
-## About Pages and Templates
+## Acerca de páginas y plantillas
 
-A page is defined by the layout template, which comes with the theme installed for the site. The layout specifies where the panes go, and each pane contains a module. A module presents content, which could be static or dynamic.
+Una página se define mediante la plantilla de diseño, que viene con el tema instalado para el sitio. El diseño especifica dónde van los paneles, y cada panel contiene un módulo. Un módulo presenta contenido, que podría ser estático o dinámico.
