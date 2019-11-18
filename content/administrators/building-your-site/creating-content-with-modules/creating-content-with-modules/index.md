@@ -1,35 +1,35 @@
 ﻿---
 uid: creating-content-with-modules
-locale: en
-title: Creating Content with Modules
+locale: es
+title: Crear contenido con módulos
 dnnversion: 09.02.00
 related-topics: included-modules,administrators-included-modules-overview,included-modules
 ---
 
-# Creating Content with Modules
+# Crear contenido con módulos
 
-Modules are a type of extension that provides you with additional functionality on your page. The container associated with a module determines how it is displayed.
+Los módulos son un tipo de extensión que le brinda funcionalidad adicional en su página. El contenedor asociado con un módulo determina cómo se muestra.
 
-## Using Modules
+## Usando módulos
 
-You can add a module to a page:
+Puede agregar un módulo a una página:
 
-*   As an independent instance. The new module instance is not affected by configuration changes made to other instances of the same module type.
-*   As a reference to an existing module instance. If the module instance is reconfigured, even from another page, those changes will also be reflected on your page.
+*   Como una instancia independiente. La nueva instancia del módulo no se ve afectada por los cambios de configuración realizados en otras instancias del mismo tipo de módulo.
+*   Como referencia a una instancia de módulo existente. Si la instancia del módulo se reconfigura, incluso desde otra página, esos cambios también se reflejarán en su página.
 
-Each module on a page has its own action menu that allows you to configure the module and its behavior. Action menus are displayed when the page is in Edit mode.
+Cada módulo en una página tiene su propio menú de acción que le permite configurar el módulo y su comportamiento. Los menús de acción se muestran cuando la página está en modo Edición.
 
-*   Edit menu (pencil icon)
-*   Manage menu (gear icon)
-*   Move menu (four-arrow icon)
-*   Custom menus specific to the module
+*   Menú de edición (icono de lápiz)
+*   Menú de Administración (icono de engranaje)
+*   Mover para menú (icono de cuatro flechas)
+*   Menús personalizados específicos para el módulo.
 
-Depending on module settings, site users could print, tag, and subscribe to the module's content.
+Dependiendo de la configuración del módulo, los usuarios del sitio podrían imprimir, etiquetar y suscribirse al contenido del módulo.
 
-DNN includes these modules which enable you to create content directly in DNN:
+DNN incluye estos módulos que le permiten crear contenido directamente en DNN:
 
-*   The HTML and HTML Pro modules allow you to enter static HTML text into your page.
-*   The Publisher module allows you to create articles, such as announcements, news, and press releases.
-*   The Module Creator enables a developer to create simple modules with custom functionality. (Requires administrator permissions on a local installation.)
+*   Los módulos HTML y HTML Pro le permiten ingresar texto HTML estático en su página.
+*   El módulo del Editor le permite crear artículos, como anuncios, noticias y comunicados de prensa.
+*   El Creador de módulos permite a un desarrollador crear módulos simples con funcionalidad personalizada. (Requiere permisos de administrador en una instalación local).
 
-You can also crowdsource your content by adding a Social module (e.g., Blogs, Journal, or Wiki) to a page in your site.
+También puede hacer crowdsourcing (colaboración abierta distribuida) de su contenido agregando un módulo Social (por ejemplo, Blogs, Journal o Wiki) a una página en su sitio.
