@@ -1,9 +1,9 @@
 ﻿---
 uid: pages
-locale: en
-title: Pages
+locale: es
+title: Páginas
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# Pages
+# Páginas
