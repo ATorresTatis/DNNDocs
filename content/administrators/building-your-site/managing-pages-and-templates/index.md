@@ -1,9 +1,9 @@
 ﻿---
 uid: pages-templates
-locale: en
-title: Page Templates
+locale: es
+title: Plantillas de páginas
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# Page Templates
+# Plantillas de páginas
