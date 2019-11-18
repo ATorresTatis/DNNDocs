@@ -1,9 +1,9 @@
 ﻿---
 uid: templates
-locale: en
-title: Templates
+locale: es
+title: Plantillas
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# Templates
+# Plantillas
