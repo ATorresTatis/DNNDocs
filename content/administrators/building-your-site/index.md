@@ -1,29 +1,27 @@
 ﻿---
 uid: administrators-building-your-site-overview
-locale: en
-title: Building Your Site
+locale: es
+title: Construyendo su sitio
 dnnversion: 09.02.00
 ---
 
-# Building Your Site
+# Construyendo su sitio
 
-Extensions expand the functionality of DNN. The most commonly used extensions when building a website are modules, themes, and containers.
+Las extensiones amplían la funcionalidad de DNN. Las extensiones más utilizadas al crear un sitio web son módulos, temas y contenedores.
 
-*   Modules present content on a page or perform administrative tasks.
-*   Themes and containers define the appearance of the pages and modules, respectively.
+*   Los módulos presentan contenido en una página o realizan tareas administrativas.
+*   Los temas y los contenedores definen la apariencia de las páginas y los módulos, respectivamente.
 
-> [!Note]
-> Extensions must be installed and enabled by the host before they become available for use in any site or page.
+> [!Nota] Las extensiones deben ser instaladas y habilitadas por el host antes de que estén disponibles para su uso en cualquier sitio o página.
 
-To build a site,
+Para construir un sitio,
 
-1.  Create or copy one or more pages on the site. A new page is based on the layout template, which defines the panes on the page.
-2.  Configure the page, including the permissions. Specific pages can be restricted to users in certain roles, such as subscribers.
-3.  To each page, add one or more modules. Each pane on the page can hold one module.
-4.  Configure the modules, choose containers for each, and add content where appropriate.
-5.  Add themes for the entire site and optionally for individual pages.
-6.  Test your site.
-7.  Publish your site.
+1.  Cree o copie una o más páginas en el sitio. Una nueva página se basa en la plantilla de diseño, que define los paneles en la página.
+2.  Configure la página, incluidos los permisos. Las páginas específicas se pueden restringir a los usuarios en ciertos roles, como suscriptores o cualquier otro rol.
+3.  A cada página, agregue uno o más módulos. Cada panel de la página puede contener un módulo.
+4.  Configure los módulos, elija contenedores para cada uno y agregue contenido cuando corresponda.
+5.  Agregue temas para todo el sitio o de forma opcional para algunas páginas individuales.
+6.  Pruebe su sitio.
+7.  Publique su sitio.
 
-> [!Tip]
-> The [Site Wizard](xref:module-site-wizard) is a quick way to configure the basic settings for a site, change the design, and apply a template.
+> [! Sugerencia] El [Asistente para sitios](xref:module-site-wizard) es una forma rápida de configurar los ajustes básicos de un sitio, cambiar el diseño y aplicar una plantilla.
