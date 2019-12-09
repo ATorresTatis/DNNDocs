@@ -1,8 +1,8 @@
 ﻿---
 uid: administrators-configuring-your-site-overview
-locale: en
-title: Configuring Your Site
+locale: es
+title: Configurando su sitio
 dnnversion: 09.02.00
 ---
 
-# Configuring Your Site
+# Configurando su sitio
