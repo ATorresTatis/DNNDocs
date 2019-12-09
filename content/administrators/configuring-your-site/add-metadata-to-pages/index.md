@@ -1,34 +1,32 @@
 ﻿---
 uid: add-metadata-to-pages
-locale: en
-title: Add Metadata to Pages
+locale: es
+title: Agregar metadatos a páginas
 dnnversion: 09.02.00
 related-topics: update-site-info,assign-key-pages,configure-messaging,access-web-config,configure-check-for-new-version,participate-in-improvement-program,configure-html-editor,administrators-extensions-overview,administrators-connectors-overview,administrators-search-overview,administrators-vocabularies-overview
 ---
 
-# Add Metadata to Pages
+# Agregar metadatos a páginas
 
-## Prerequisites
+## Prerequisitos
 
-*   **A host / super user account.** Hosts have full permissions to all sites in the DNN instance.
+*   Una cuenta **host/superusuario**. Las cuentas hosts tienen permisos completos para modificar todos los sitios en una instancia de DNN.
 
-## Steps
+## Pasos
 
-1.  Go to **Persona Bar \> Settings \> Site Settings**.
+1.  Vaya a **Persona Bar \> Configuración \> Configuraciones del sitio**.
     
-    ![Persona Bar > Settings > Site Settings](/images/scr-pbar-host-Settings-E91-platform.png)
+    ![Persona Bar > Configuración > Configuraciones del sitio](/images/scr-pbar-host-Settings-E91-platform.png)
     
-2.  Go to the **Site Behavior** tab, and then the **Default Pages** subtab.
+2.  Vaya a la pestaña **Comportamiento del sitio** y luego a la subpestaña **Páginas predeterminadas**.
     
-    ![Site Behavior > Default Pages](/images/scr-pbtabs-host-Settings-SiteSettings-SiteBehavior-DefaultPages-E90.png)
+    ![Comportamiento del sitio > Páginas predeterminadas](/images/scr-pbtabs-host-Settings-SiteSettings-SiteBehavior-DefaultPages-E90.png)
     
-3.  Enter the HTML code (e.g., <meta>) to add to the <head> section of every page.
+3.  Ingrese el código HTML (por ejemplo, <meta>) que desea agregar a la sección <head> de cada página.
+      
+    
+    ![Configuraciones del sitio > Comportamiento del sitio > Páginas predeterminadas — <head> tags](/images/scr-SiteSettings-SiteBehavior-DefaultPages-HeadTags-E90.png)
     
       
     
-    ![Site Settings > Site Behavior > Default Pages — <head> tags](/images/scr-SiteSettings-SiteBehavior-DefaultPages-HeadTags-E90.png)
-    
-      
-    
-    > [!Note]
-    > The HTML tags must be valid for the <head> section.
+    > [!Nota] Las etiquetas HTML deben ser válidas para la sección <head>.
