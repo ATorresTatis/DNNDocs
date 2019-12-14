@@ -1,41 +1,37 @@
 ﻿---
 uid: assign-key-pages
-locale: en
-title: Assign Key Pages
+locale: es
+title: Asignar páginas clave
 dnnversion: 09.02.00
 related-topics: update-site-info,add-metadata-to-pages,configure-messaging,access-web-config,configure-check-for-new-version,participate-in-improvement-program,configure-html-editor,administrators-extensions-overview,administrators-connectors-overview,administrators-search-overview,administrators-vocabularies-overview
 ---
 
-# Assign Key Pages
+# Asignar páginas clave
 
-## Prerequisites
+## Prerrequisitos
 
-*   **An administrator account for the site.** Administrators have full permissions to the specific site.
+*   **Una cuenta de administrador para el sitio**. Los administradores tienen permisos completos para el sitio específico.
 
-## Steps
+## Pasos
 
-1.  Go to **Persona Bar \> Settings \> Site Settings**.
+1.  Vaya a **Persona Bar \> Configuración \> Configuración del sitio **.
     
-    ![Persona Bar > Settings > Site Settings](/images/scr-pbar-host-Settings-E91-platform.png)
+    ![Persona Bar > Configuración > Configuración del sitio](/images/scr-pbar-host-Settings-E91-platform.png)
     
-2.  Go to the **Site Behavior** tab, and then the **Default Pages** subtab.
+2.  Vaya a la pestaña **Comportamiento del sitio** y luego a la subficha **Páginas predeterminadas**.
     
-    ![Site Behavior > Default Pages](/images/scr-pbtabs-host-Settings-SiteSettings-SiteBehavior-DefaultPages-E90.png)
+    ![Comportamiento del sitio > Páginas predeterminadas](/images/scr-pbtabs-host-Settings-SiteSettings-SiteBehavior-DefaultPages-E90.png)
     
-3.  Choose an existing page in your site to assign to each key page setting.
+3.  Elija una página existente en su sitio para asignar a cada configuración de página clave.         
     
-      
+    ![Configuración del sitio> Comportamiento del sitio> Páginas predeterminadas](/images/scr-SiteSettings-SiteBehavior-DefaultPages-E90.png)          
     
-    ![Site Settings > Site Behavior > Default Pages](/images/scr-SiteSettings-SiteBehavior-DefaultPages-E90.png)
-    
-      
-    
-    |**Field**|**Description**|
+    |**Campo**|**Descripción**|
     |---|---|
-    |<strong>Splash Page</strong>|The page displayed before the user sees the home page of the site. If None Specified, then the Home Page is displayed immediately.|
-    |<strong>Login Page</strong>|The page must include the Authentication module.|
-    |<strong>Registration Page</strong>|The page can include the Registration module.|
-    |<strong>User Profile Page</strong>|The page can include the Profile Dashboard module.|
-    |<strong>Search Results Page</strong>|The page must include the Search Results module.|
-    |<strong>404 Error Page</strong>|The page displayed if the requested page is not found.|
-    |<strong>500 Error Page</strong>|The page displayed if the requested page generates an error.|
+    |<strong>Página de bienvenida</strong>|La página que se muestra antes de que el usuario vea la página de inicio del sitio. Si no se especifica ninguno, la página de inicio se muestra inmediatamente.|
+    |<strong>Página de inicio de sesión</strong>|La página debe incluir el módulo de autenticación.|
+    |<strong>Página de registro</strong>|La página puede incluir el módulo de registro.|
+    |<strong>Página de perfil de usuario</strong>|La página puede incluir el módulo del tablero de control del perfil.|
+    |<strong>Página de resultados de búsqueda</strong>|La página debe incluir el módulo de Resultados de la búsqueda.|
+    |<strong>Página de error 404</strong>|La página que se muestra si no se encuentra la página solicitada.|
+    |<strong>Página de error 500</strong>|La página que se muestra si la página solicitada genera un error.|
