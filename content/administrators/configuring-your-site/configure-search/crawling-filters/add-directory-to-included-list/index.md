@@ -1,41 +1,34 @@
 ﻿---
 uid: add-directory-to-included-list
-locale: en
+locale: es
 title: Add a Directory to Included List for Crawling
 dnnversion: 09.02.00
 related-topics: add-starting-url-to-crawl-list,edit-starting-url-in-crawl-list,delete-starting-url-from-crawl-list,delete-directory-from-included-list,add-directory-to-excluded-list,delete-directory-from-excluded-list,add-file-extension-to-included-or-excluded-list,delete-file-extension-from-included-or-excluded-list
 ---
 
-# Add a Directory to Included List for Crawling
+# Agregar un directorio a la lista incluida para el rastreo
 
-## Prerequisites
+## Prerrequisitos
 
-*   **An administrator account for the site.** Administrators have full permissions to the specific site.
+*   Una **cuenta de administrador para el sitio**. Los administradores tienen permisos completos para el sitio específico.
 
-## Steps
+## Pasos
 
-1.  Go to **Persona Bar \> Settings \> Site Settings**.
+1.  Vaya a **Persona Bar \> Configuración \> Configuración del sitio**.
     
-    ![Persona Bar > Settings > Site Settings](/images/scr-pbar-host-Settings-E91.png)
+    ![Persona Bar > Configuración > Configuración del sitio](/images/scr-pbar-host-Settings-E91.png)
     
-2.  Go to the Search tab, and then the Crawling subtab.
+2.  Vaya a la pestaña Búsqueda y luego a la subficha Rastreo.
     
-    ![Search > Crawling](/images/scr-pbtabs-all-Settings-SiteSettings-Search-Crawling-E90.png)
+    ![Búsqueda > Rastreo](/images/scr-pbtabs-all-Settings-SiteSettings-Search-Crawling-E90.png)
     
-3.  In **Included Directories**, click/tap \+ **Add Directory**.
-    
-      
+3.  En **Directorios incluidos**, haga clic en **Agregar directorio**.         
     
     ![](/images/scr-SiteSettings-Search-Crawling-IncludedDirectories-add-directory-button-E90.png)
     
-      
+          
+4.  Elija el directorio del menú desplegable.          
     
-4.  Choose the directory from the dropdown.
-    
-      
-    
-    ![](/images/scr-SiteSettings-Search-Crawling-IncludedDirectories-add-directory-E90.png)
-    
-      
-    
-5.  Save.
+    ![](/images/scr-SiteSettings-Search-Crawling-IncludedDirectories-add-directory-E90.png)    
+     
+5.  Guardar.
