@@ -1,9 +1,9 @@
-﻿---
+---
 uid: crawling-filters
-locale: en
-title: Crawling Filters
+locale: es
+title: Filtros de rastreo
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# Crawling Filters
+# Filtros de rastreo
