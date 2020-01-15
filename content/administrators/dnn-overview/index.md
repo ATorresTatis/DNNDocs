@@ -1,45 +1,41 @@
-﻿---
+---
 uid: dnn-overview
-locale: en
-title: An Overview of DNN Solutions
+locale: es
+title: Descripción general de una solución DNN
 dnnversion: 09.02.00
 related-topics: administrators-included-modules-overview,requirements,product-versions,control-bar-to-persona-bar,persona-bar-by-role,providers,more-resources
 ---
 
-# An Overview of DNN Solutions
+# Descripción general de una solución DNN
 
-## DNN Products
+## Productos DNN
 
-DNN offers three primary products:
+DNN ofrece tres productos principales:
 
-*   DNN Platform is an open, extensible, secure, and scalable content management system for ASP.NET. Hundreds of thousands of businesses around the world, [from small local businesses to Global 1000 companies](https://www.dnnsoftware.com/solutions/our-customers), depend on the DNN Platform as their website authoring environment.
-*   DNN Evoq Content includes everything in the DNN Platform, plus additional features to make it easier to publish great content.
-*   DNN Evoq Engage includes everything in the DNN Evoq Content, plus additional features focused on building a community and on social activities.
+*   DNN Platform es un sistema de administración de contenido abierto, extensible, seguro y escalable para ASP.NET. Cientos de miles de empresas en todo el mundo, [desde pequeñas empresas locales hasta compañías el top 1000 de compañías mundiales](https://www.dnnsoftware.com/solutions/our-customers), dependen de la Plataforma DNN para su entorno de creación de sitios web.
+*   DNN Evoq incluye todo en la plataforma de DNN, además de características adicionales para facilitar la publicación de contenido.
+*   DNN Evoq Engage incluye todo en el contenido de DNN Evoq, además de características adicionales centradas en la construcción de una comunidad y en actividades sociales.
 
-## Personas
+## Roles
 
-DNN products are designed around the needs of several personas or organization roles involved in publishing a website.
+Los productos de DNN están diseñados para satisfacer las necesidades de varias personas o roles de la organización involucrados en la publicación de un sitio web.
 
-*   **Superusers** (also known as hosts) manage the web servers and the DNN installation, which could support multiple websites. Superusers have full access to all websites in the DNN installation and are essentially site admins for all the sites.
-*   **Site administrators** manage an individual website (formerly portal). Site administrators have access only within their assigned website(s).
-*   **Developers** extend the functionality of DNN products by using the DNN APIs to build third-party add-on modules, which can be installed into the system.
-*   **Designers** provide a wide variety of themes (formerly skins) that change the appearance of the websites.
-*   **Content Editors** or **Content Creators** provide the content assets or components that are displayed on the website.
-*   **Content Managers** curate content and decide where each content asset appears on the website.
-*   **Community Managers** manage the online community through games and reward systems.
+*   **Superusuarios** (también conocidos como hosts) administran los servidores web y la instalación de DNN, que admite múltiples sitios web. Los superusuarios tienen acceso total a todos los sitios web en la instalación de DNN y son esencialmente administradores del sitio con acceso a todos los sitios.
+*   **administradores de sitios** administran un sitio web individual (anteriormente llamado portal). Los administradores del sitio solo tienen acceso a los sitios web asignados.
+*   **Desarrolladores** amplían la funcionalidad de los productos DNN mediante el uso de las APIs de DNN para crear módulos complementarios, que pueden instalarse en el sistema.
+*   **Diseñadores** proporcionan una amplia variedad de temas (anteriormente llamadas máscaras o skins) que cambian la apariencia de los sitios web.
+*   **Editores de contenido** o **Creadores de Contenido** proporcionan los activos o componentes de contenido que se muestran en el sitio web.
+*   **Administradores de contenido** seleccionan el contenido y deciden dónde aparece cada activo de contenido en el sitio web.
+*   **Community Managers** gestionan la comunidad en línea a través de juegos y sistemas de recompensas.
 
+![DNN roles de flujo de trabajo](/images/gra-DNNRoles.png)
 
+## Centro de documentación
 
-![DNN workflow with roles](/images/gra-DNNRoles.png)
+El Centro de Documentación de DNN está organizado en base a estos grupos de personas:
 
-
-
-## Documentation Center
-
-The DNN Documentation Center is organized based on these persona groups:
-
-*   [Administrators](http://dnndocs.com/content/administrators/) includes superusers and site administrators.
-*   [Developers](http://dnndocs.com/content/developers/)
-*   [Designers](http://dnndocs.com/content/designers/)
+*   [Administradores ](http://dnndocs.com/content/administrators/) incluyen superusuarios y administradores de sitios.
+*   [Desarrolladores](http://dnndocs.com/content/developers/)
+*   [Diseñadores](http://dnndocs.com/content/designers/)
 *   [Content Managers](http://dnndocs.com/content/content-managers/) includes content managers, editors, and creators.
-*   [Community Managers](http://dnndocs.com/content/community-managers/)
+*   [Gerentes de la comunidad o Community Managers](http://dnndocs.com/content/community-managers/)
