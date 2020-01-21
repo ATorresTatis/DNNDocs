@@ -111,7 +111,7 @@ Este es un término que puede ver usado y simplemente describe una instancia de 
 
 Un tipo de extensión DNN utilizada en temas para proporcionar funcionalidad adicional para elementos comunes de IU en una página web. Ejemplos: barra de menú, aviso de copyright, enlaces de inicio de sesión o de registro, enlaces de privacidad, enlaces de términos del servicio y cuadros de búsqueda. Los objetos temáticos son configurados por el diseñador del tema
 
-> [!Consejo] [10 Pound Gorilla](https://www.10poundgorilla.com/) y su herramienta [DNN-Skinning-Tool](https://10poundgorilla.com/DNN-Skinning-Tool) funciona tanto una referencia demás de como una herramienta que permite personalizar el código para los objetos del tema de DNN, en función de los valores de atributo que especifique.
+> [!Consejo] [10 Pound Gorilla](https://www.10poundgorilla.com/) y su herramienta [DNN-Skinning-Tool](https://10poundgorilla.com/DNN-Skinning-Tool) funciona como referencia y como una herramienta que permite personalizar el código para los objetos del tema de DNN, en función de los valores de atributo que especifique.
 
 **Tema (theme)**
 
