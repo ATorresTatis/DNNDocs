@@ -1,132 +1,131 @@
-﻿---
+---
 uid: glossary
-locale: en
+locale: es
 title: Glossary
 dnnversion: 09.02.00
 links: ["[DNN Wiki: DNN Glossary](https://www.dnnsoftware.com/wiki/dotnetnuke-glossary)","[DNN Wiki: Globalization Glossary](https://www.dnnsoftware.com/wiki/international-glossary)"]
 ---
 
-# Glossary
+# Glosario
 
-**action menu**
+**menú de acción (action menú)**
 
-The set of menus that provides access to the functionality of a module. Available only if the page is in **Edit** mode. The menus can include the Edit menu (pencil icon), the Manage menu (gear icon), and the Move menu (four-arrow icon). The DNN Platform provides actions that are common to all modules; however, a module might provide additional actions. If the module instance is independent, then actions performed through the module action menu affect only that specific module instance in that specific webpage. If the same module instance is referenced in multiple pages, then changes made to the module instance from any of those pages are reflected in all those pages.
+El conjunto de menús que proporciona acceso a la funcionalidad de un módulo. Disponible solo si la página está en modo Edición. Los menús pueden incluir el menú de edición (icono de lápiz), el menú de Administración (icono de engranaje) y el menú para mover (icono de cuatro flechas). La plataforma DNN proporciona acciones que son comunes a todos los módulos; sin embargo, un módulo puede agregar acciones adicionales. Si la instancia del módulo es independiente, las acciones realizadas a través del menú de acción del módulo afectan solo a esa instancia de módulo específica en esa página web específica. Si se hace referencia a la misma instancia de módulo en varias páginas, los cambios realizados en la instancia de módulo desde cualquiera de esas páginas se reflejan en todas esas páginas..
 
-**Advanced URL Management**
+**Administración avanzada de URL (Advanced URL Management)**
 
-The latest implementation of the Friendly URL Rewriter. Includes additional tools that give DNN administrators greater control over the formatting of URLs within DNN.
+La última implementación de Friendly URL Rewriter. Incluye herramientas adicionales que brindan a los administradores de DNN un mayor control sobre el formato de las URL dentro de DNN.
 
-**container**
+**Contenedor (container)**
 
-A set of related components that define the look and feel of a module. In contrast, a skin or theme defines the look and feel of an entire webpage or website.
+Un conjunto de componentes relacionados que definen la apariencia de un módulo. Por el contrario, una máscara o un tema define la apariencia de una página web o sitio web completo.
 
-**culture**
+**Cultura (culture)**
 
-The RFC 4646 code for the language and region. Example: en-US for English (US) and fr-FR for French (France).
+El código RFC 4646 para el idioma y la región. Ejemplo: en-US para inglés (US) y fr-FR para francés (Francia).
 
-**databaseOwner**
+**Propietario de la base de datos (databaseOwner)**
 
-A token used in database scripts to refer to the SQL Server database schema that is used during DNN installation. Default: `dbo`.
+Un token utilizado en los scripts de la base de datos para referirse al esquema de la base de datos de SQL Server que se utiliza durante la instalación de DNN. Valor predeterminado: `dbo`.
 
-**engagement**
+**Compromiso (engagement)**
 
-A score that measures how involved the member is with the rest of the community.
+Una puntuación que mide qué tan involucrado está el miembro con el resto de la comunidad.
 
-**Experience Points**
+**Puntos de experiencia (Experience Points)**
 
-An unlimited lifetime cumulative score based on the activities of the user on the site.
+Un puntaje acumulativo ilimitado de por vida basado en las actividades del usuario en el sitio.
 
-**extension**
+**Extensión (extensión)**
 
-A combination of themes, modules, or other components that replace or extend specific features of the DNN Platform.
+Una combinación de temas, módulos u otros componentes que reemplazan o extienden características específicas de la Plataforma DNN.
 
-**friendly URL**
+**URL amigable (friendly URL)**
 
-A URL that hides a coded path. Example: https://www.example.com/myanswerpage might actually resolve to https://www.example.com/default.aspx?tabid=42. DNN provides three modes of friendly URLs:
+Una URL que oculta una ruta codificada. Ejemplo: https://www.example.com/myanswerpage podría resolverse en https://www.example.com/default.aspx?tabid=42 . DNN proporciona tres modos de URL amigables::
 
-*   **Advanced** provides both human-friendly and search-friendly URLs.
-*   **HumanFriendly** uses simple URLs for page names and uses `tabid` in more complicated URLs. Limited redirect support.
-*   **SearchFriendly** includes `tabid` patterns in URLs.
+*   **Advanced** proporciona URLs amigables para los humanos y para búsquedas.
+*   **HumanFriendly** usa URL simples para nombres de páginas y valores de tabid en URLs más complicadas. Soporta el redireccionamiento con algunas limitaciones.
+*   **SearchFriendly** incluye patrones de  `tabid` en las URLs.
 
-**influence**
+**Influencia (influence)**
 
-A score that measures the positive or negative effect of the member on the community.
+Una puntuación que mide el efecto positivo o negativo del miembro en la comunidad.
 
-**manifest**
+**Manifiesto (manifest)**
 
-An XML file (e.g., MyExtension.dnn) that specifies how to install an extension. The manifest contains information regarding the extension type, and the various components that make up the extension.
+Un archivo XML (por ejemplo, MyExtension.dnn) que especifica cómo instalar una extensión. El manifiesto contiene información sobre el tipo de extensión y los diversos componentes que conforman la extensión.
 
-**module**
+**Módulo (module)**
 
-A DNN extension that provides content or some functionality in a page. Example: A module could produce dynamic content that is displayed in a pane on the page.
+Una extensión DNN que proporciona contenido o alguna funcionalidad en una página. Ejemplo: un módulo podría producir contenido dinámico que se muestra en un panel en la página.
 
-**objectQualifier**
+**Calificador (objectQualifier)**
 
-A custom string used as a prefix to names of DNN-related SQL objects, such as tables and stored procedures. This allows you to identify the DNN objects in a database that supports other applications besides DNN. Default: blank.
+Una cadena personalizada utilizada como prefijo para nombres de objetos SQL relacionados con DNN, como tablas y procedimientos almacenados. Esto le permite identificar los objetos DNN en una base de datos que admite otras aplicaciones además de DNN. Valor predeterminado: en blanco.
 
-**package**
+**Paquete (package)**
 
-The zip file that contains all files required to install an extension in a DNN-based website. Also, a section of the DNN Manifest schema that specifies how the core components of the extension are installed.
+Un archivo zip que contiene todos los archivos necesarios para instalar una extensión en un sitio web basado en DNN. Además, una sección del esquema de del archivo DNN de manifestó, que especifica cómo se instalan los componentes principales de la extensión.
 
-**page**
+**Página (page)**
 
-A DNN object that includes all components of a webpage, including scripts and UI components.
+Un objeto DNN que incluye todos los componentes de una página web, como los scripts y los componentes de la interfaz de usuario.
 
-**pane**
+**Panel (pane)**
 
-A layout template area that holds a module. Theme designers determine the names and positions of panes. Administrators and webpage editors select the pane for each module added to the webpage. When the webpage is viewed, the pane can display content, depending on the module's functionality.
+Un área de plantilla de diseño que contiene un módulo. Los diseñadores de temas determinan los nombres y las posiciones de los paneles. Los administradores y editores de páginas web seleccionan el panel para cada módulo agregado a la página web. Cuando se ve la página web, el panel puede mostrar contenido, dependiendo de la funcionalidad del módulo.
 
-**portal**
-Portal is a term that was originally used during the earlier versions of DNN and has since been replaced with "site" or "website."  Essentially, a portal is a single website in your DNN instance, and DNN can have one or many portals/sites in a single instance of DNN.  You will still see the `portal` and `portals` term used exclusively in the API and database.
+**Portal (portal)**
+Portal es un término que se utilizó originalmente en versiones anteriores de DNN y desde entonces se ha reemplazado por "sitio" o "sitio web". Esencialmente, un portal es un único sitio web en su instancia de DNN, y DNN puede tener uno o varios portales/sitios en una sola instancia de DNN. Aún verá el término `portal` y `portals` utilizados en la API y en la base de datos de DNN.
 
-**portal alias**
+**Alias de portal (portal alias)**
 
-A URL that refers to a specific website in a DNN installation. Examples: `https://www.example.com` (parent portal alias), `https://www.example.com/pathname` (child portal alias). Each website can have one or more portal aliases.
+Una URL que se refiere a un sitio web específico en una instalación de DNN. Ejemplos: https://www.example.com(alias del portal principal), https://www.example.com/pathname (alias de portal secundario). Cada sitio web puede tener uno o más alias de portal.
 
-**premium**
+**Premium (premium)**
 
-A module setting that indicates that use of the module can be restricted for security reasons. Example: Modules that expose confidential user information and modules that manage security access to the site should be premium.
+Una configuración de módulo que indica que el uso del módulo puede restringirse por razones de seguridad. Ejemplo: los módulos que exponen información confidencial del usuario y los módulos que administran el acceso de seguridad al sitio deben ser premium.
 
-**provider**
+**Proveedor (provider)**
 
-A type of DNN extension that provides an alternative implementation of a specific functionality of the DNN Platform. Examples: authentication providers, data providers, and navigation providers. In most cases, even if multiple implementations are available in a DNN installation, only one implementation of each provider type is active at any time.
+Un tipo de extensión de DNN que proporciona una implementación alternativa de una funcionalidad específica de la plataforma DNN. Ejemplos: proveedores de autenticación, proveedores de datos y proveedores de navegación. En la mayoría de los casos, incluso si hay varias implementaciones disponibles en una instalación de DNN, solo una implementación de cada tipo de proveedor está activa en cualquier momento.
 
-**Reputation Points**
+**Puntos de reputación (Reputation Points)**
 
-A set of points based on how members of the site perceive the trustworthiness of a user.
+Un conjunto de puntos basado en cómo los miembros del sitio perciben la confiabilidad de un usuario.
 
-**site**
+**Sitio (site)**
 
-A specific website in a DNN installation, which can host multiple websites that share files and resources.
+Un sitio web específico en una instalación de DNN, que puede alojar múltiples sitios web que comparten archivos y recursos.
 
-**superuser**
+**Superusuario (superuser)**
 
-The most privileged administrative account with complete access to all websites within the DNN installation and to all installed apps.
+La cuenta administrativa más privilegiada con acceso completo a todos los sitios web dentro de la instalación de DNN y a todas las aplicaciones instaladas.
 
-**tab**
+**Tab (tab)**
 
-This is a term that you may see used and it simply describes an instance of a page/webpage in DNN. "Page" and "Tab" are interchangeable terms from an end-user perspective. You'll still see `tab` and `tabs` used exclusively in the API and database.
+Este es un término que puede ver usado y simplemente describe una instancia de una página/página web en DNN. "Página" y "Pestaña" son términos intercambiables desde la perspectiva del usuario final. Todavía lo verá con el nombre `tab` o `tabs` en la API de DNN y en objetos de la base de datos
 
-**theme object**
+**Objeto del tema (theme object)**
 
-A type of DNN extension used in themes to provide additional functionality for common UI elements on a webpage. Examples: menu bar, copyright notice, login/registration links, privacy link, terms of service link, and search box. Theme objects are configured by the theme designer.
+Un tipo de extensión DNN utilizada en temas para proporcionar funcionalidad adicional para elementos comunes de IU en una página web. Ejemplos: barra de menú, aviso de copyright, enlaces de inicio de sesión o de registro, enlaces de privacidad, enlaces de términos del servicio y cuadros de búsqueda. Los objetos temáticos son configurados por el diseñador del tema
 
-> [!Tip]
-> [10 Pound Gorilla](https://www.10poundgorilla.com/)'s [Skinning Tool](https://10poundgorilla.com/DNN-Skinning-Tool) is both a reference and a tool that customizes the code for DNN theme objects, based on the attribute values you specify.
+> [!Consejo] [10 Pound Gorilla](https://www.10poundgorilla.com/) y su herramienta [DNN-Skinning-Tool](https://10poundgorilla.com/DNN-Skinning-Tool) funciona tanto una referencia demás de como una herramienta que permite personalizar el código para los objetos del tema de DNN, en función de los valores de atributo que especifique.
 
-**theme**
+**Tema (theme)**
 
-A set of related components that define the look and feel of a webpage or website. These components include:
+Un conjunto de componentes relacionados que definen el aspecto de una página web o sitio web. Estos componentes incluyen:
 
-*   one or more layout templates, and
-*   an optional CSS for each of the templates, or an optional master CSS for the entire website.
+*   una o más plantillas de diseño, y
+*   un CSS opcional para cada una de las plantillas, o un CSS maestro opcional para todo el sitio web.
 
-In contrast, a container and any associated CSS define the look and feel of a module in a single pane of a page.
+Por el contrario, un contenedor y cualquier CSS asociado definen la apariencia de un módulo en un solo panel de una página.
 
-**token**
+**Token (token)**
 
-In an HTML content template, a placeholder for data to be injected into the HTML output. Example: `[User:UserName]` is replaced with the actual username.
+En una plantilla de contenido HTML, un marcador de posición para los datos que se inyectarán en la salida HTML. Ejemplo: `[User:UserName]` se reemplaza con el nombre de usuario real.
 
-In an HTML layout template, a word that represents DNN-standard code for a **theme object**. Examples: \[NAV\], \[COPYRIGHT\], \[LOGIN\], \[PRIVACY\], \[TERMS\], and \[SEARCH\].
+En una plantilla de diseño de HTML, una palabra que representa el código estándar DNN para un objeto del tema. Por ejemplo: \[NAV\], \[COPYRIGHT\], \[LOGIN\], \[PRIVACY\], \[TERMS\], y \[SEARCH\].
 
-In a Visualizer template, a word that represents a field in the content type associated with the visualizer. Example: If the content type field is named `Meeting Timeslot`, the field's token would be `{{ meetingTimeslot }}`.
+En una plantilla de visualización, una palabra que representa un campo en el tipo de contenido asociado con el visualizador. Ejemplo: si se nombra `Meeting Timeslot` el campo de tipo de contenido, el token del campo sería `{{meetingTimeslot}}`.
