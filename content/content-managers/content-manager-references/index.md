@@ -1,8 +1,8 @@
-﻿---
+---
 uid: content-manager-references
-locale: en
-title: Content Manager References
+locale: es
+title: Referencias de Administración de Contenido 
 dnnversion: 09.02.00
 ---
 
-# Content Manager References
+# Referencias de Administración de Contenido 
