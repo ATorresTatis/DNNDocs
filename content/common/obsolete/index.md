@@ -1,11 +1,11 @@
-﻿---
+---
 uid: obsolete
-locale: en
-title: Obsolete
+locale: es
+title: Obsoleto
 dnnversion: 09.02.00
 ---
 
-# Obsolete
+# Obsoleto
 
-This link is obsolete. Help us improve documentation if you feel the content you were looking for needs to be here.
+Este enlace está obsoleto. Ayúdenos a mejorar la documentación si siente que el contenido que estaba buscando debe estar aquí..
 
