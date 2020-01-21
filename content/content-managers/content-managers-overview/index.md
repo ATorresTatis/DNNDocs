@@ -1,10 +1,10 @@
-﻿---
+---
 uid: content-managers-overview
-locale: en
-title: Hello, Content Manager!
+locale: es
+title: Hola, administrador de contenido!
 dnnversion: 09.02.00
 ---
 
-# Hello, Content Manager!
+# ¡Hola, administrador de contenido!
 
-Hello, Content Manager!
+¡Hola, administrador de contenido!
