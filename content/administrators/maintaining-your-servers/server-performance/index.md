@@ -1,9 +1,9 @@
-﻿---
+---
 uid: server-performance
-locale: en
-title: Server Performance
+locale: es
+title: Rendimiento del servidor
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# Server Performance
+# Rendimiento del servidor
