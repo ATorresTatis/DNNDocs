@@ -1,6 +1,6 @@
 ---
 uid: clear-cache
-locale: en
+locale: es
 title: Clear Cache
 dnnversion: 09.02.00
 related-topics: restart-application
