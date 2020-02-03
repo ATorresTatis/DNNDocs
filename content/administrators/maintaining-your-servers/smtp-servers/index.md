@@ -1,9 +1,9 @@
-﻿---
+---
 uid: smtp-servers
-locale: en
-title: SMTP Servers
+locale: es
+title: Servidores SMTP
 dnnversion: 09.02.00
 related-topics: 
 ---
 
-# SMTP Servers
+# Servidores SMTP
