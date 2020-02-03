@@ -1,25 +1,24 @@
-﻿---
+---
 uid: about-import-export
-locale: en
-title: Import / Export
+locale: es
+title: Importación y exportación
 dnnversion: 09.02.00
 ---
 
-# Import / Export
+# Importación y exportación
 
-Import/Export in v9.1 is designed to synchronize two sites in different installations in different servers, such as a staging installation and a production installation.
+Importar / Exportar en v9.1 está diseñado para sincronizar dos sitios en diferentes instalaciones en diferentes servidores, como una instalación provisional y una instalación de producción.
 
-Important: Before you perform an import, back up your site and database. Imports can only be undone by restoring from a backup.
+Importante: antes de realizar una importación, haga una copia de seguridad de su sitio y de su base de datos. Las importaciones solo se pueden deshacer restaurando desde una copia de seguridad.
 
-## Differential Export
+## Exportación diferencial
 
-You can export the entire site or select which components to export. You can also choose to perform a Full export or a Differential export. A differential export includes only the changes from the last export; therefore, the process is faster and the package is smaller.
+Puede exportar todo el sitio o seleccionar qué componentes exportar. También puede optar por realizar una exportación completa o una exportación diferencial. Una exportación diferencial incluye solo los cambios desde la última exportación; por lo tanto, el proceso es más rápido y el paquete es más pequeño.
 
-Warning: Differential exports must be managed and used carefully.
+Advertencia: las exportaciones diferenciales deben gestionarse y utilizarse con cuidado.
 
-*   Differential packages must be imported in the same order as they were exported, so that the changes are applied correctly.
-*   Deleting a differential export package will invalidate the differential export packages that were created after it.
+*   Los paquetes diferenciales deben importarse en el mismo orden en que se exportaron, para que los cambios se apliquen correctamente.
+*   Eliminar un paquete de exportación diferencial invalidará los paquetes de exportación diferencial que se crearon después de este.
+          
     
-      
-    
-    ![Illustration of differential scenario if middle differential export is deleted.](/images/gra-import-export-example.gif)
+    ![Ilustración del escenario diferencial si se elimina la exportación diferencial media](/images/gra-import-export-example.gif)
