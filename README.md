@@ -1,23 +1,24 @@
-# DNN Platform Documentation
+# Documentación de la plataforma DNN
 
-The documentation site for the open source Content Management System DNN (formerly DotNetNuke).
+El sitio de documentación para el sistema de gestión de contenido de código abierto DNN (anteriormente DotNetNuke).
 
-The project uses the `docfx` library to pull XML comments from the DNN Platform source code and combine that with articles written in Markdown to form the documentation for DNN.
+El proyecto utiliza la biblioteca `docfx` para extraer comentarios XML del código fuente de la Plataforma DNN y combinarlo con artículos escritos en Markdown para formar la documentación para DNN.
 
-## Installing Git
-If you do not have Git installed you will need to install Git first. You can find instructions on installing Git from [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+## Instalar Git
+Si no lo tiene instalado, primero deberá instalar Git. Puede encontrar instrucciones sobre cómo instalar Git [aquí](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-## Installing DocFX
-DocFX may be installed on Windows via _Chocolatey_ by calling `choco install docfx -y`
+## Instalar DocFX
+DocFX puede instalarse en Windows a través de Chocolatey ejecutando `choco install docfx -y`
 
-If you are on MacOS you can install it with _Homebrew_ `brew install docfx`
+Si está en MacOS, puede instalarlo con _Homebrew_, así `brew install docfx`
 
-Or you can download and unzip `docfx.zip` from [GitHub](https://github.com/dotnet/docfx/releases), extract it to a folder and then set your `PATH` to that folder so you can run it anywhere.
+O puede descargar y descomprimir`docfx.zip` desde [GitHub](https://github.com/dotnet/docfx/releases), extraerlo a una carpeta y luego configurar la ruta en `PATH` a esa carpeta para que pueda ejecutarlo desde cualquier lugar
 
-## Setting Up the DNN Docs Project
-After installing DocFX, the next step is to clone this repo.  'Cloning the repo' will simply create a copy of the repo (files and folders) on your local machine so that you can work with them.
+## Configurando el Proyecto DNN Docs
+Después de instalar DocFX, el siguiente paso es clonar este repositorio. 'Clonar el repositorio' simplemente creará una copia del repositorio (archivos y carpetas) en su máquina local para que pueda trabajar con ellos.
 
-Note the following example command clones the repo to the location of `c:\dev`. Update the `c:\dev` location to your location of choice on your machine.
+Tenga en cuenta que el siguiente comando de ejemplo clona el repositorio en la ubicación `c:\dev`. Actualice la ubicación `c:\dev` a la ubicación de su elección en su máquina.
+
 ```
 c:\dev> git clone https://github.com/DNNCommunity/DNNDocs.git
 ```
