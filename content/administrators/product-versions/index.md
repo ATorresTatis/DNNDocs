@@ -36,7 +36,7 @@ related-topics: administrators-included-modules-overview,requirements,dnn-overvi
 |2014 mar 19|7.2.2 [CodePlex](https://github.com/dnnsoftware/Dnn.Releases.Archive.7x/tree/master/07.02.02)|7.2.2|[Release Notes](xref:relnotes-2014-mar-19)|
 |2014 ene 21|7.2.1 [CodePlex](https://github.com/dnnsoftware/Dnn.Releases.Archive.7x/tree/master/07.02.01)|7.2.1|[Release Notes](xref:relnotes-2014-ene-21)|
 |2013 dic 4|7.2.0 [CodePlex](https://github.com/dnnsoftware/Dnn.Releases.Archive.7x/tree/master/07.02.00)|7.2.0|[Release Notes](xref:relnotes-2013-dic-04)|
-|2013 Sep 24|7.1.2 [CodePlex](https://github.com/dnnsoftware/Dnn.Releases.Archive.7x/tree/master/07.01.02)|7.1.2|[Release Notes](xref:relnotes-2013-sep-24)|
+|2013 sep 24|7.1.2 [CodePlex](https://github.com/dnnsoftware/Dnn.Releases.Archive.7x/tree/master/07.01.02)|7.1.2|[Release Notes](xref:relnotes-2013-sep-24)|
 |2013 ago 13|7.1.1 [CodePlex](https://github.com/dnnsoftware/Dnn.Releases.Archive.7x/tree/master/07.01.01)|7.1.1|[Release Notes](xref:relnotes-2013-ago-13)|
 |2013 jul 09|7.1.0 [CodePlex](https://github.com/dnnsoftware/Dnn.Releases.Archive.7x/tree/master/07.01.00)|7.1.0|[Release Notes](xref:relnotes-2013-jul-09)|
 |2013 may 01|7.0.6 [CodePlex](https://github.com/dnnsoftware/Dnn.Releases.Archive.7x/tree/master/07.00.06)|7.0.6|[Release Notes](xref:relnotes-2013-may-01)|
