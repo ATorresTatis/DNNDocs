@@ -17,7 +17,7 @@ Las siguientes tablas muestran la correspondencia entre el antiguo Panel de Cont
 ![Panel de control antiguo/Menú de barra-Administrador- Elementos comunes](/images/scr-menuAdminCommon.png)
 
   
-|**Panel de control antiguo**|*Barar de Persona**|
+|**Panel de control antiguo**|*Barar de Persona*|
 |---|---|
 |**Admin \> Event Viewer**|**Manage \> Admin Logs**|
 |**Admin \> File Management**|**Content \> Assets**|
