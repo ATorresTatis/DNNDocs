@@ -1,27 +1,23 @@
-﻿---
+---
 uid: control-bar-to-persona-bar
-locale: en
-title: Control Bar to Persona Bar
+locale: es
+title: De la barra de control a Persona Bar
 dnnversion: 09.02.00
 related-topics: administrators-included-modules-overview,requirements,product-versions,dnn-overview,persona-bar-by-role,providers,more-resources
 ---
 
-# Control Bar to Persona Bar
+# De la barra de control a Persona Bar
 
-The following tables show the correspondence between the old Control Panel/Bar and the new Persona Bar.
+Las siguientes tablas muestran la correspondencia entre el antiguo Panel de Control/la nueva Persona Bar.
 
-> [!NOTE]
-> The Persona Bar varies according to the product and to the permissions granted to the current authenticated (logged-in) user through roles. Examples: A host or superuser has access to almost all menu items, whereas a community manager would have access to only the features required to manage the community-related aspects of the site.
+> [!NOTA] La Barra de Persona o Persona Bar, varía según el producto y los permisos del usuario autenticado (conectado) a través de roles. Ejemplos: un usuario host o superusuario tiene acceso a casi todos los elementos del menú, mientras que un administrador de la comunidad solo tendría acceso a las funciones necesarias para administrar los aspectos del sitio relacionados con la comunidad.
 
 ## Admin
+  
+![Panel de control antiguo/Menú de barra-Administrador- Elementos comunes](/images/scr-menuAdminCommon.png)
 
   
-
-![Old Control Panel/Bar menu - Admin - Common](/images/scr-menuAdminCommon.png)
-
-  
-
-|**Control Panel/Bar**|**Persona Bar**|
+|**Panel de control antiguo**|*Barar de Persona**|
 |---|---|
 |**Admin \> Event Viewer**|**Manage \> Admin Logs**|
 |**Admin \> File Management**|**Content \> Assets**|
